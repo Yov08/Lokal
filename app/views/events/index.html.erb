@@ -1,5 +1,38 @@
 <div class="container">
+
   <h1>Events - Index</h1>
 
-  <%= link_to 'New Event', new_event_path, :class => "btn btn-secondary"%>
+    <div class="row mt-5 justify-content-md-left">
+    <% @events.each do |event| %>
+    <div class="col-md-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="col">
+    </div>
+
+
+    <div class="col">
+
+      <h3 class="card-title"><%= event.name %></h3>
+      <p class="card-text">Date: <%= event.date %></p>
+      <p class="card-text">Venue <%= event.venue %></p>
+      <p class="card-text">Description: <%= event.description %></p>
+      <p class="card-text">Price: <%= event.price_normal %></p>
+      <br>
+
+      <%= link_to "Info", event_path(event), class: "button-main" %>
+      <br>
+      <br>
+        </div>
+      </div>
+    </div>
+  </div>
+    <% end %>
+  </div>
+
+  <br>
+  <div class="col">
+    <%= link_to 'New Event', new_event_path, :class => "btn btn-secondary"%>
+    <%= link_to "Back", root_path, class: "btn btn-dark" %>
+  </div>
 </div>
