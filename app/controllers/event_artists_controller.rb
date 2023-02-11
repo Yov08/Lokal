@@ -1,0 +1,2 @@
+class EventArtistsController < ApplicationController
+end
