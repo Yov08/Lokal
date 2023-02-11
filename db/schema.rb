@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_11_112437) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_11_113702) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "user_id"
+    t.integer "pax"
+    t.boolean "booking_type"
+    t.integer "total_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "event_artists", force: :cascade do |t|
     t.integer "artist_id"
