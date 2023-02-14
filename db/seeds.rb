@@ -45,46 +45,63 @@ Event.create!(
 puts "Finished!"
 
 
-puts "Destroying artists"
-Artist.destroy_all
-puts "Creating artists"
-Artist.create!(
-  name: "kaya",
-  surname: "popise",
-  email: "kayaman@gmail.com",
-  category: "reggea",
-  hourly_rate: "200",
-  photo: "http//www.mra.com"
-)
-Artist.create!(
-  name: "annega",
-  surname: "annaise",
-  email: "annega@gmail.com",
-  category: "pop",
-  hourly_rate: "1000",
-  photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwearefreedom.studio%2Fcasestudy-annega%2F&psig=AOvVaw3Oj9k-cTSlpe2Y0qqhErVZ&ust=1676211177015000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOCNiq_Tjf0CFQAAAAAdAAAAABAE"
-)
-Artist.create!(
-  name: "hans",
-  surname: "nayna",
-  email: "kayaman@gmail.com",
-  category: "reggea",
-  hourly_rate: "200",
-  photo: "https://otayo.com/en/artists/hans-nayna/"
-)
-puts "Finished!"
-
+# puts "Destroying artists"
+# Artist.destroy_all
+# puts "Creating artists"
+# Artist.create!(
+#   name: "kaya",
+#   surname: "popise",
+#   email: "kayaman@gmail.com",
+#   category: "reggea",
+#   hourly_rate: "200",
+#   photo: "http//www.mra.com"
+# )
+# Artist.create!(
+#   name: "annega",
+#   surname: "annaise",
+#   email: "annega@gmail.com",
+#   category: "pop",
+#   hourly_rate: "1000",
+#   photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwearefreedom.studio%2Fcasestudy-annega%2F&psig=AOvVaw3Oj9k-cTSlpe2Y0qqhErVZ&ust=1676211177015000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOCNiq_Tjf0CFQAAAAAdAAAAABAE"
+# )
+# Artist.create!(
+#   name: "hans",
+#   surname: "nayna",
+#   email: "kayaman@gmail.com",
+#   category: "reggea",
+#   hourly_rate: "200",
+#   photo: "https://otayo.com/en/artists/hans-nayna/"
+# )
+# puts "Finished!"
 
 puts "Destroying users"
 User.destroy_all
 puts "Creating users"
 User.create!(
   first_name: "damien",
-  surname: "popise",
-  email: "kayaman@gmail.com",
-  category: "reggea",
+  last_name: "lemoine",
+  user_type: "user",
+  image_url: "https://www.footmercato.net/",
+  category: "reggea don sa",
+  biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur aliquet mauris ut tincidunt. Nullam convallis magna sed erat placerat posuere. Pellentesque ultrices pellentesque turpis, vel condimentum est pellentesque sed. Maecenas fringilla, purus vel ultricies convallis, sem libero egestas lectus, faucibus eleifend sapien felis et lacus. Praesent orci mauris, posuere laoreet semper vitae, aliquam vitae est. Mauris eget lacus eu lectus tincidunt ornare. N",
+  rating: "200",
+  hourly_rate: "20",
+  email: "d.lemoine@gmail.com",
+  reset_password_token: "123456789"
+)
+User.create!(
+  first_name: "robert",
+  last_name: "franklin",
+  user_type: "user",
+  image_url: "https://www.footmercato.net/",
+  category: "reggea don sa",
+  biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur aliquet mauris ut tincidunt. Nullam convallis magna sed erat placerat posuere. Pellentesque ultrices pellentesque turpis, vel condimentum est pellentesque sed. Maecenas fringilla, purus vel ultricies convallis, sem libero egestas lectus, faucibus eleifend sapien felis et lacus. Praesent orci mauris, posuere laoreet semper vitae, aliquam vitae est. Mauris eget lacus eu lectus tincidunt ornare. N",
+  rating: "2000",
   hourly_rate: "200",
-  photo: "http//www.mra.com"
+  email: "r.franklin@gmail.com",
+  reset_password_token: "123456789"
+)
+puts "Finished!"
 
 
 # require "faker"
