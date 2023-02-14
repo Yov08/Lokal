@@ -1,2 +1,35 @@
-<h1>LOKAL</h1>
-<p>Lokal ene zur, lokal tuzur!</p>
+<div class="title">
+  <div class="container">
+      <h1>LOKAL</h1>
+      <p>Lokal ene zur, lokal tuzur!</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="title">
+    <h4>Welcome home</h4>
+  </div>
+  <div>
+    <div>
+      <%= link_to 'Artists', event_artists_path, :class => "btn btn-primary"%>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= link_to 'Events', events_path, :class => "btn btn-primary"%>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= link_to 'Sign Up', new_user_registration_path, :class => "btn btn-secondary"%>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <%= link_to 'Login', new_user_session_path, :class => "btn btn-secondary"%>
+    </div>
+  </div>
+</div>

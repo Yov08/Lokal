@@ -1,0 +1,2 @@
+class EventArtist < ApplicationRecord
+end

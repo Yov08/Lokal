@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="title">
+    <h1>Events - Add New Event</h1>
+  </div>
+
+  <div class="form">
+    <%= simple_form_for @event do |f| %>
+      <%= f.input :name, :label => 'Event Name', :required => true %>
+      <%= f.input :date, as: :date, :required => true %>
+      <%= f.input :venue, :placeholder => 'user@domain.com', :required => true %>
+      <%= f.input :description, :inline_label => 'Yes, remember me' %>
+      <%= f.input :price_normal, :inline_label => 'Yes, remember me', :required => true %>
+      <%= f.input :price_vip, :inline_label => 'Yes, remember me' %>
+      <%= f.input :address, :inline_label => 'Yes, remember me' %>
+      <%= f.input :capacity, :inline_label => 'Yes, remember me' %>
+      <%= f.input :image_url, :inline_label => 'Yes, remember me', :required => true %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+  <%= link_to 'Back', events_path, :class => "btn btn-secondary"%>
+</div>
