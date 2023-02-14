@@ -1,53 +1,24 @@
 <div class="container">
-
   <h1>Upcoming Events</h1>
 
-    <div class="row mt-5 justify-content-md-left">
+  <div class="row mt-5 justify-content-md-left">
     <% @events.each do |event| %>
-      <div class="col-md-auto">
-        <div class="card">
-          <div class="card-body">
-            <div class="col">
-    </div>
-
-    <div class="col-12 col-md-8 justify-content-center">
-      <h3 class="card-title"><%= event.name %></h3>
-    </div>
-    <div class="col-12 col-md-8 align-items-center">
-
-      <p class="card-text">Date: <%= event.date %></p>
-      <p class="card-text">Venue <%= event.venue %></p>
-      <p class="card-text">Description: <%= event.description %></p>
-      <p class="card-text">Price: <%= event.price_normal %></p>
-      <br>
-
-      <%= link_to "Info", event_path(event), class: "button-main" %>
-      <br>
-      <br>
+      <div class="cards bg-light">
+        <div class="col-12 col-md-8 justify-content-center">
+          <h3 class="card-title"><%= event.name %></h3>
         </div>
+        <p class="card-text">Date: <%= event.date %></p>
+        <p class="card-text">Event: <%= event.name %> @ <%= event.venue %></p>
+        <p class="card-text">Address: <%= event.address %></p>
+        <p class="card-text">Image NOT YET FINISHED: <%= event.image_url %></p>
+        <%= link_to "Info", event_path(event), class: "button-main" %>
+        <p>----------------------------------------------TEST LINE: !!!WORKING!!!</p>
+        <p>***************ADD SEPARATION BETWEEN CARDS***************</p>
       </div>
-    </div>
-  </div>
     <% end %>
   </div>
-
-  <br>
   <div class="col">
-    <%= link_to 'New Event', new_event_path, :class => "btn btn-secondary"%>
+    <%= link_to 'New Event', new_event_path, :class => "btn btn-primary"%>
     <%= link_to "Back", root_path, class: "btn btn-dark" %>
   </div>
-</div>
-
-<div class="container">
-  <h1>Upcoming Events</h1>
-
-  <% @events.each do |event| %>
-    <div class="row">
-      <%= event.date %> <br>
-      <%= event.name %> <br>
-      <%= event.address %> <br>
-      <%= event.image_url %> <br>
-    </div>
-  <% end %>
-
 </div>
