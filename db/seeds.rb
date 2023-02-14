@@ -10,9 +10,9 @@ puts "Destroying events"
 Event.destroy_all
 puts "Creating events"
 Event.create!(
-  name: "pure at Lux",
+  name: "Pure at Lux",
   date: "30.07.2023",
-  venue: "grand gaube ",
+  venue: "Grand Gaube ",
   description: "This 3-day Music & Beach festival will occur on the 7th, 8th, and 9th of August. For the first time in Mauritius, an entire resort is being privatised for a 3-day festival. ",
   price_normal: 2000,
   price_vip: 3000,
@@ -23,7 +23,7 @@ Event.create!(
 Event.create!(
   name: "Mauritius Open Air Festival",
   date: "23.07.2023",
-  venue: "Nou le Morne",
+  venue: "Nou Le Morne",
   description: "Discover Mauritius’ paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
   price_normal: 400,
   price_vip: 1000,
