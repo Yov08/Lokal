@@ -43,9 +43,10 @@
 
   <% @events.each do |event| %>
     <div class="row">
-      <%= event.name %> <br>
       <%= event.date %> <br>
+      <%= event.name %> <br>
       <%= event.address %> <br>
+      <%= event.image_url %> <br>
     </div>
   <% end %>
 
