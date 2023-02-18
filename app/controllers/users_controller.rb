@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @user = User.new(user_params)
+    if user_type == "true"
+      redirect_to users_path
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
