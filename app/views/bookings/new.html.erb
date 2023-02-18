@@ -1,0 +1,12 @@
+<h1>New Booking</h1>
+  <%= simple_form_for(booking) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :event_id %>
+    <%= f.input :pax %>
+    <%= f.input :type %>
+    <%= f.input :price %>
+    <%= f.submit %>
+
+  <%= link_to "Abort!", bookings_path(@booking)%>
+  <%= link_to "Back to Events", events_path %>
+  <% end %>

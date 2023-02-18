@@ -1,0 +1,6 @@
+<H1>Please see all your Bookings</H1>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= booking.name %></li>
+  <%= end %>
+</ul>

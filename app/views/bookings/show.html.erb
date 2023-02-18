@@ -1,0 +1,11 @@
+<div>
+<h1>Booking Details :</h1>
+  <h2><%= @booking.name %></h2>
+  <p><%= @booking.pax %></p>
+  <p><%= @booking.type %></p>
+  <p><%= @booking.price %></p>
+
+  <%= link_to "Make a booking", new_booking_path, class:"btn btn-primary" %>
+  <%= link_to "Back to homepage", root_path, class:"btn btn-outline-dark"%>
+  
+</div>
