@@ -24,12 +24,12 @@ Event.create!(
   name: "Mauritius Open Air Festival",
   date: "23.07.2023",
   venue: "Nou Le Morne",
-  description: "Discover Mauritius’ paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
+  description: "Discover Mauritius paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
   price_normal: 400,
   price_vip: 1000,
   address: "Royal Road, Coteau Raffin, Black River",
   capacity: 2000,
-  image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t39.30808-6/328333023_699301461669729_1901966523216265308_n.png?_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=JD_zkievJy8AX-pp3m4&_nc_ht=scontent.fmru4-1.fna&oh=00_AfD3bokjQIf7X3qUIlxmhgZ7TYPrdsj3PPNtlXLiNTmH_w&oe=63EFFBF1"
+  image_url: "https://scontent.fmru7-1.fna.fbcdn.net/v/t39.30808-6/325892634_715209850069089_4637343665437270031_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8631f5&_nc_ohc=ljZn33TyJdEAX-xa1kZ&_nc_ht=scontent.fmru7-1.fna&oh=00_AfB7sAWLPUNGzEE8YWmCmeHrvTkj9wNjA-bCkHvU8sfBRQ&oe=63F5142A"
 )
 Event.create!(
   name: "Sakifo Music Festival",
@@ -49,27 +49,27 @@ Artist.destroy_all
 puts "Creating artists"
 Artist.create!(
   name: "kaya",
-  surname: "popise",
+  surname: "Popise",
   email: "kayaman@gmail.com",
-  category: "reggea",
+  category: "Reggea",
   hourly_rate: "200",
-  photo: "http//www.mra.com"
+  photo: "https://otayo.com/wp-content/uploads/2022/07/Kaya-2.jpg"
 )
 Artist.create!(
-  name: "annega",
-  surname: "annaise",
+  name: "Annega",
+  surname: "Annaise",
   email: "annega@gmail.com",
-  category: "pop",
+  category: "Pop",
   hourly_rate: "1000",
-  photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwearefreedom.studio%2Fcasestudy-annega%2F&psig=AOvVaw3Oj9k-cTSlpe2Y0qqhErVZ&ust=1676211177015000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOCNiq_Tjf0CFQAAAAAdAAAAABAE"
+  photo: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg"
 )
 Artist.create!(
-  name: "hans",
-  surname: "nayna",
+  name: "Hans",
+  surname: "Nayna",
   email: "kayaman@gmail.com",
-  category: "reggea",
+  category: "Music for Soul",
   hourly_rate: "200",
-  photo: "https://otayo.com/en/artists/hans-nayna/"
+  photo: "https://otayo.com/wp-content/uploads/2022/07/hans-nayna-3.jpg"
 )
 puts "Finished!"
 
@@ -101,7 +101,6 @@ puts "Finished!"
 #   reset_password_token: "123456789"
 # )
 # puts "Finished!"
-
 
 # require "faker"
 # puts "Creating 3 fake events"
