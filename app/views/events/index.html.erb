@@ -1,15 +1,33 @@
 <div class="container-main">
-  <div class="banner_event">
+  <div class="banner-event">
   <h1>Upcoming Events</h1>
   </div>
 
+  <div class="flex">
+    <% @events.each do |event| %>
+      <div>
 
+        <div class="image">
+          <img src=<%= event.image_url %>  alt="">
+        </div>
 
+        <div class="details-upcomingevents">
+          <p><%= event.date %></p>
+          <p><%= event.name %></p>
+          <p><%= event.address %></p>
+        </div>
 
+      </div>
+    <% end %>
+  </div>
 
 
   <div class="col">
-    <%= link_to 'New Event', new_event_path, :class => "btn btn-primary"%>
-    <%= link_to "Back", root_path, class: "btn btn-dark" %>
+      <div class="new-event">
+        <%= link_to 'New Event', new_event_path, :class => "btn btn-primary"%>
+      </div>
+      <div class="back">
+        <%= link_to "Back", root_path, class: "btn btn-dark" %>
+      </div>
   </div>
-  </div>
+</div>
