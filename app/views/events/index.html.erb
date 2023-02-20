@@ -4,49 +4,42 @@
   <h1>Upcoming Events</h1>
   </div>
 
-  <div class="flex">
+  <div class="upcoming-event">
     <% @events.each do |event| %>
-      <div>
-
-        <div class="image">
-          <img src=<%= event.image_url %>  alt="">
+      <div class="image">
+        <img src=<%= event.image_url %>  alt="">
+      </div>
+      <div class="details">
+        <div class="date">
+          <h1><%= event.date %></h1>
         </div>
-
-        <div class="details">
-          <div class="date">
-            <h1><%= event.date %></h1>
-          </div>
-          <div class="name">
-            <h1><%= event.name %></h1>
-          </div>
-          <div class="address">
-            <h3><%= event.address %></h3>
-          </div>
-          <div class="location">
-            <i class="fa-sharp fa-solid fa-location-dot fa-3x"></i>
-          </div>
-
-
+        <div class="name">
+          <h1><%= event.name %></h1>
+        </div>
+        <div class="location">
+          <i class="fa-sharp fa-solid fa-location-dot fa-3x fa-fade"></i>
+          <i class="fa-solid fa-i-cursor fa-fade" style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;" ></i>
+        </div>
+        <div class="address">
+          <h3><%= event.address %></h3>
+        </div>
         <div class="info">
-        <%= link_to "Info", event_path(event) %>
+          <%= link_to "Info", event_path(event) %>
         </div>
-
-
       </div>
     <% end %>
-
-    <div class="grid-container">
-
-      <div class="grid-child new">
-        <%= link_to "New Event", new_event_path %>
-      </div>
-
-      <div class="grid-child back">
-        <%= link_to "Back", root_path%>
-      </div>
-
-    </div>
-
   </div>
 
+
+      <div class="grid-container">
+
+        <div class="grid-child new">
+          <%= link_to "New Event", new_event_path %>
+        </div>
+
+        <div class="grid-child back">
+          <%= link_to "Back", root_path%>
+        </div>
+
+      </div>
 </div>

@@ -1,13 +1,33 @@
 // # styling for index
-.flex{
-display: flex;
-flex-direction: column;
-background-color: $white;
-border-radius: 8px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+// .upcoming-event {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .upcoming-event > div {
+//   flex-basis: 50% ; /* or - flex: 0 50% - or - flex-basis: 50% - */
+//   /*demo*/
+//   text-align: center;
+// }
+
+.details {
+  width: 100%;
+  height: auto;
+  text-align: justify;
+  padding: 275px 25px 25px;
 }
 
-.flex img{
+.upcoming-event {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.upcoming-event > div {
+  flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  /*demo*/
+}
+
+.upcoming-event img {
   width: 400px;
   height: 600px;
   object-fit: cover;
@@ -18,11 +38,6 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border-color:$blue ;
   border-radius: 8px;
   }
-
-.details{
-  color: $pink-annega;
-
-   }
 
 .date {
   color: red;
@@ -59,6 +74,8 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   margin-bottom: 32px;
   margin-left: 26px ;
   text-decoration: underline white;
+  font-size: 20px;
+
   }
 
   .info:hover{

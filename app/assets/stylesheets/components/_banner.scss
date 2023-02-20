@@ -1,6 +1,6 @@
 .banner-event{
   width: 1000px;
-  height: 100px;
+  height: 75px;
   margin: 0 auto;
   background-color: #F5EA5A;
   $Border-radius :64px;
@@ -8,12 +8,13 @@
   $Background-size : cover;
   $Background-position :center;
   $Object-fit: cover;
-  $Padding : 8px;
+  $Padding : 38px 56px;
   font-style: $h1-font-family;
   font-size: 75px;
-  color: $white;
+  color: $black;
   text-shadow:0 10px 30px rgba(0,0,0,0.4);
   text-align: center;
+  font-weight: 900;
 }
 
 
@@ -21,6 +22,8 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-gap: 500px;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 
