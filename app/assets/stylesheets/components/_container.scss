@@ -1,32 +1,32 @@
 .container-main{
   width: 1000px;
   margin: 0 auto;
-  background-color : $white;
-  box-shadow:2 px 2px 3 px rbga(0,0,0,.1);
+  background-color : white;
+  box-shadow:2px 2px 3px rbga(0,0,0,.1);
   background-size : cover;
   background-position :center;
   }
 
   @media(max-width:800px) {
     .container{
-      Width :650 px
+      Width :650px
   }
 }
 
-@media(max-width:600px) {
+  @media(max-width:600px) {
   .container{
-    Width :450 px
-}
-}
+    Width :450px
+  }
+  }
 
-@media(max-width:400px) {
-  .container{
-    Width :250 px
-}
-}
+  @media(max-width:400px) {
+    .container{
+      Width :250px
+  }
+  }
 
-@media(max-width:200px) {
-  .container{
-    Width :50 px
-}
-}
+  @media(max-width:200px) {
+    .container{
+      Width :50px
+  }
+  }

@@ -2,7 +2,7 @@
   width: 1000px;
   height: 100px;
   margin: 0 auto;
-  background-color: $pink-annega;
+  background-color: #F5EA5A;
   $Border-radius :64px;
   $Box-shadow : 2px 2px 3px rgba(0,0,0,.1);
   $Background-size : cover;
@@ -16,28 +16,32 @@
   text-align: center;
 }
 
-.new-event{
-  $Border-radius :8 px;
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 500px;
+}
+
+
+.grid-child {
+  width: 150px;
+  height: 50px;
+  border-style: groove;
+  border-color: $blue;
+  border-radius: 8px;
+  padding: 8px 16px;
   $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
   $Background-size : cover;
   $Background-position :center;
-  background-color: $white;
-  $Object-fit: cover;
-  $Padding : 8 px;
-  margin-top: 32px;
-  color: $white;
+  color:$white;
+  text-align: center;
   text-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  margin-top: 32px;
   margin-bottom: 32px;
-  margin-left: 16px;
+  margin-left: 16px ;
 }
 
-.back{
-  $Border-radius :8 px;
-  $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
-  background-color: $white;
-  $Padding : 8 px;
-  color: $white;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  margin-bottom: 32px;
-  margin-left: 16px;
+.grid-child:hover {
+  background-color: $pink-annega;
 }

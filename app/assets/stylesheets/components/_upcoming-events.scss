@@ -2,26 +2,65 @@
 .flex{
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
 background-color: $white;
 border-radius: 8px;
 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-// .flex div{
-//   flex-grow: 26;
-// }
 
 .flex img{
   width: 400px;
   height: 600px;
   object-fit: cover;
-  display: block;
   margin-top: 32px;
   margin-bottom: 32px;
-  margin-right: auto;
   margin-left: 32px;
+  border-style: solid;
+  border-color:$blue ;
+  border-radius: 8px;
   }
 
-  .div{
+.details{
+  color: $pink-annega;
 
+   }
+
+.date {
+  color: red;
+}
+
+.name {
+  font-weight: bold;
+  color: $black;
+}
+
+.address{
+  font-family:$inter;
+  color: $black;
+}
+
+.location{
+  color: $black;
+}
+
+.info{
+  width: 100px;
+  height: 50px;
+  border-style: groove;
+  border-color: $blue;
+  border-radius: 8px;
+  padding: 8px 16px;
+  $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
+  $Background-size : cover;
+  $Background-position :center;
+  $color:$white;
+  text-align: center;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 26px ;
+  text-decoration: underline white;
+  }
+
+  .info:hover{
+    background-color: #F5EA5A;
   }
