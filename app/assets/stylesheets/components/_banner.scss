@@ -21,6 +21,7 @@
   $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
   $Background-size : cover;
   $Background-position :center;
+  background-color: $white;
   $Object-fit: cover;
   $Padding : 8 px;
   margin-top: 32px;
@@ -33,6 +34,7 @@
 .back{
   $Border-radius :8 px;
   $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
+  background-color: $white;
   $Padding : 8 px;
   color: $white;
   text-shadow: 0 10px 30px rgba(0,0,0,0.4);

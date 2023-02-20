@@ -1,0 +1,27 @@
+// # styling for index
+.flex{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+background-color: $white;
+border-radius: 8px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+// .flex div{
+//   flex-grow: 26;
+// }
+
+.flex img{
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-right: auto;
+  margin-left: 32px;
+  }
+
+  .div{
+
+  }
