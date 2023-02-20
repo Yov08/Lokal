@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Create an account</title>
+      <%= javascript_include_tag 'script' %>
+    </head>
+
+  <body>
+
 <div class="container">
   <h2>Create an account</h2>
 
@@ -23,7 +32,23 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :artist_details, as: :boolean %>
+
+      <div>
+        <div class="artistsignup", id="artist_info", onclick="showHideArtistInfo()">
+      <%= f.input :artist_details, as: :boolean%>
+        </div>
+      </div>
+
+      <div class="d-none", id="artistsignup">
+      <h5>Hola! We will need additional information:</h5><br>
+      <%= f.input :category,
+                  autofocus: true %>
+      <%= f.input :biography,
+                  autofocus: true %>
+      <%= f.input :hourly_rate,
+                  placeholder: '0',
+                  autofocus: true %>
+      </div>
 
     </div>
 
@@ -31,3 +56,5 @@
       <%= f.button :submit, "Create account", class: "btn btn-info" %>
     </div>
   <% end %>
+</body>
+</html>
