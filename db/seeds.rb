@@ -44,10 +44,10 @@ Event.create!(
 )
 puts "Finished!"
 
-puts "Destroying artists"
-Artist.destroy_all
-puts "Creating artists"
-Artist.create!(
+puts "Destroying event_artists"
+EventArtist.destroy_all
+puts "Creating event_artists"
+EventArtist.create!(
   name: "kaya",
   surname: "Popise",
   email: "kayaman@gmail.com",
@@ -55,7 +55,7 @@ Artist.create!(
   hourly_rate: "200",
   photo: "https://otayo.com/wp-content/uploads/2022/07/Kaya-2.jpg"
 )
-Artist.create!(
+EventArtist.create!(
   name: "Annega",
   surname: "Annaise",
   email: "annega@gmail.com",
@@ -63,7 +63,7 @@ Artist.create!(
   hourly_rate: "1000",
   photo: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg"
 )
-Artist.create!(
+EventArtist.create!(
   name: "Hans",
   surname: "Nayna",
   email: "kayaman@gmail.com",
