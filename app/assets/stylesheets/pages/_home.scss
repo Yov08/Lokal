@@ -1,1 +1,52 @@
 // Specific CSS for your home-page
+body {
+  margin: 0 auto;
+}
+
+.banner h1{
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artist-banner h5{
+  font-size: 25px;
+}
+
+.artist-banner p {
+  font-size: 14px;
+}
+
+.banner {
+  background-image: url("https://res.cloudinary.com/dqjdq06qv/image/upload/v1676889469/LOKAL/Artists_homepage_r3sjvt.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  background: linear-gradient(rgba(0,0,0,0.9));
+  height: auto;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+.banner .container {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.banner .artist-banner {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.banner .h1 {
+  font-size: large;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
