@@ -14,18 +14,20 @@
   width: 100%;
   height: auto;
   text-align: justify;
-  padding: 275px 25px 25px;
+  padding: 250px 25px 25px;
 }
 
 .upcoming-event {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .upcoming-event > div {
   flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
-  /*demo*/
+  // /*demo*/
 }
+
 
 .upcoming-event img {
   width: 400px;
@@ -63,7 +65,7 @@
   border-style: groove;
   border-color: $blue;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 0px 16px;
   $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
   $Background-size : cover;
   $Background-position :center;
@@ -74,7 +76,7 @@
   margin-bottom: 32px;
   margin-left: 26px ;
   text-decoration: underline white;
-  font-size: 20px;
+  font-size: 28px;
 
   }
 
