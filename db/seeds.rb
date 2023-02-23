@@ -44,14 +44,14 @@ Event.create!(
 )
 puts "Finished!"
 
-puts "Destroying event_artists"
-EventArtist.destroy_all
-puts "Creating event_artists"
-EventArtist.create!(
-  name: "kaya",
-  surname: "Popise",
+puts "Destroying users"
+User.destroy_all
+puts "Creating users"
+User.create!(
+  first_name: "kaya",
+  last_name: "Popise",
   email: "kayaman@gmail.com",
-  category: "Reggea",
+  category: "Reggae",
   hourly_rate: "200",
   photo: "https://otayo.com/wp-content/uploads/2022/07/Kaya-2.jpg"
 )
@@ -72,50 +72,3 @@ EventArtist.create!(
   photo: "https://otayo.com/wp-content/uploads/2022/07/hans-nayna-3.jpg"
 )
 puts "Finished!"
-
-# puts "Destroying users"
-# User.destroy_all
-# puts "Creating users"
-# User.create!(
-#   first_name: "damien",
-#   last_name: "lemoine",
-#   user_type: "user",
-#   image_url: "https://www.footmercato.net/",
-#   category: "reggea don sa",
-#   biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur aliquet mauris ut tincidunt. Nullam convallis magna sed erat placerat posuere. Pellentesque ultrices pellentesque turpis, vel condimentum est pellentesque sed. Maecenas fringilla, purus vel ultricies convallis, sem libero egestas lectus, faucibus eleifend sapien felis et lacus. Praesent orci mauris, posuere laoreet semper vitae, aliquam vitae est. Mauris eget lacus eu lectus tincidunt ornare. N",
-#   rating: "200",
-#   hourly_rate: "20",
-#   email: "d.lemoine@gmail.com",
-#   reset_password_token: "123456789"
-# )
-# User.create!(
-#   first_name: "robert",
-#   last_name: "franklin",
-#   user_type: "user",
-#   image_url: "https://www.footmercato.net/",
-#   category: "reggea don sa",
-#   biography: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consectetur aliquet mauris ut tincidunt. Nullam convallis magna sed erat placerat posuere. Pellentesque ultrices pellentesque turpis, vel condimentum est pellentesque sed. Maecenas fringilla, purus vel ultricies convallis, sem libero egestas lectus, faucibus eleifend sapien felis et lacus. Praesent orci mauris, posuere laoreet semper vitae, aliquam vitae est. Mauris eget lacus eu lectus tincidunt ornare. N",
-#   rating: "2000",
-#   hourly_rate: "200",
-#   email: "r.franklin@gmail.com",
-#   reset_password_token: "123456789"
-# )
-# puts "Finished!"
-
-# require "faker"
-# puts "Creating 3 fake events"
-# 3.times do
-#   event =Event.new(
-#     name: Faker::Name.name,
-#     date: Faker::Date.between(from: '2023-09-23', to: '2024-09-24'),
-#     venue: Faker::Address.city,
-#     description: Faker::Lorem.unique.exclude,
-#     price_normal: Faker::Number.binary,
-#     price_vip: Faker::Number.binary,
-#     address: Faker::Address.secondary_address,
-#     capacity: Faker::Number.binary,
-#     image_url: Faker::Internet.domain_name(subdomain: true, domain: "example")
-#   )
-#   event.save!
-# end
-# puts "finished!"

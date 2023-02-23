@@ -6,67 +6,54 @@
     <title>Lokal ene zur, lokal tuzur!</title>
   </head>
   <body>
-
-<! -- banner -->
-
-<div class="banner">
-  <div class="container">
-      <h1>LOKAL</h1>
-      <div class="homepage-search">
-        <div class="input-group rounded">
-          <input type="search" class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-          <span class="input-group-append"></span>
+    <! -- banner -->
+    <div class="banner">
+      <div class="container">
+        <h1>LOKAL</h1>
+        <div class="homepage-search">
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-append"></span>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="artist-banner">
+          <h5>Artists</h5>
+          <p>Book your favorite artist now, with a simple click.</p>
+        </div>
+        <br>
+        <br>
+        <div class="homepage-buttons">
+          <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
         </div>
       </div>
-      <br>
-      <br>
-      <div class="artist-banner">
-        <h5>Artists</h5>
-        <p>Book your favorite artist now, with a simple click.</p>
-      </div>
+    </div>
+    <! -- footer -->
+    <div class="footer">
+      <div class="container">
         <br>
+        <h6>Join our social community</h6>
         <br>
-
-        <div class="homepage-buttons">
-
-      <%= link_to "Log in", "http://[::1]:3000/users/sign_in", class: "button-outline" %>
-      <%= link_to "Sign Up", "http://[::1]:3000/users/sign_up", class: "button-main" %>
-
+        <div>
+          <ul class="social">
+            <li>
+              <a class="ease-all" href="www.facebook.com"><i class="fa fa-facebook"></i><span class="hide-text">Facebook</span></a>
+            </li>
+            <li>
+              <a class="ease-all" href="www.twitter.com"><i class="fa fa-twitter"></i><span class="hide-text">Twitter</span></a>
+            </li>
+            <li>
+              <a class="ease-all" href="wwww.instagram.com"><i class="fa fa-instagram"></i><span class="hide-text">Instagram</span></a>
+            </li>
+          </ul>
+        </div><br>
+        <div class="as_artist">
+          <h6><strong>Join as artist</strong></h6>
+          <p>We'd love to hear from you.</p>
+          <%= link_to "Contact us", "", class: "button-contact" %>
+        </div><br>
       </div>
-
-  </div>
-</div>
-
-
-  </div>
-
-
-<div class="container">
-  <div class="title">
-  </div>
-  <div>
-    <div>
-      <%= link_to 'Artists', event_artists_path, :class => "btn btn-primary"%>
     </div>
-  </div>
-
-  <div>
-    <div>
-      <%= link_to 'Events', events_path, :class => "btn btn-primary"%>
-    </div>
-  </div>
-
-  <div>
-    <div>
-      <%= link_to 'Sign Up', new_user_registration_path, :class => "btn btn-secondary"%>
-    </div>
-  </div>
-
-  <div>
-    <div>
-      <%= link_to 'Login', new_user_session_path, :class => "btn btn-secondary"%>
-    </div>
-  </div>
-</div>
   </body>
-</html>
