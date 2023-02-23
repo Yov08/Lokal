@@ -1,17 +1,29 @@
-<div class="container-main">
-  <div class="details">
-    <div class="image">
+<div class="container-main-ash">
+  <div class="banner-ash">
+    <div class="image-ash">
       <img src=<%= @event.image_url %> alt="">
     </div>
+    <div class="price-ash">
+    <h1> RS <%= @event.price_normal %></h1>
+    </div>
 
-    <div class="container">
-    <h1><%= @event.name %></h1>
-    <div class="col">
+  <div class="details-ash">
+    <div class="event-name-ash">
+      <h1><%= @event.name %></h1>
+    </div>
+    <div class="details-date-ash">
+      <div class="rating">
+        <h1>4.8</h1>
+      </div>
+      <div class="event-date">
+        <h2><%= @event.date %></h2>
+      </div>
+    </div>
+
     <h3><strong><%= @event.name %></strong></h3>
-      <p>Date: <%= @event.date %></p>
+
       <p>Venue: <%= @event.venue %></p>
       <p>Description:<%= @event.description %> </p>
-
   </div>
 
   <%= link_to "Delete", event_path(@event), class: "btn btn-warning",
