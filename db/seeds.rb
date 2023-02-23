@@ -29,7 +29,7 @@ Event.create!(
   price_vip: 1000,
   address: "Royal Road, Coteau Raffin, Black River",
   capacity: 2000,
-  image_url: "https://scontent.fmru7-1.fna.fbcdn.net/v/t39.30808-6/325892634_715209850069089_4637343665437270031_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8631f5&_nc_ohc=ljZn33TyJdEAX-xa1kZ&_nc_ht=scontent.fmru7-1.fna&oh=00_AfB7sAWLPUNGzEE8YWmCmeHrvTkj9wNjA-bCkHvU8sfBRQ&oe=63F5142A"
+  image_url: "https://scontent.fmru7-1.fna.fbcdn.net/v/t39.30808-6/325892634_715209850069089_4637343665437270031_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8631f5&_nc_ohc=bKEdZ4N5EoMAX_sDuyv&_nc_ht=scontent.fmru7-1.fna&oh=00_AfCa1VgkuOjdOPBxrN25HaEWjELVal52nZBtv3cTdcBv3A&oe=63FB02EA"
 )
 Event.create!(
   name: "Sakifo Music Festival",
@@ -55,7 +55,7 @@ User.create!(
   hourly_rate: "200",
   photo: "https://otayo.com/wp-content/uploads/2022/07/Kaya-2.jpg"
 )
-Artist.create!(
+EventArtist.create!(
   name: "Annega",
   surname: "Annaise",
   email: "annega@gmail.com",
@@ -63,7 +63,7 @@ Artist.create!(
   hourly_rate: "1000",
   photo: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg"
 )
-Artist.create!(
+EventArtist.create!(
   name: "Hans",
   surname: "Nayna",
   email: "kayaman@gmail.com",
