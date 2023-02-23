@@ -1,25 +1,45 @@
-<div class="container">
-  <h1>Upcoming Events</h1>
+<div class="container-main">
 
-  <div class="row mt-5 justify-content-md-left">
+  <div class="banner-event">
+  <h1>Upcoming Events</h1>
+  </div>
+
+  <div class="upcoming-event">
     <% @events.each do |event| %>
-      <div class="cards bg-light">
-        <div class="col-12 col-md-8 justify-content-center">
-          <h3 class="card-title"><%= event.name %></h3>
+      <div class="image">
+        <img src=<%= event.image_url %>  alt="">
+      </div>
+      <div class="details">
+        <div class="date">
+          <h1><%= event.date %></h1>
         </div>
-        <p class="card-text">Date: <%= event.date %></p>
-        <p class="card-text">Event: <%= event.name %> @ <%= event.venue %></p>
-        <p class="card-text">Address: <%= event.address %></p>
-        <p class="card-text">Image NOT YET FINISHED: <%= event.image_url %></p>
-        <p>Image <%= event.image_url %></p>
-        <%= link_to "Info", event_path(event), class: "button-main" %>
-        <p>----------------------------------------------TEST LINE: !!!WORKING!!!</p>
-        <p>***************ADD SEPARATION BETWEEN CARDS***************</p>
+        <div class="name">
+          <h1><%= event.name %></h1>
+        </div>
+        <div class="location">
+          <i class="fa-sharp fa-solid fa-location-dot fa-3x fa-fade"></i>
+          <i class="fa-solid fa-i-cursor fa-fade" style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;" ></i>
+        </div>
+        <div class="address">
+          <h3><%= event.address %></h3>
+        </div>
+        <div class="info">
+          <%= link_to "Info", event_path(event) %>
+        </div>
       </div>
     <% end %>
   </div>
-  <div class="col">
-    <%= link_to 'New Event', new_event_path, :class => "btn btn-primary"%>
-    <%= link_to "Back", root_path, class: "btn btn-dark" %>
-  </div>
+
+
+      <div class="grid-container">
+
+        <div class="grid-child new">
+          <%= link_to "New Event", new_event_path %>
+        </div>
+
+        <div class="grid-child back">
+          <%= link_to "Back", root_path%>
+        </div>
+
+      </div>
 </div>
