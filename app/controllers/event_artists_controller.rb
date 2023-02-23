@@ -1,6 +1,7 @@
 class EventArtistsController < ApplicationController
   def index
-    @event_artists = Event_artist.all
+    # @event_artists = Event_artist.all
+    
   end
 
   def show
@@ -36,6 +37,6 @@ class EventArtistsController < ApplicationController
   private
 
   def event_artist_params
-    params.require(:event).permit(:name)
+    params.require(:event_artist).permit(:artist_id, :event_id)
   end
 end
