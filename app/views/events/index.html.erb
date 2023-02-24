@@ -10,7 +10,8 @@
       <div class="image">
         <img src=<%= event.image_url %>  alt="">
       </div>
-        </div>
+    </div>
+
     <div class="event-info">
       <div class="details">
         <div class="date">
@@ -25,25 +26,15 @@
         <div class="address">
           <p><%= event.address %></p>
         </div>
-        <div class="info">
+        <div class="button-info">
           <%= link_to "Info", event_path(event) %>
         </div>
-      </div>
-      </div>
     <% end %>
+      </div>
+    </div>
   </div>
 
-      <div class="grid-container">
-      <div class="container">
-
-        <div class="grid-child new">
-          <%= link_to "New Event", new_event_path %>
-        </div>
-
-        <div class="grid-child back">
-          <%= link_to "Back", root_path%>
-        </div>
-
-      </div>
-      </div>
-</div>
+  <div class="events-button">
+    <%= link_to "New Event", new_event_path %>
+    <%= link_to "Back", root_path%>
+  </div>
