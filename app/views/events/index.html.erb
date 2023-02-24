@@ -1,10 +1,11 @@
-<div class="container-main">
-
-  <div class="banner-event">
-  <h1>Upcoming Events</h1>
+<div class="banner-event">
+  <div class="container">
+    <h1>Upcoming Events</h1>
   </div>
+</div>
 
   <div class="upcoming-event">
+    <div class="container">
     <% @events.each do |event| %>
       <div class="image">
         <img src=<%= event.image_url %>  alt="">
@@ -26,6 +27,7 @@
         <div class="info">
           <%= link_to "Info", event_path(event) %>
         </div>
+      </div>
       </div>
     <% end %>
   </div>

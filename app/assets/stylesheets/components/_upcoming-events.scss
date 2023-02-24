@@ -1,83 +1,31 @@
-// # styling for index
-// .upcoming-event {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
-// .upcoming-event > div {
-//   flex-basis: 50% ; /* or - flex: 0 50% - or - flex-basis: 50% - */
-//   /*demo*/
-//   text-align: center;
-// }
-
-.details {
-  width: 100%;
-  height: auto;
-  text-align: justify;
-  padding: 275px 25px 25px;
+body {
+  margin: 0 auto;
 }
 
-.upcoming-event {
-  display: flex;
-  flex-wrap: wrap;
+.banner-event {
+  background-color: $yellow;
+  background-position: cover;
+  height: 150px;
+  max-width: 100%;
+
 }
 
-.upcoming-event > div {
-  flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
-  /*demo*/
-}
-
-.upcoming-event img {
-  width: 400px;
-  height: 600px;
-  object-fit: cover;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 32px;
-  border-style: solid;
-  border-color:$blue ;
-  border-radius: 8px;
-  }
-
-.date {
-  color: red;
-}
-
-.name {
+.banner-event h1 {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 30px;
   font-weight: bold;
-  color: $black;
-}
-
-.address{
-  font-family:$inter;
-  color: $black;
-}
-
-.location{
-  color: $black;
-}
-
-.info{
-  width: 100px;
-  height: 50px;
-  border-style: groove;
-  border-color: $blue;
-  border-radius: 8px;
-  padding: 8px 16px;
-  $Box-shadow : 2 px 2px 3 px rgba(0,0,0,.1);
-  $Background-size : cover;
-  $Background-position :center;
-  $color:$white;
   text-align: center;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 26px ;
-  text-decoration: underline white;
-  font-size: 20px;
+  padding: 65px 0;
+}
 
-  }
 
-  .info:hover{
-    background-color: #F5EA5A;
+
+  /* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
+}
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
