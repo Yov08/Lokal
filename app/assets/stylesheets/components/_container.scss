@@ -1,14 +1,15 @@
 // #styling for container-main
-.container-main-ash{
+.container-main-ash {
   background-color: $white;
-  width: 1000px;
+  // position:relative;
+  width: 700px;
   margin: auto;
 }
-.container-main{
-  width: 1000px;
+.container-main {
+  width: 700px;
   margin: 0 auto;
   background-color : white;
-  box-shadow:2px 2px 3px rbga(0,0,0,.1);
-  background-size : cover;
-  background-position :center;
+  // box-shadow:2px 2px 3px rbga(0,0,0,.1);
+  // background-size : cover;
+  // background-position :center;
   }

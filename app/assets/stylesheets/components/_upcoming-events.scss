@@ -13,14 +13,14 @@
 .details {
   width: 100%;
   height: auto;
-  text-align: justify;
-  padding: 250px 25px 25px;
+  // text-align: justify;
+  // padding: 250px 25px 25px;
 }
 
 .upcoming-event {
   display: flex;
   flex-wrap: wrap;
-  
+
 }
 
 .upcoming-event > div {
@@ -30,8 +30,8 @@
 
 
 .upcoming-event img {
-  width: 400px;
-  height: 600px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -43,20 +43,24 @@
 
 .date {
   color: red;
+  font-size: 24px;
 }
 
 .name {
   font-weight: bold;
   color: $black;
+  font-size: 24px;
 }
 
 .address{
   font-family:$inter;
   color: $black;
+  font-size: 24px;
 }
 
 .location{
   color: $black;
+  font-size: 24px;
 }
 
 .info{

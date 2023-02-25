@@ -1,7 +1,7 @@
 <div class="container-main">
 
   <div class="banner-event">
-    <h1>Upcoming Events</h1>
+    <p>Upcoming Events</p>
   </div>
 
   <div class="upcoming-event">
@@ -11,17 +11,17 @@
       </div>
       <div class="details">
         <div class="date">
-          <h1><%= event.date %></h1>
+          <p><%= event.date %></p>
         </div>
         <div class="name">
-          <h1><%= event.name %></h1>
+          <p><%= event.name %></p>
         </div>
         <div class="location">
           <i class="fa-sharp fa-solid fa-location-dot fa-3x fa-fade"></i>
           <i class="fa-solid fa-i-cursor fa-fade" style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;" ></i>
         </div>
         <div class="address">
-          <h3><%= event.address %></h3>
+          <p><%= event.address %></p>
         </div>
         <div class="info">
           <%= link_to "Info", event_path(event) %>
@@ -31,15 +31,12 @@
   </div>
 
 
-      <div class="grid-container">
-
+      <div class="buttonflex-ash">
         <div class="grid-child new">
           <%= link_to "New Event", new_event_path %>
         </div>
-
         <div class="grid-child back">
           <%= link_to "Back", root_path%>
         </div>
-
       </div>
 </div>
