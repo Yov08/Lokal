@@ -21,7 +21,15 @@ body {
   height: 280px;
   width: 160px;
   object-fit: cover;
-  padding: 10px 10px 10px 12px;
+  padding: 10px 12px 10px 12px;
+}
+
+.event-list {
+  background-color: white;
+}
+
+.event-details {
+  margin-right: 14px;
 }
 
 .container h2{
@@ -53,4 +61,16 @@ p {
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   color: black;
+}
+
+.back-button {
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  color: black;
+}
+
+.back-space {
+  background-color: white;
 }
