@@ -15,6 +15,7 @@
       </div><br>
       <% if user_signed_in? %>
         <%= link_to "View Events", events_path, class: "button-main" %>
+        <%= link_to "View Artists", artists_path, class: "button-main" %>
       <% else %>
         <div class="homepage-buttons">
           <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
