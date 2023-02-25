@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_165109) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_25_082222) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_165109) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "category"
+    t.string "biography"
+    t.integer "rating"
+    t.integer "hourly_rate"
+    t.string "media_link"
+    t.string "image_url"
+    t.string "social_media_links"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -85,10 +98,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_165109) do
     t.string "last_name"
     t.boolean "user_type"
     t.string "image_url"
-    t.string "category"
-    t.string "biography"
-    t.integer "rating"
-    t.integer "hourly_rate"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
