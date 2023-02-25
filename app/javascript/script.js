@@ -1,6 +1,5 @@
 <script>
 function showHideArtistInfo () {
-
   if (document.getElementById('artist_info')) {
     document.getElementById('artistsignup').classList.toggle("d-none");
 

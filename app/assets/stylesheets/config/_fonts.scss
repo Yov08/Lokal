@@ -1,10 +1,23 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+Rounded+1c:wght@100&family=Noto+Sans:ital,wght@0,200;0,400;1,200&display=swap');
+
+
+
 
 // Define fonts for body and headers
-$body-font: "Quicksand", "sans-serif";
-$headers-font: "Quicksand", "sans-serif";
+// $body-font: "Quicksand", "sans-serif";
+// $headers-font: "Quicksand", "sans-serif";
+// $h1-font-family: 'Inter', sans-serif;
+
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "Nunito", "Helvetica", "sans-serif";
+$h1-font-family: "Noto Sans", "sans-serif";
+$h2-font-family:"font-family: 'Noto Sans', sans-serif";
+$p-font-family: "Noto Sans', sans-serif";
+$inter:"font-family: 'M PLUS Rounded 1c', sans-serif";
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
