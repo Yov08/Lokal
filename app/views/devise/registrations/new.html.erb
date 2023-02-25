@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Create an account</h2>
+  <h2>Create an account!</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
     <%= f.error_notification %>
@@ -27,18 +27,6 @@
                   as: :radio_buttons,
                   collection: ['I am casual user', 'I am an artist'],
                   required: true %>
-
-      <div class="d-none", id="artistsignup">
-      <h5>Hola! We will need additional information:</h5><br>
-      <%= f.input :category,
-                  autofocus: true %>
-      <%= f.input :biography,
-                  autofocus: true %>
-      <%= f.input :hourly_rate,
-                  placeholder: '0',
-                  autofocus: true %>
-      </div>
-
     </div>
 
     <div class="form-actions">
