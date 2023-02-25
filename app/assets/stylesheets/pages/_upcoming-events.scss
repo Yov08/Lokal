@@ -37,6 +37,7 @@ body {
   font-weight: bold;
   font-size: 18px;
   color: black;
+  line-height: 1.5;
 }
 
 .col {
@@ -71,6 +72,20 @@ p {
   color: black;
 }
 
+.back-button:hover {
+  background-color: $black;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  color: white;
+}
+
+
 .back-space {
   background-color: white;
+}
+
+.address {
+  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
 }
