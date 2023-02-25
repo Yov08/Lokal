@@ -5,17 +5,24 @@
 </div>
 
 <div class="container">
+
   <% @events.each do |event| %>
     <div class="row">
       <div class="col">
+
         <img src=<%= event.image_url %>>
       </div>
       <div class="col">
+      <div class="event-details">
         <p class="date"><%= event.date %><p>
         <h2 class="name"><%= event.name %></h2>
         <p class="address"><i class="fa-solid fa-location-dot"></i>
+        <%= event.address %></p>
+        <br>
         <%= link_to "More", event_path(event), class: "button-event" %>
       </div>
     </div>
+    </div>
   <% end %>
+</div>
 </div>
