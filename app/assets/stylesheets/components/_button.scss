@@ -59,3 +59,23 @@
   text-decoration: none;
   flex-direction: row;
 }
+
+.button-event {
+  background-color: transparent;
+  color: black;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+}
+
+.button-event:hover {
+  background-color: $violet;
+  color: white;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+}
