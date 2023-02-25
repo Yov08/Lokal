@@ -4,37 +4,31 @@
   </div>
 </div>
 
-  <div class="wrapper">
+<div class="card-product">
     <div class="event-img">
         <% @events.each do |event| %>
-      <div class="image">
-        <img src=<%= event.image_url %>  alt="">
-      </div>
     </div>
 
-    <div class="event-info">
-      <div class="details">
-        <div class="date">
+     <div class="img">
+        <img src=<%= event.image_url %>>
+      </div>
+
+  <div class="card-product-infos">
+      <div class="date">
           <p><%= event.date %><p>
-        </div>
-        <div class="name">
-          <h5><%= event.name %></h5>
-        </div>
-        <div class="location">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <div class="address">
-          <p><%= event.address %></p>
-        </div>
-        <div class="button-info">
-          <%= link_to "Info", event_path(event) %>
-        </div>
-    <% end %>
       </div>
-    </div>
+      <div class="name">
+          <h2><%= event.name %></h2>
+      </div>
+      <div class="location">
+          <i class="fa-solid fa-location-dot"></i>
+      </div>
+      <div class="address">
+          <p><%= event.address %></p>
+      </div>
+      <div class="button-info">
+          <%= link_to "Info", event_path(event) %>
+      </div>
   </div>
-
-  <div class="events-button">
-    <%= link_to "New Event", new_event_path %>
-    <%= link_to "Back", root_path%>
-  </div>
+  <% end %>
+</div>
