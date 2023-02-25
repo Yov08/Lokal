@@ -1,3 +1,8 @@
+<div class="back-space">
+<%= link_to "<", root_path, class: "back-button" %>
+</div>
+
+
 <div class="banner-event">
   <div class="container">
     <h1>Upcoming Events</h1>
@@ -5,17 +10,27 @@
 </div>
 
 <div class="container">
+<div class="event-list">
   <% @events.each do |event| %>
     <div class="row">
       <div class="col">
+
         <img src=<%= event.image_url %>>
       </div>
       <div class="col">
+      <div class="event-details">
         <p class="date"><%= event.date %><p>
         <h2 class="name"><%= event.name %></h2>
         <p class="address"><i class="fa-solid fa-location-dot"></i>
+        <%= event.address %></p>
+        <br>
         <%= link_to "More", event_path(event), class: "button-event" %>
       </div>
+
+    </div>
+
     </div>
   <% end %>
+  </div>
+</div>
 </div>

@@ -17,41 +17,60 @@ body {
   padding: 65px 0;
 }
 
-.card-product {
-  overflow: hidden;
-  height: 300px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-}
-
-.card-product img {
+.container img {
   height: 280px;
   width: 160px;
   object-fit: cover;
-  padding: 10px 10px 10px 12px;
+  padding: 10px 12px 10px 12px;
 }
 
-.card-product h2 {
+.event-list {
+  background-color: white;
+}
+
+.event-details {
+  margin-right: 14px;
+}
+
+.container h2{
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   color: black;
 }
 
-.card-product-infos {
+.col {
   line-height: 1.4;
   margin-bottom: 0;
+  padding: 12px 10px 12px 10px;
+
 }
 
-.card-product .card-product-infos {
-  padding: 12px;
-}
-
-.date p {
+.date {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   font-size: 20px;
   color: $red;
+}
+
+.event-details {
+  margin-top: 20px;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+.back-button {
+  background-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  color: black;
+}
+
+.back-space {
+  background-color: white;
 }
