@@ -4,18 +4,18 @@
   </div>
 </div>
 
-<% @events.each do |event| %>
-  <div class="container">
-    <div class="row-12">
-      <div class="col-6">
+<div class="container">
+  <% @events.each do |event| %>
+    <div class="row">
+      <div class="col">
         <img src=<%= event.image_url %>>
       </div>
-      <div class="col-6">
+      <div class="col">
         <p class="date"><%= event.date %><p>
         <h2 class="name"><%= event.name %></h2>
         <p class="address"><i class="fa-solid fa-location-dot"></i>
         <%= link_to "More", event_path(event), class: "button-event" %>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
