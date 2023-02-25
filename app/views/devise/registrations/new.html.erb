@@ -23,12 +23,10 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-
-      <div>
-        <div class="artistsignup", id="artist_info", onclick="showHideArtistInfo()">
-      <%= f.input :user_type, as: :boolean%>
-        </div>
-      </div>
+      <%= f.input :user_type,
+                  as: :radio_buttons,
+                  collection: ['I am casual user', 'I am an artist'],
+                  required: true %>
 
       <div class="d-none", id="artistsignup">
       <h5>Hola! We will need additional information:</h5><br>
