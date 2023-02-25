@@ -20,15 +20,16 @@
       <div class="name">
           <h2><%= event.name %></h2>
       </div>
-      <div class="location">
-          <i class="fa-solid fa-location-dot"></i>
-      </div>
       <div class="address">
-          <p><%= event.address %></p>
+          <p><i class="fa-solid fa-location-dot"></i>
+          <%= event.address %></p>
       </div>
-      <div class="button-info">
-          <%= link_to "Info", event_path(event) %>
+      <br>
+      <br>
+      <div class="button-events">
+          <%= link_to "More", event_path(event), class: "button-event" %>
       </div>
+      <br>
   </div>
   <% end %>
 </div>
