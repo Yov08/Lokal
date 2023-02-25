@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :events
   resources :event_artists
   resources :bookings
+  resources :artists
 
 end
