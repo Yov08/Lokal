@@ -1,48 +1,19 @@
-<div class="container-main-ash">
-  <div class="banner-ash">
-    <div class="image-ash">
-      <img src=<%= @event.image_url %> alt="">
-    </div>
-    <div class="price-ash">
-    <h1> RS <%= @event.price_normal %></h1>
-    </div>
-
-  <div class="details-ash">
-    <div class="event-name-ash">
-      <h1><%= @event.name %></h1>
-    </div>
-    <div class="details-date-ash">
-      <div class="rating">
-        <h1>4.8</h1>
-      </div>
-      <div class="event-date">
-        <h2><%= @event.date %></h2>
-      </div>
-    </div>
-    <div class="details-address-ash">
-      <div class="image-add-ash">
-
-      </div>
-      <div class="address-ash">
-        <h2><%= @event.venue %></h2>
-      </div>
-    </div>
-
-    <div class="details-description-ash">
-        <h3>Description:<%= @event.description %> </h3>
-    </div>
-
-
-  </div>
-
-  <%= link_to "Delete", event_path(@event), class: "btn btn-warning",
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-  <%= link_to "Edit", edit_event_path(@event), class: "btn btn-primary"%>
-  <%= link_to 'Back', events_path, :class => "btn btn-secondary"%>
-
+<div class="back-space">
+<%= link_to "<", root_path, class: "back-button" %>
 </div>
 
+<div class="banner-show-event">
+  <div class="container-event">
+    <div class="img-event-container">
+     <img src=<%= @event.image_url %>>
+        <p class="price-event">Rs <%= @event.price_normal %></p>
+     </div>
+  </div>
+  <br>
+
+    <div class="show-event-details">
+      <h3><%= @event.name %></h3>
+    </div>
 
 
 
