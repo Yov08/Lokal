@@ -1,25 +1,23 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  def create
-  end
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /resource
-   def create
-    super
-    do |resource|
-      if params[:user][:user_type] == true
-        Artist.create(user_id: resource.id)
+  def create
+    super do |resource|
+      if params[:user][:user_type] == 'artist'
+        @artist = Artist.create!(user_id: resource.id, name: "#{resource.first_name} #{resource.last_name}")
+        # redirect_to edit_artist_path(@artist)
       end
     end
-   end
+  end
 
   # GET /resource/edit
   # def edit
@@ -58,13 +56,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    if resource.is_a?(User) && resource.user_type == 'true'
+      edit_artist_path(resource.artist)
+    else
+      super(resource)
+    end
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
 end
