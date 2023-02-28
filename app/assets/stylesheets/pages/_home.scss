@@ -33,13 +33,14 @@ body {
   color: white;
 }
 
-.banner .artist-banner {
+.banner h5 {
   font-family: 'Quicksand', sans-serif;
   color: white;
 }
 
-.banner .h1 {
+.banner h1 {
   font-size: large;
+  font-size: 52px;
 }
 
 /* Use a media query to add a breakpoint at 800px: */
@@ -60,9 +61,24 @@ body {
 .footer h6 {
   color: #20262E;
   font-family: 'Quicksand', sans-serif;
+  padding-bottom: 10px;
 }
 
+.artist-banner p {
+  color: white;
+}
 
+.as_artist p {
+  font-size: 14px;
+  font-weight: 20;
+}
+
+.as_artist h6 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 15px;
+}
 
 
 .hide-text{
@@ -128,9 +144,4 @@ body {
 
   background-color: #F5EA5A;
 	color: #222;
-}
-
-.as_artist p {
-  font-size: 14px;
-  font-weight: 20;
 }
