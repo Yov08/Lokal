@@ -72,3 +72,21 @@ EventArtist.create!(
   photo: "https://otayo.com/wp-content/uploads/2022/07/hans-nayna-3.jpg"
 )
 puts "Finished!"
+
+puts "Destroying artists"
+Artist.destroy_all
+puts "Creating artists"
+Artist.create!(
+  name: "Blakkayo",
+  category: "Mizik Lokal",
+  biography: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  rating: "4.8",
+  hourly_rate: "30000"
+)
+Artist.create!(
+  name: "Annega",
+  category: "Chilled",
+  biography: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  rating: "4.2",
+  hourly_rate: "15000"
+)
