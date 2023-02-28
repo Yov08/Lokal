@@ -1,4 +1,27 @@
-<h1>Hello <%= current_user.first_name %></h1>
+<h1>Hello <%= current_user.first_name + " " + current_user.last_name %></h1>
 <h1>User ID: <%= current_user.id %></h1>
 
 <h2>Viewing Lokal Aritsts</h2>
+
+<div class="banner-event">
+  <div class="container">
+    <h1>Upcoming Events</h1>
+  </div>
+</div>
+
+<div class="container">
+  <% @users.each do |user| %>
+    <div class="row">
+      <div class="col">
+        <img src=<%= user.image_url %>>
+      </div>
+      <div class="col">
+        <p class="date"><%= user.first_name %><p>
+        <h2 class="name"><%= event.last_name %></h2>
+        <p class="address"><i class="fa-solid fa-location-dot"></i>
+        <%= link_to "More", event_path(event), class: "button-event" %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to "Back", root_path, class: "button-event" %>
+</div>
