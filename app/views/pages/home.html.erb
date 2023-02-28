@@ -1,61 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokal ene zur, lokal tuzur!</title>
-  </head>
-  <body>
-
-    <! -- banner -->
-    <div class="banner">
-      <div class="container">
-        <h1>LOKAL</h1>
-        <div class="homepage-search">
-          <div class="input-group rounded">
-            <input type="search" class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <span class="input-group-append"></span>
-          </div>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+  <! -- banner -->
+  <div class="banner">
+    <div class="container">
+      <h1>LOKAL</h1>
+      <div class="homepage-search">
+        <div class="input-group rounded">
+          <input type="search" class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+          <span class="input-group-append"></span>
         </div>
-        <br>
-        <br>
-        <div class="artist-banner">
-          <h5>Artists</h5>
-          <p>Book your favorite artist now, with a simple click.</p>
-        </div>
-        <br>
-        <br>
+      </div><br>
+      <div class="artist-banner">
+        <h5>Artists</h5>
+        <p>Book your favorite artist now, with a simple click.</p>
+      </div><br>
+      <% if user_signed_in? %>
+        <%= link_to "View Events", events_path, class: "button-main" %>
+        <%= link_to "View Artists", artists_path, class: "button-main" %>
+      <% else %>
         <div class="homepage-buttons">
           <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
           <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
         </div>
-        <%= link_to "View Events", events_path, class: "button-main" %>
-      </div>
+      <% end %>
     </div>
-    <! -- footer -->
-    <div class="footer">
-      <div class="container">
-        <br>
-        <h6>Join our social community</h6>
-        <br>
-        <div>
-          <ul class="social">
-            <li>
-              <a class="ease-all" href="www.facebook.com"><i class="fa fa-facebook"></i><span class="hide-text">Facebook</span></a>
-            </li>
-            <li>
-              <a class="ease-all" href="www.twitter.com"><i class="fa fa-twitter"></i><span class="hide-text">Twitter</span></a>
-            </li>
-            <li>
-              <a class="ease-all" href="wwww.instagram.com"><i class="fa fa-instagram"></i><span class="hide-text">Instagram</span></a>
-            </li>
-          </ul>
-        </div><br>
-        <div class="as_artist">
-          <h6><strong>Join as artist</strong></h6>
-          <p>We'd love to hear from you.</p>
-          <%= link_to "Contact us", "", class: "button-contact" %>
-        </div><br>
-      </div>
+  </div>
+  <! -- footer -->
+  <div class="footer">
+    <div class="container"><br>
+      <h6>Join our social community</h6><br>
+      <div>
+        <ul class="social">
+          <li>
+            <a class="ease-all" href="https://www.facebook.com"><i class="fa fa-facebook"></i><span class="hide-text">Facebook</span></a>
+          </li>
+          <li>
+            <a class="ease-all" href="https://www.twitter.com"><i class="fa fa-twitter"></i><span class="hide-text">Twitter</span></a>
+          </li>
+          <li>
+            <a class="ease-all" href="https://wwww.instagram.com"><i class="fa fa-instagram"></i><span class="hide-text">Instagram</span></a>
+          </li>
+        </ul>
+      </div><br>
+      <p>We'd love to hear from you.</p>
+      <%= link_to "Contact us", "", class: "button-contact" %>
     </div>
-  </body>
+  </div>
+</body>

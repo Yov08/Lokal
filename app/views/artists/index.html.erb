@@ -1,0 +1,23 @@
+<div class="banner-event">
+  <div class="container">
+    <h1>View Artists</h1>
+  </div>
+</div>
+
+<div class="container">
+  <% @artists.each do |artist| %>
+    <div class="row">
+      <div class="col">
+        <h1>Yo!</h1>
+        <img src=<%= artist.image_url %>>
+      </div>
+      <div class="col">
+        <p class="date"><%= user.first_name %><p>
+        <h2 class="name"><%= user.last_name %></h2>
+        <p class="address"><i class="fa-solid fa-location-dot"></i>
+        <%= link_to "More", artist_path(user), class: "button-event" %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to "Back", root_path, class: "button-event" %>
+</div>
