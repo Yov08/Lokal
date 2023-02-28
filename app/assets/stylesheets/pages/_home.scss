@@ -33,13 +33,14 @@ body {
   color: white;
 }
 
-.banner .artist-banner {
+.banner h5 {
   font-family: 'Quicksand', sans-serif;
   color: white;
 }
 
-.banner .h1 {
+.banner h1 {
   font-size: large;
+  font-size: 52px;
 }
 
 /* Use a media query to add a breakpoint at 800px: */
@@ -62,7 +63,9 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-
+.artist-banner p {
+  color: white;
+}
 
 
 .hide-text{
