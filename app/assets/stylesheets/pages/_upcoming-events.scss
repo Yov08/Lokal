@@ -143,6 +143,7 @@ p {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 40px;
 }
 
 .circle-text p:hover {
@@ -157,12 +158,21 @@ p {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 40px;
 }
 
 .event-date p {
   font-weight: bold;
   color: black;
   font-family: 'Quicksand', sans-serif;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.event-address p {
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 30px;
 }
 
 .col .circle-text {
@@ -170,7 +180,7 @@ p {
 }
 
 .col .circle-map {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .col .event-date {
@@ -186,4 +196,9 @@ p {
   padding-right: 15px;
   text-align: justify;
 
+}
+
+.border-right {
+  border-right: 0.5px solid $violet;
+  height: 80px;
 }
