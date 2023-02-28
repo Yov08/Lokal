@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @artists = User.joins(:artist).where(users: { user_type: true })
   end
 
   def show
