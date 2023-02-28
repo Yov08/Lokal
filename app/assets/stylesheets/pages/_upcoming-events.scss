@@ -106,14 +106,35 @@ p {
   bottom: 1%;
   right: 2%;
   font-family: 'Quicksand', sans-serif;
-  font-size: 34px;
+  font-size: 30px;
   font-weight: bold;
   color: black;
   background-color: white;opacity: 0.8;
 }
 
-.show-event-details h3 {
+.show-event-details h2 {
   font-family: 'Quicksand', sans-serif;
+  padding: 14px;
+}
+
+
+.circle-text p {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: $violet;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
   font-weight: bold;
+}
+
+.event-date p {
+  font-weight: bold;
+  color: black;
+  font-family: 'Quicksand', sans-serif;
 
 }
