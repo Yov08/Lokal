@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :event_artists
   resources :bookings
   resources :artists
+  devise_for :users, skip: [:sessions]
 
 end
