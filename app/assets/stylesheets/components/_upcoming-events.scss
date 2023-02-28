@@ -43,24 +43,25 @@
 
 .date {
   color: red;
-  font-size: 24px;
+  font-size: 26px;
+  margin-top: 28px;
 }
 
 .name {
   font-weight: bold;
   color: $black;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .address{
   font-family:$inter;
   color: $black;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .location{
   color: $black;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .info{
@@ -76,11 +77,12 @@
   $color:$white;
   text-align: center;
   text-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  margin-top: 32px;
+  margin-top: 8px;
   margin-bottom: 32px;
   margin-left: 26px ;
   text-decoration: underline white;
-  font-size: 28px;
+  font-size: 26px;
+  border-radius: 8px;
 
   }
 
