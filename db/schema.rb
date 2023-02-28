@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_25_082222) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_28_142119) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_25_082222) do
     t.string "social_media_links"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "bookings", force: :cascade do |t|

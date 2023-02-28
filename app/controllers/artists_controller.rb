@@ -14,7 +14,7 @@ class ArtistsController < ApplicationController
   def create
     @artist = Artist.new(artist_params)
     @artist.save
-    redirect_to artists_path(@artist)
+    redirect_to artist_path(@artist)
   end
 
   def edit
@@ -35,7 +35,7 @@ class ArtistsController < ApplicationController
 
   private
 
-  def event_params
+  def artist_params
     params.require(:artist).permit(:category, :biography, :rating, :hourly_rate, :media_link, :image_url, :social_media_links)
   end
 end

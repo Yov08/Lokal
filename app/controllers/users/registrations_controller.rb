@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  def create
+  end
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -10,9 +12,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+    super
+    do |resource|
+      if params[:user][:user_type] == true
+        Artist.create(user_id: resource.id)
+      end
+    end
+   end
 
   # GET /resource/edit
   # def edit
@@ -60,26 +67,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
-  private
-
-  def sign_up_params
-    params.require(:user).permit(
-      :first_name,
-      :last_name,
-      :email,
-      :password,
-      :password_confirmation,
-      :user_type)
-  end
-
-  def account_update_params
-    params.require(:user).permit(
-      :email,
-      :password,
-      :password_confirmation,
-      :first_name,
-      :last_name,
-      :user_type,
-      :current_password)
-  end
 end

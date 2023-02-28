@@ -31,7 +31,7 @@
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :user_type,
                   as: :radio_buttons,
-                  collection: ['I am casual user', 'I am an artist'],
+                  collection: [['I am casual user', 'false'], ['I am an artist', 'true']],
                   required: true %>
     </div>
 
@@ -39,5 +39,6 @@
       <%= f.button :submit, "Create account", class: "btn btn-info" %>
     </div>
   <% end %>
+
 </body>
 </html>

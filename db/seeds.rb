@@ -72,3 +72,15 @@ EventArtist.create!(
   photo: "https://otayo.com/wp-content/uploads/2022/07/hans-nayna-3.jpg"
 )
 puts "Finished!"
+
+puts "Destroying artists"
+Artist.destroy_all
+puts "Creating artists"
+Artist.create!(
+  first_name: "kaya",
+  last_name: "Popise",
+  email: "kayaman@gmail.com",
+  category: "Reggae",
+  hourly_rate: "200",
+  photo: "https://otayo.com/wp-content/uploads/2022/07/Kaya-2.jpg"
+)
