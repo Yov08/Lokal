@@ -84,3 +84,21 @@ Artist.create!(
   social_media_links:"https://scontent.fmru3-1.fna.fbcdn.net/v/t1.6435-9/115824069_2777886295769681_7249292576166010466_n.jpg?stp=cp0_dst-jpg_e15_q65_s403x403&_nc_cat=107&ccb=1-7&_nc_sid=7aed08&_nc_ohc=5z9b7xiutr8AX_jPulB&_nc_ht=scontent.fmru3-1.fna&oh=00_AfCx4I1yIkToFtWGXuv--7OR--4SYaF8xka-BiknkGKZ8w&oe=6425AEE0"
 )
 puts "Finished!"
+
+puts "Destroying artists"
+Artist.destroy_all
+puts "Creating artists"
+Artist.create!(
+  name: "Blakkayo",
+  category: "Mizik Lokal",
+  biography: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  rating: "4.8",
+  hourly_rate: "30000"
+)
+Artist.create!(
+  name: "Annega",
+  category: "Chilled",
+  biography: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  rating: "4.2",
+  hourly_rate: "15000"
+)

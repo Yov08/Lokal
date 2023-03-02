@@ -1,0 +1,35 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <%= simple_form_for @artist do |f| %>
+        <h1 class="text-center">Edit Artist</h1><hr>
+
+        <%= f.input :name,
+                    required: true,
+                    input_html: { value: @artist.name } %>
+        <%= f.input :category,
+                    required: true,
+                    input_html: { value: @artist.category } %>
+        <%= f.input :biography,
+                    required: true,
+                    input_html: { value: @artist.biography } %>
+        <%= f.input :hourly_rate,
+                    required: true,
+                    input_html: { value: @artist.hourly_rate } %>
+        <%= f.input :media_link,
+                    required: true,
+                    input_html: { value: @artist.media_link } %>
+        <%= f.input :image_url,
+                    required: true %>
+        <%= f.input :social_media_links,
+                    input_html: { value: @artist.social_media_links } %>
+                    
+        <div class="text-center">
+          <%= f.submit "Update Artist", class: "btn btn-primary" %>
+          <%= link_to "Back", artist_path(@artist), class: "btn btn-secondary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
