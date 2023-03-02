@@ -1,2 +1,53 @@
 <h1>New Booking</h1>
 <%= link_to "Back", root_path, class: "button-event" %>
+
+
+<div class="back-space">
+<%= link_to "<", events_path, class: "back-button" %>
+</div>
+
+<div class="banner-show-event">
+  <div class="container-event">
+    <div class="img-event-container">
+      <img src=<%= @event.image_url %>>
+    </div>
+  </div>
+  <div class="show-event-details">
+    <h2><%= @event.name %></h2>
+  </div>
+
+  <div class="row">
+    <div class="col border-right">
+      <div class="circle-text">
+        <p>4.8</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="event-date">
+        <p><%= @event.date %></p>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col border-right">
+      <div class="circle-map">
+        <p>Map</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="event-address">
+        <p><strong><%= @event.venue %></strong></p>
+        <p><%= @event.address %></p>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="event-description">
+    <p><%= @event.description %></p>
+  </div>
+
+  <div class="text-center">
+    <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
+  </div><br>
+</div>
