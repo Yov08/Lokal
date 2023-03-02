@@ -33,13 +33,12 @@
       <%= f.input :pax_vip, as: :integer, label: "VIP Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
       <p class="total-price">Total: $<span id="total-price">0</span></p>
       <div class="text-center">
-        <%= f.button :submit, "Proceed to Payment", class: "button-main" %>
+        <%= link_to "Proceed to Payment", booking_confirmation_path, method: :post, class: "button-main" %>
         <%= link_to "Back", root_path, class: "button-event" %>
-      </div>
+      </div><br>
     <% end %>
   </div>
 </div>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
