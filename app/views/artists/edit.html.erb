@@ -24,7 +24,7 @@
                     required: true %>
         <%= f.input :social_media_links,
                     input_html: { value: @artist.social_media_links } %>
-
+                    
         <div class="text-center">
           <%= f.submit "Update Artist", class: "btn btn-primary" %>
           <%= link_to "Back", artist_path(@artist), class: "btn btn-secondary" %>
