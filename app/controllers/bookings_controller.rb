@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @event = Event.find(params[:event_id])
     @booking = Booking.new
   end
 
