@@ -9,13 +9,14 @@
     <div class="row">
       <div class="col">
         <h1>Yo!</h1>
-        <img src=<%= artist.image_url %>>
+        ------------------
+        <% image_tag ('logo.png') %>
       </div>
       <div class="col">
-        <p class="date"><%= artist.user.first_name %></p>
-        <h2 class="name"><%= artist.user.last_name %></h2>
+        <p class="date"><%= artist.name %></p>
         <p class="address"><i class="fa-solid fa-location-dot"></i>
-        <%= link_to "More", artist_path(artist), class: "button-event" %>
+        <%= link_to "More", artist_path(artist), class: "button-event" %><br>
+        -------------------
       </div>
     </div>
   <% end %>
