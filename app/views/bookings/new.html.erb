@@ -3,6 +3,7 @@
 
   <div class="container-event">
     <div class="img-event-container">
+      <%= puts @event.inspect %>
       <img src=<%= @event.image_url %>>
     </div>
   </div>
@@ -27,6 +28,7 @@
 
   <div class="ticket-quantity">
     <%= simple_form_for @booking do |f| %>
+      <%= f.hidden_field :event_id, value: params[:event_id] %>
       <%= f.input :pax, as: :integer, label: "Normal Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
       <%= f.input :pax_vip, as: :integer, label: "VIP Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
       <p class="total-price">Total: $<span id="total-price">0</span></p>
