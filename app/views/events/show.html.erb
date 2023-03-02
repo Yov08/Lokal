@@ -44,5 +44,7 @@
     <p><%= @event.description %></p>
   </div>
 
-  <%= link_to "Book Now", new_booking_path(event_id: @event.id), class: "button-main" %>
+  <div class="text-center">
+    <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
+  </div><br>
 </div>
