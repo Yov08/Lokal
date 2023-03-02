@@ -1,0 +1,49 @@
+<h1>Artist Show Page</h1>
+
+<div class="container-artist">
+  <div class="banner-show-artist">
+    <div class="img-artist-container">
+      <img src=<%= @artist.image_url %>>
+    </div>
+  </div>
+
+  <div class="show-artist-details">
+    <h2><%= @artist.name %></h2>
+    <h3><%= @artist.category %></h3>
+    <h5><%= @artist.rating %></h5>
+  </div>
+
+  <%# <div class="row"> %>
+    <%# <div class="col border-right"> %>
+      <%# <div class="circle-text"> %>
+        <%# <p>4.8</p> %>
+      <%# </div> %>
+    <%# </div> %>
+    <%# <div class="col"> %>
+      <%# <div class="event-date"> %>
+        <%# <p><%= @event.date %></p> %>
+      <%# </div> %>
+    <%# </div> %>
+  <%# </div><br> %>
+
+  <%# <div class="row"> %>
+    <%# <div class="col border-right"> %>
+      <%# <div class="circle-map"> %>
+        <%# <p>Map</p> %>
+      <%# </div> %>
+    <%# </div> %>
+    <%# <div class="col"> %>
+      <%# <div class="event-address"> %>
+        <%# <p><strong><%= @event.venue %></strong></p> %>
+        <%# <p><%= @event.address %></p> %>
+      <%# </div> %>
+    <%# </div> %>
+  <%# </div><br> %>
+
+  <div class="artist-description">
+    <p><%= @artist.biography %></p>
+  </div>
+
+  <%= link_to "Edit Artist Info", edit_artist_path, class: "button-main" %>
+  <%= link_to "Back", root_path, class: "button-event" %>
+</div>
