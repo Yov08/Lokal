@@ -12,10 +12,10 @@
         <img src=<%= artist.image_url %>>
       </div>
       <div class="col">
-        <p class="date"><%= user.first_name %><p>
-        <h2 class="name"><%= user.last_name %></h2>
+        <p class="date"><%= artist.user.first_name %></p>
+        <h2 class="name"><%= artist.user.last_name %></h2>
         <p class="address"><i class="fa-solid fa-location-dot"></i>
-        <%= link_to "More", artist_path(user), class: "button-event" %>
+        <%= link_to "More", artist_path(artist), class: "button-event" %>
       </div>
     </div>
   <% end %>
