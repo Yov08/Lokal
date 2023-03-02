@@ -5,64 +5,46 @@
 <div class="banner-show-event">
   <div class="container-event">
     <div class="img-event-container">
-     <img src=<%= @event.image_url %>>
-        <p class="price-event">As from Rs <%= @event.price_normal %></p>
-     </div>
+      <img src=<%= @event.image_url %>>
+      <p class="price-event">As from Rs <%= @event.price_normal %></p>
+    </div>
+  </div>
+  <div class="show-event-details">
+    <h2><%= @event.name %></h2>
   </div>
 
-    <div class="show-event-details">
-      <h2><%= @event.name %></h2>
-    </div>
-
-
-    <div class="row">
-       <div class="col border-right">
-          <div class="circle-text">
-            <p>4.8</p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="event-date">
-          <p><%= @event.date %></p>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col border-right">
+      <div class="circle-text">
+        <p>4.8</p>
       </div>
+    </div>
+    <div class="col">
+      <div class="event-date">
+        <p><%= @event.date %></p>
+      </div>
+    </div>
+  </div><br>
 
-      <br>
-
-
-    <div class="row">
-      <div class="col border-right">
-        <div class="circle-map">
+  <div class="row">
+    <div class="col border-right">
+      <div class="circle-map">
         <p>Map</p>
       </div>
     </div>
-
-      <div class="col">
-        <div class="event-address">
-          <p><strong><%= @event.venue %></strong></p>
-          <p><%= @event.address %></p>
-        </div>
+    <div class="col">
+      <div class="event-address">
+        <p><strong><%= @event.venue %></strong></p>
+        <p><%= @event.address %></p>
       </div>
     </div>
-    <br>
+  </div><br>
 
-      <div class="event-description">
-      <p><%= @event.description %></p>
-      </div>
+  <div class="event-description">
+    <p><%= @event.description %></p>
+  </div>
 
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+  <div class="text-center">
+    <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
+  </div><br>
 </div>
