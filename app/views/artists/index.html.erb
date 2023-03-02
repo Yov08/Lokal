@@ -2,43 +2,12 @@
 <%= link_to "<", root_path, class: "back-button" %>
 </div>
 
-
 <div class="background-texture">
   <div class="container">
-
-    <div class="name-slider">
-      <div class="container">
-      <h2>Annega</h2>
-      </div>
+    <% @artists.each do |artist| %>
+    <div class="carousel-item">
+      <%= image_tag %>
     </div>
-
-  <div class="artist-slider">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677755618/LOKAL/Annega_artist_ohx0bn.jpg" class="d-block w-100" alt="...">
-
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677093292/LOKAL/Blakkayo_fh0f8s.jpg" class="d-block w-100" alt="...">
-        </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-      </div>
-    </div>
+    <%end%>
   </div>
-
-  <div class="slider-buttons">
-    <div class="container">
-    </div>
-  </div>
-
 </div>
