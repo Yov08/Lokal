@@ -1,0 +1,29 @@
+body .registration-form {
+  font-family: 'Quicksand', sans-serif;
+  background-image: url("https://res.cloudinary.com/dqjdq06qv/image/upload/v1677829761/LOKAL/background_registration_form_mqqv6p.png");
+  background-color: rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.registration-form .container {
+  width: auto;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 10px 10px 10px;
+  color: white;
+}
+
+.container h2 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+.form-inputs input {
+  background-color: transparent;
+}
