@@ -79,3 +79,23 @@
   padding: 8px 12px 8px 12px;
   text-decoration: none;
 }
+
+.btn-registration {
+  background-color: #A31ACB;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  flex-direction: row;
+  margin-top: 4px;
+}
+
+.btn-registration:hover {
+  background-color: $yellow;
+  color: black;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  flex-direction: row;
+  margin-top: 4px;
+}
