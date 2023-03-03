@@ -53,6 +53,7 @@
   <div class="text-center">
     <% if @event.present? %>
       <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
+      <%= link_to "Back", request.referrer, class: "button-event" %>
     <% end %>
   </div><br>
 </div>
