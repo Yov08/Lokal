@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super do |resource|
-      if params[:user][:user_type] == 'artist'
+      if params[:user][:user_type] == true
         @artist = Artist.create!(user_id: resource.id, name: "#{resource.first_name} #{resource.last_name}")
         # redirect_to edit_artist_path(@artist)
       end
@@ -57,7 +57,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    if resource.is_a?(User) && resource.user_type == 'true'
+    if resource.is_a?(User) && resource.user_type == true
       edit_artist_path(resource.artist)
     else
       super(resource)
