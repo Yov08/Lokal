@@ -4,6 +4,7 @@
     end
 
     def show
+      @event = Event.find(params[:event_id])
       @booking = Booking.find(params[:id])
     end
 
@@ -48,6 +49,11 @@
       @booking.destroy
       redirect_to booking_path
     end
+
+    # def confirmation
+      # @booking = Booking.find(params[:booking_id])
+      # @event = @booking.event
+    # end
 
     private
 
