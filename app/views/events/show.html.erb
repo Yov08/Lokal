@@ -50,6 +50,12 @@
         <% end %>
       </div>
 
+      <div>
+        <% if @artists.present? %>
+          <p>Artist: <%= @artists.first.name %> </p>
+        <% end %>
+      </div>
+
       <div class="text-center">
         <% if @event.present? %>
           <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
