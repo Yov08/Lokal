@@ -18,30 +18,28 @@
         <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
         </div><br>
-
-
-        <div class="artist-banner">
+        <div class="artist-banner text-center">
           <h5>Artists</h5>
           <p>Book your favorite artist now, with a simple click.</p>
         </div><br>
-        <% if user_signed_in? %>
-          <%= link_to "View Events", events_path, class: "button-main" %>
-          <%= link_to "View Artists", artists_path, class: "button-main" %>
-        <% else %>
-          <div class="homepage-buttons">
+        <div class="homepage-buttons text-center">
+          <% if user_signed_in? %>
+            <%= link_to "View Events", events_path, class: "button-main" %>
+            <%= link_to "View Artists", artists_path, class: "button-main" %>
+          <% else %>
             <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
             <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
   </div>
 
     <! -- footer -->
     <div class="footer">
-      <div class="container">
+      <div class="container text-center">
         <br>
         <h6>Join our social community</h6>
-        <div>
+        <div class="text-center">
           <ul class="social">
             <li>
               <a class="ease-all" href="www.facebook.com"><i class="fa-brands fa-facebook"></i><span class="hide-text">Facebook</span></a>
@@ -54,8 +52,7 @@
             </li>
           </ul>
         </div><br>
-        <div class="as_artist">
-          <h6>Join as artist</h6>
+        <div class="contact-us text-center">
           <p>We'd love to hear from you.</p>
           <%= link_to "Contact us", "", class: "button-contact" %>
         </div><br>

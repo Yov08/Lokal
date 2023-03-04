@@ -20,15 +20,14 @@
 
     <div class="artist-description">
       <% if @events.present? %>
-        <p>Upcoming Events: <%= @events.first.name %></p>
+        <p>Upcoming Events: <%= link_to @events.first.name, event_path(@events.first) %></p>
         <p>Upcoming Date: <%= @events.first.date %></p>
       <% end %>
     </div>
 
     <div class="text-center">
       <%= link_to "Edit Info", edit_artist_path, class: "button-main" %>
-      <%= link_to "Back", root_path, class: "button-event" %>
+      <%= link_to "Back", request.referrer, class: "button-event" %>
     </div>
   </div>
 </div>
-
