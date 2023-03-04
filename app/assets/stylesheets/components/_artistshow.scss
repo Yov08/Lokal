@@ -1,11 +1,153 @@
 .artist-maincontainerash{
   background-color: white;
   margin: auto;
-  width: 100px;
+  width: 390px;
  }
 
 .foto-artistash{
-  // image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  // height: 50px;
-  // object-fit: cover;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.artistnameash{
+  padding: 8px;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.artistnameash{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.styleash{
+  padding: 8px;
+  margin-top: -24px;
+  font-style: italic;
+  font-weight: 700;
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.ratingash{
+  padding: 8px;
+  display: flex;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.artist-description{
+  padding: 8px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 500;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.discographyash{
+  padding: 18px;
+  font-weight: 500;
+  margin-top: -18px;
+  font-size: 20px;
+}
+
+.line-5 {
+  height: 4px;
+  margin-top: -28px;
+  background: linear-gradient(
+    to bottom,
+    transparent 2px,
+    black 4px,
+    black 6px,
+    transparent 3px
+  );
+}
+
+.multimedialinkash{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.d-flex{
+  text-align: center;
+}
+
+.xxx{
+  font-style: italic;
+  font-size: 22px;
+}
+
+.buttonbookingupcomingevent{
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.button-mainash{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.buttonbackash{
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.button-mainbottom{
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.button-eventash {
+  background-color: transparent;
+  color: black;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  right: -10px;
+}
+
+.button-eventash:hover {
+  background-color: #FECDD4;
+  color: black;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px;
+  text-decoration: none;
 }

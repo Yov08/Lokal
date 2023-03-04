@@ -30,6 +30,25 @@
   flex-direction: row;
 }
 
+.button-mainash{
+  background-color: #A31ACB;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  justify-content: center;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+}
+
+.button-mainash:hover{
+  background-color: #FECDD4;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
 .button-main:hover{
   background-color: #F5EA5A;
   color: black;
@@ -118,4 +137,24 @@
   text-decoration: none;
   flex-direction: row;
   margin-top: 4px;
+}
+
+.button-event {
+  background-color: transparent;
+  color: black;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+}
+
+.button-event:hover {
+  background-color: $violet;
+  color: white;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
 }
