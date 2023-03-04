@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     if params[:query].present?
-      @events = Event.where(title: params[:query])
+      @events = Event.global_search(params[:query])
     else
       @events = Event.all
     end

@@ -42,6 +42,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_094242) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "artists", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "category"
+    t.string "biography"
+    t.integer "rating"
+    t.integer "hourly_rate"
+    t.string "media_link"
+    t.string "image_url"
+    t.string "social_media_links"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
   create_table "bookings", force: :cascade do |t|
     t.integer "event_id"
     t.integer "user_id"
