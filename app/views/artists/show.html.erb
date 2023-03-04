@@ -1,11 +1,12 @@
-<h1>Artist Show Page</h1>
+<%# <h1>Artist Show Page</h1> %>
+<div class="artist-maincontainerash">
 
-<div class="container-artist">
-  <div class="banner-show-artist">
-    <div class="img-artist-container">
+  <div class="artist-banerash">
+    <div class="foto-artistash">
       <img src=<%= @artist.image_url %>>
     </div>
   </div>
+
 
   <div class="show-artist-details">
     <h2><%= @artist.name %></h2>
@@ -19,5 +20,6 @@
 
   <%= link_to "Edit Artist Info", edit_artist_path, class: "button-main" %>
   <%= link_to "Back", root_path, class: "button-event" %>
-</div>
 
+
+</div>
