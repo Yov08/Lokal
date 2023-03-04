@@ -62,7 +62,7 @@ kaya = User.create!(
   password: "123456",
   email: "kayaman@gmail.com",
   user_type: true,
-  image_url: "https://otayo.com/wp-content/uploads/2022/07/Kaya-2.jpg"
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/Kaya-1.jpg"
 )
 annega = User.create!(
   first_name: "Annega",
@@ -125,7 +125,7 @@ kaya_artist = Artist.create!(
   rating: "4.8",
   hourly_rate: "30000",
   media_link: " ",
-  image_url: " ",
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/Kaya-1.jpg",
   social_media_links: " "
 )
 annega_artist = Artist.create!(
@@ -136,7 +136,7 @@ annega_artist = Artist.create!(
   rating: "4.2",
   hourly_rate: "15000",
   media_link: " ",
-  image_url: " ",
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg",
   social_media_links: " "
 )
 blakkayo_artist = Artist.create!(
@@ -147,7 +147,7 @@ blakkayo_artist = Artist.create!(
   rating: "4.8",
   hourly_rate: "30000",
   media_link: " ",
-  image_url: " ",
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/blakkayo-1.jpg",
   social_media_links: " "
 )
 puts "Artists Created!"
