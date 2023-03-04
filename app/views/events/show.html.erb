@@ -1,50 +1,61 @@
-<div class="back-space">
-<%= link_to "<", events_path, class: "back-button" %>
-</div>
-
-<div class="banner-show-event">
-  <div class="container-event">
-    <div class="img-event-container">
-      <img src=<%= @event.image_url %>>
-      <p class="price-event">As from Rs <%= @event.price_normal %></p>
-    </div>
-  </div>
-  <div class="show-event-details">
-    <h2><%= @event.name %></h2>
+<div class="container">
+  <div class="back-space col-2 col-sm-2 col-md-2 col-lg-2">
+    <%= link_to "<", events_path, class: "back-button" %>
   </div>
 
-  <div class="row">
-    <div class="col border-right">
-      <div class="circle-text">
-        <p>4.8</p>
+  <div class="banner-show-event col-8 col-sm-8 col-md-8 col-lg-8">
+    <div class="container-event">
+      <div class="img-event-container">
+        <% if @event.present? %>
+          <img src="<%= @event.image_url %>">
+          <p class="price-event">As from Rs <%= @event.price_normal %></p>
+        <% end %>
       </div>
-    </div>
-    <div class="col">
-      <div class="event-date">
-        <p><%= @event.date %></p>
+      <div class="show-event-details">
+        <h2><%= @event.name if @event.present? %></h2>
       </div>
-    </div>
-  </div><br>
 
-  <div class="row">
-    <div class="col border-right">
-      <div class="circle-map">
-        <p>Map</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="event-address">
-        <p><strong><%= @event.venue %></strong></p>
-        <p><%= @event.address %></p>
-      </div>
-    </div>
-  </div><br>
+      <div class="row">
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
+          <div class="circle-text">
+            <p>4.8</p>
+          </div>
+        </div>
+        <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+          <div class="event-date">
+            <p><%= @event.date if @event.present? %></p>
+          </div>
+        </div>
+      </div><br>
 
-  <div class="event-description">
-    <p><%= @event.description %></p>
+      <div class="row">
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
+          <div class="circle-map">
+            <p>Map</p>
+          </div>
+        </div>
+        <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+          <div class="event-address">
+            <% if @event.present? %>
+              <p><strong><%= @event.venue %></strong></p>
+              <p><%= @event.address %></p>
+            <% end %>
+          </div>
+        </div>
+      </div><br>
+
+      <div class="event-description">
+        <% if @event.present? %>
+          <p><%= @event.description %></p>
+        <% end %>
+      </div>
+
+      <div class="text-center">
+        <% if @event.present? %>
+          <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
+          <%= link_to "Back", request.referrer, class: "button-event" %>
+        <% end %>
+      </div><br>
+    </div>
   </div>
-
-  <div class="text-center">
-    <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
-  </div><br>
 </div>

@@ -16,6 +16,7 @@
                     input_html: { value: @artist.biography } %>
         <%= f.input :hourly_rate,
                     required: true,
+                    as: :numeric,
                     input_html: { value: @artist.hourly_rate } %>
         <%= f.input :media_link,
                     required: true,
@@ -24,7 +25,7 @@
                     required: true %>
         <%= f.input :social_media_links,
                     input_html: { value: @artist.social_media_links } %>
-                    
+
         <div class="text-center">
           <%= f.submit "Update Artist", class: "btn btn-primary" %>
           <%= link_to "Back", artist_path(@artist), class: "btn btn-secondary" %>

@@ -1,43 +1,47 @@
-<div class="container-booking">
-  <h1>New Booking</h1>
+<div class="container">
+  <div class="container-booking">
+    <h1>New Booking</h1>
 
-  <div class="container-event">
-    <div class="img-event-container">
-      <img src=<%= @event.image_url %>>
+    <div class="container-event">
+      <div class="img-event-container">
+        <%= puts @event.inspect %>
+        <img src=<%= @event.image_url %>>
+      </div>
+    </div>
+
+    <div class="show-event-details">
+      <h2><%= @event.name %></h2>
+    </div>
+
+    <div class="event-date">
+      <p><%= @event.date %></p>
+    </div>
+
+    <div class="event-address">
+      <p><strong><%= @event.venue %></strong></p>
+      <p><%= @event.address %></p>
+    </div>
+
+    <div class="ticket-prices">
+      <p>Normal Price: $<%= @event.price_normal %></p>
+      <p>VIP Price: $<%= @event.price_vip %></p>
+    </div>
+
+    <div class="ticket-quantity">
+      <%= simple_form_for @booking do |f| %>
+        <%= f.hidden_field :event_id, value: params[:event_id] %>
+        <%= f.input :pax, as: :integer, label: "Normal Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
+        <%= f.input :pax_vip, as: :integer, label: "VIP Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
+        <p class="total-price">Total: $<span id="total-price">0</span></p>
+        <div class="text-center">
+          <%= f.button :submit, "Book now", class: "button-main" %>
+          <%# <%= link_to "Proceed to Payment", booking_confirmation_path, method: :post, class: "button-main" %>
+          <%= link_to "Back", request.referrer, class: "button-event" %>
+        </div><br>
+      <% end %>
     </div>
   </div>
-
-  <div class="show-event-details">
-    <h2><%= @event.name %></h2>
-  </div>
-
-  <div class="event-date">
-    <p><%= @event.date %></p>
-  </div>
-
-  <div class="event-address">
-    <p><strong><%= @event.venue %></strong></p>
-    <p><%= @event.address %></p>
-  </div>
-
-  <div class="ticket-prices">
-    <p>Normal Price: $<%= @event.price_normal %></p>
-    <p>VIP Price: $<%= @event.price_vip %></p>
-  </div>
-
-  <div class="ticket-quantity">
-    <%= simple_form_for @booking do |f| %>
-      <%= f.input :pax, as: :integer, label: "Normal Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
-      <%= f.input :pax_vip, as: :integer, label: "VIP Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
-      <p class="total-price">Total: $<span id="total-price">0</span></p>
-      <div class="text-center">
-        <%= f.button :submit, "Proceed to Payment", class: "button-main" %>
-        <%= link_to "Back", root_path, class: "button-event" %>
-      </div>
-    <% end %>
-  </div>
 </div>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
