@@ -18,6 +18,13 @@
       <p>Bio: <%= @artist.biography %></p>
     </div>
 
+    <div class="artist-description">
+      <% if @events.present? %>
+        <p>Upcoming Events: <%= @events.first.name %></p>
+        <p>Upcoming Date: <%= @events.first.date %></p>
+      <% end %>
+    </div>
+
     <div class="text-center">
       <%= link_to "Edit Info", edit_artist_path, class: "button-main" %>
       <%= link_to "Back", root_path, class: "button-event" %>
