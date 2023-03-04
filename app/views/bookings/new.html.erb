@@ -33,7 +33,8 @@
       <%= f.input :pax_vip, as: :integer, label: "VIP Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
       <p class="total-price">Total: $<span id="total-price">0</span></p>
       <div class="text-center">
-        <%= link_to "Proceed to Payment", booking_confirmation_path, method: :post, class: "button-main" %>
+        <%= f.button :submit, "Book now", class: "button-main" %>
+        <%# <%= link_to "Proceed to Payment", booking_confirmation_path, method: :post, class: "button-main" %> %>
         <%= link_to "Back", request.referrer, class: "button-event" %>
       </div><br>
     <% end %>
