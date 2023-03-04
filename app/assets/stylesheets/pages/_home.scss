@@ -48,32 +48,7 @@ body {
   .left, .main, .right {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
-  .logo-lokal img {
-    width: 100%;
-  }
 
-  .banner h1 {
-    font-size: 32px;
-  }
-
-  .artist-banner h5 {
-    font-size: 20px;
-  }
-
-  .artist-banner p {
-    font-size: 12px;
-  }
-
-  .homepage-buttons a {
-    font-size: 14px;
-  }
-  
-  .social li a {
-    width: 30px;
-    height: 30px;
-    margin-right: 0.5rem;
-    padding-top: 6px;
-  }
 }
 
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
