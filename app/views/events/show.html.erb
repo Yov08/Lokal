@@ -52,7 +52,7 @@
 
       <div>
         <% if @artists.present? %>
-          <p>Artist: <%= @artists.first.name %> </p>
+          <p>Artist: <%= link_to @artists.first.name, artist_path(@artists.first) %> </p>
         <% end %>
       </div>
 

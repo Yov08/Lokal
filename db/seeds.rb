@@ -25,7 +25,8 @@ pure = Event.create!(
   price_vip: 3000,
   address: "Lux Grand Gaube",
   capacity: 1000,
-  image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t1.6435-9/106805838_3207637609282733_6413803682731626488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Dfz130joYH0AX-vG_zM&_nc_ht=scontent.fmru4-1.fna&oh=00_AfCLZros5_KXnwMaKt5bVa3qg-PaNqDhcFxeAYz_6P2u-Q&oe=64130F68"
+  image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t1.6435-9/106805838_3207637609282733_6413803682731626488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Dfz130joYH0AX-vG_zM&_nc_ht=scontent.fmru4-1.fna&oh=00_AfCLZros5_KXnwMaKt5bVa3qg-PaNqDhcFxeAYz_6P2u-Q&oe=64130F68",
+  rating: 4.9
 )
 moaf = Event.create!(
   name: "Mauritius Open Air Festival",
@@ -36,7 +37,8 @@ moaf = Event.create!(
   price_vip: 1000,
   address: "Royal Road, Coteau Raffin, Black River",
   capacity: 2000,
-  image_url: "https://scontent.fmru3-1.fna.fbcdn.net/v/t39.30808-6/328333023_699301461669729_1901966523216265308_n.png?stp=dst-png_p720x720&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=KCpKpyRej8IAX8Ngwn5&_nc_ht=scontent.fmru3-1.fna&oh=00_AfCDA7meYB3f2qUEFSHO8Z4Drxv7xLSBHuPvzZyZHIVNhg&oe=6407B6F1"
+  image_url: "https://scontent.fmru3-1.fna.fbcdn.net/v/t39.30808-6/328333023_699301461669729_1901966523216265308_n.png?stp=dst-png_p720x720&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=KCpKpyRej8IAX8Ngwn5&_nc_ht=scontent.fmru3-1.fna&oh=00_AfCDA7meYB3f2qUEFSHO8Z4Drxv7xLSBHuPvzZyZHIVNhg&oe=6407B6F1",
+  rating: 4.2
 )
 sakifo = Event.create!(
   name: "Sakifo Music Festival",
@@ -47,7 +49,8 @@ sakifo = Event.create!(
   price_vip: 4000,
   address: " Motorway M3, Cote D'Or, St Pierre",
   capacity: 5000,
-  image_url: "https://www.monticket.re/storage/4043/affiche-4X3-sakifo-2023.jpg"
+  image_url: "https://www.monticket.re/storage/4043/affiche-4X3-sakifo-2023.jpg",
+  rating: 4.5
 )
 puts "Events Created!"
 
@@ -83,7 +86,7 @@ rouslan = User.create!(
   password: "123456",
   email: "rous@lokal.com",
   user_type: true,
-  photo: "https://otayo.com/wp-content/uploads/2022/07/dj-ash-1.jpg"
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/dj-ash-1.jpg"
 )
 yov = User.create!(
   first_name: "Yov",
