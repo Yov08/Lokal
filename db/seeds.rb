@@ -97,7 +97,7 @@ yov = User.create!(
   image_url: "https://otayo.com/wp-content/uploads/2022/07/Emmanuel-Savannah-1.jpg"
 )
 silvio = User.create!(
-  first_name: "Silvio",
+  first_name: "Silviooo",
   last_name: "",
   password: "123456",
   email: "silvio@lokal.com",
