@@ -4,28 +4,30 @@
 <body>
   <! -- banner -->
   <div class="banner">
-    <div class="container">
-      <h1>LOKAL</h1>
-      <div class="homepage-search">
-        <div class="input-group rounded">
-          <input type="search" class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-          <span class="input-group-append"></span>
-        </div>
-      </div><br>
-      <div class="artist-banner">
-        <h5>Artists</h5>
-        <p>Book your favorite artist now, with a simple click.</p>
-      </div><br>
-      <% if user_signed_in? %>
-        <%= link_to "View Events", events_path, class: "button-main" %>
-        <%= link_to "View Artists", artists_path, class: "button-main" %>
-      <% else %>
-        <div class="homepage-buttons">
-          <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
-        </div>
-      <% end %>
-    </div>
+      <div class="container">
+        <h1>LOKAL</h1>
+        <div class="homepage-search">
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-append"></span>
+          </div>
+        </div><br>
+        <div class="artist-banner">
+          <h5>Artists</h5>
+          <p>Book your favorite artist now, with a simple click.</p>
+        </div><br>
+        <% if user_signed_in? %>
+          <%= link_to "View Events", events_path, class: "button-main" %>
+          <%= link_to "View Artists", artists_path, class: "button-main" %>
+        <% else %>
+          <div class="homepage-buttons">
+            <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
+            <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+
     <! -- footer -->
     <div class="footer">
       <div class="container">
