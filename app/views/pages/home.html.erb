@@ -1,18 +1,11 @@
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-</head>
-<body>
+<div>
   <! -- banner -->
   <div class="banner">
       <div class="container">
         <div class="logo-lokal">
-
         <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png">
         </div>
-
         <div class="homepage-search">
-
         <%= form_with url: events_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1 bg-transparent", placeholder: "Find an event"%>
         <%= submit_tag "Search", class: "btn btn-primary" %>
@@ -33,7 +26,6 @@
         </div>
       </div>
   </div>
-
     <! -- footer -->
     <div class="footer">
       <div class="container text-center">
@@ -59,4 +51,4 @@
       </div>
     </div>
   </div>
-</body>
+</div>
