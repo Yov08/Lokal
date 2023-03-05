@@ -40,8 +40,10 @@
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :user_type,
                   as: :radio_buttons,
-                  collection: [['I am casual user', false], ['I am an artist', true]],
-                  required: true %>
+                  collection: [['I am casual user', true], ['I am an artist', false]],
+                  required: true,
+                  checked: true %>
+
     </div>
 
     <div class="form-actions">

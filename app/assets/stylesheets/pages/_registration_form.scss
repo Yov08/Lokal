@@ -34,3 +34,11 @@ body .registration-form {
 .form-inputs input {
   background-color: transparent;
 }
+
+.white-radio input[type="radio"] {
+  background-color: #fff;
+}
+
+.white-radio label {
+  color: #fff;
+}

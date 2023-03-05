@@ -35,7 +35,7 @@ body
   background-color: #A31ACB;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
 }
@@ -102,8 +102,9 @@ body
   height: 70px;
   background: #EB7C36;
   border-radius: 50%;
-  border: 6px solid var(--clr);
-  transition: 0.5s;
+  border: 6px solid rgba(92, 163, 179, 0.5);
+  transition: transform 0.5s ease-out;
+  transform-origin: center center;
 }
 .indicator::before
 {
@@ -115,7 +116,7 @@ body
   height: 20px;
   background: transparent;
   border-top-right-radius: 20px;
-  box-shadow: 1px -10px 0 0  var(--clr);
+  box-shadow: 1px -10px 0 0  rgba(92, 163, 179, 0.5);
 }
 .indicator::after
 {
@@ -127,7 +128,7 @@ body
   height: 20px;
   background: transparent;
   border-top-left-radius: 20px;
-  box-shadow: -1px -10px 0 0  var(--clr);
+  box-shadow: -1px -10px 0 0  rgba(92, 163, 179, 0.5);
 }
 
 .navigation ul li:nth-child(1).active ~ .indicator
