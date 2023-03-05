@@ -1,8 +1,75 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+<div class="nav-container">
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+      </li>
+      <li class="list">
+          <a href="/">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+             </span>
+            <span class="text">Profile</span>
+          </a>
+      </li>
+      <li class="list">
+          <a href="<%= bookings_path %>">
+            <span class="icon">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </span>
+            <span class="text">Bookings</span>
+          </a>
+      </li>
+      <li class="list">
+          <a href="#">
+            <span class="icon">
+              <ion-icon name="star-outline"></ion-icon>
+            </span>
+            <span class="text">Favorites</span>
+          </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="settings-outline"></ion-icon>
+          </span>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  const list = document.querySelectorAll(".list");
+  list.forEach((item) => {
+    item.addEventListener("click",(event) => {
+      event.preventDefault()
+      list.forEach((item)=> {
+        item.classList.remove("active")
+      })
+      event.currentTarget.classList.add("active")
+
+  })});
+</script>
+
+
+<!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag ("logo.png") %>
-    <% end %>
+    <%= link_to "#", class: "navbar-brand" do
+      <%= image_tag ("logo.png")
+    <% end
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,27 +77,27 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
+        <% if user_signed_in?
           <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link"
           </li>
           <li class="nav-item">
-            <%= link_to "Bookings", "", class: "nav-link" %>
+            <%= link_to "Bookings", "", class: "nav-link"
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item"
+              <%= link_to "Another action", "#", class: "dropdown-item"
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item"
             </div>
           </li>
-        <% else %>
+        <% else
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link"
           </li>
-        <% end %>
+        <% end
       </ul>
     </div>
   </div>
-</div>
+</div> -->
