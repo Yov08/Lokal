@@ -6,7 +6,8 @@ body {
 .logo-lokal img {
   display: block;
   margin: 0 auto;
-  width: 800px;
+  width: 400px;
+  opacity: 0.8;
 }
 
 .artist-banner h5{
@@ -17,16 +18,19 @@ body {
   font-size: 14px;
 }
 
-.banner {
-  background-image: url("https://res.cloudinary.com/dqjdq06qv/image/upload/v1676889469/LOKAL/Artists_homepage_r3sjvt.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+.background-clip {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
   background: linear-gradient(rgba(0,0,0,0.9));
-  height: auto;
-  max-width: 100%;
-  background-repeat: no-repeat;
 }
+
 
 .banner .container {
   font-family: 'Quicksand', sans-serif;
