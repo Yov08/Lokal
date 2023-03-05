@@ -26,14 +26,13 @@ body
   display: block;
   position: fixed;
   bottom: 0;
-  border: 1px red solid;
   width: 100vw;
 }
 .navigation
 {
   width: 100vw;
   height: 70px;
-  background-color: #fff;
+  background-color: #A31ACB;
   position: relative;
   display: flex;
   justify-content: center;
@@ -87,6 +86,8 @@ body
   font-size: 0.75em;
   letter-spacing: 0.05em;
   transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
 }
 .navigation ul li.active a .text
 {
@@ -99,7 +100,7 @@ body
   top: -50%;
   width: 70px;
   height: 70px;
-  background: #5CA3B3;
+  background: #EB7C36;
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
