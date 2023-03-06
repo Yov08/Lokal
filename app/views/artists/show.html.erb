@@ -15,6 +15,7 @@
       </div>
       <div class="data-bio">
         <h3><span>Bio:</span><br><p><%= @artist.biography %></p> </h3>
+        <%= truncate(@artist.biography, length: 100) %><br><span>Bio</span></p>
       </div>
       <div class="actionBtn">
         <button>Follow</button>

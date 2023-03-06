@@ -20,7 +20,7 @@
                 <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
               <% end %>
               <h3><%= artist.rating %><br><span>Rating</span> </h3>
-              <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %><br><span>Bio</span></p>
+              <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %><br><span>Bio</span></h3>
             </div>
           </div>
           </div>
