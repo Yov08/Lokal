@@ -41,8 +41,8 @@ body .swiper
 {
   width: 250px;
   height: 250px;
-
 }
+
 .imgBx img
 {
   position: absolute;
@@ -69,7 +69,9 @@ body .swiper
   width: 100%;
   transform: 0.5s;
   transform: translateY(320px);
+
 }
+
 .artist-card:hover .content .details
 {
   transform: translateY(0px);
@@ -79,8 +81,9 @@ body .swiper
 {
   font-size: 1.25em;
   font-weight: 600;
-  color: #555;
+  color: $violet;
   line-height: 1.2em;
+  text-align: left;
 }
 .artist-card .content .details h2 span
 {

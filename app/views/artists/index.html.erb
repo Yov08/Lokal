@@ -16,13 +16,18 @@
           </div>
           <div class="content">
           <div class="details">
-            <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
             <div class="data">
+              <div class="col">
+                <div class="row">
               <% if @events.present? %>
                 <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
               <% end %>
-              <h3><%= artist.rating %><br><span>Rating</span> </h3>
+              <div class="row">
+              <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
               <h3><p><span>Bio</span><br><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %></p></h3>
+               </div>
+              </div>
+            </div>
             </div>
           </div>
           </div>
