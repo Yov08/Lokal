@@ -15,6 +15,15 @@ body
   min-height: 100vh;
   background: linear-gradient(45deg, #fbda61, #ff5acd);
 }
+.swiper-container
+{
+  background-color: #fbda61;
+}
+.swiper-slide
+{
+  height: 500px;
+  background-color: #fbda61;
+}
 .card{
   position: relative;
   width: 350px;
