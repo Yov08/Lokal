@@ -1,10 +1,36 @@
-<div class="banner-event">
-  <div class="container">
-    <h1>View Artists</h1>
-  </div>
+<div class="container">
+  <%# <div class="banner-event"> %>
+    <%# <div class="container"> %>
+      <%# <h1>Viewing Artists</h1> %>
+    <%# </div> %>
+  <%# </div> %>
+
+  <swiper-container class="swiper">
+    <% @artists.each do |artist| %>
+      <swiper-slide class="slider">
+        <div class="card">
+          <div class="imgBx">
+          <img src=<%= artist.image_url %>>
+          </div>
+          <div class="content">
+          <div class="details">
+            <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
+            <div class="data">
+              <% if @events.present? %>
+                <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
+              <% end %>
+              <h3><%= artist.rating %><br><span>Rating</span> </h3>
+              <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %><br><span>Bio</span></p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </swiper-slide>
+    <% end %>
+  </swiper-container>
 </div>
 
-<div class="container">
+<!-- <div class="container">
   <% @artists.each do |artist| %>
     <div class="card">
       <div class="imgBx">
@@ -25,21 +51,4 @@
     </div>
   <% end %>
   <%= link_to "Back", root_path, class: "button-event" %>
-</div>
-
-
-    <!-- <div class="row">
-      <div class="col">
-        <h1><%= artist.id %> <%= artist.name %> <%= artist.category %></h1>
-        ------------------
-        <%# <% image_tag ('logo.png') %> %>
-        <%# <img src=<%= @artist.image_url %>> %>
-      </div>
-      <div class="col">
-        <p class="date"><%= artist.name %></p>
-        <p class="bio"><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %></p>
-        <p class="address"><i class="fa-solid fa-location-dot"></i>
-        <%= link_to "More", artist_path(artist), class: "button-event" %><br>
-        -------------------
-      </div>
-    </div> -->
+</div> -->
