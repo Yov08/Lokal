@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
-
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body
+body .swiper
 {
   display: flex;
   justify-content: center;
@@ -15,28 +6,22 @@ body
   min-height: 100vh;
   background: linear-gradient(45deg, #fbda61, #ff5acd);
 }
-.swiper-container
-{
-  background-color: #fbda61;
-}
-.swiper-slide
-{
-  height: 500px;
-  background-color: #fbda61;
-}
-.card{
+
+.artist-card{
   position: relative;
   width: 350px;
   height: 190px;
   // height: 450px;
-  background: #fff;
+  background: #fff;opacity: 0.5;
   border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+  // box-shadow: 0 15px 50px rgba(0,0,0,0.15);
   transition: 0.5s;
 }
-.card:hover
+.artist-card:hover
 {
   height: 450px;
+  opacity: 0.9;
+
 }
 .imgBx
 {
@@ -48,14 +33,15 @@ body
   height: 150px;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+  // box-shadow: 0 15px 50px rgba(0,0,0,0.35);
   overflow: hidden;
   transition: 0.5s;
 }
-.card:hover .imgBx
+.artist-card:hover .imgBx
 {
   width: 250px;
   height: 250px;
+
 }
 .imgBx img
 {
@@ -66,7 +52,7 @@ body
   height: 100%;
   object-fit: cover;
 }
-.card .content
+.artist-card .content
 {
   position: absolute;
   width: 100%;
@@ -76,7 +62,7 @@ body
   align-items: flex-end;
   overflow: hidden;
 }
-.card .content .details
+.artist-card .content .details
 {
   padding: 40px;
   text-align: center;
@@ -84,49 +70,51 @@ body
   transform: 0.5s;
   transform: translateY(320px);
 }
-.card:hover .content .details
+.artist-card:hover .content .details
 {
   transform: translateY(0px);
+
 }
-.card .content .details h2
+.artist-card .content .details h2
 {
   font-size: 1.25em;
   font-weight: 600;
   color: #555;
   line-height: 1.2em;
 }
-.card .content .details h2 span
+.artist-card .content .details h2 span
 {
   font-size: 0.75em;
   font-weight: 500;
   opacity: 0.5;
 }
-.card .content .details .data
+.artist-card .content .details .data
 {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
-.card .content .details .data h3
+.artist-card .content .details .data h3
 {
   font-size: 1em;
   color: #555;
   line-height: 1.2em;
   font-weight: 600;
+  text-align: justify;
 }
-.card .content .details .data h3 span
+.artist-card .content .details .data h3 span
 {
   font-size: 0.85em;
   font-weight: 400;
   opacity: 0.5;
 }
-.card .content .details .actionBtn
+.artist-card .content .details .actionBtn
 {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-.card .content .details .actionBtn button
+.artist-card .content .details .actionBtn button
 {
   padding: 10px 30px;
   border-radius: 5px;
