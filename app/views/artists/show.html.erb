@@ -1,33 +1,25 @@
-<div class="container">
-  <h1>Artist Show Page</h1>
-
-  <div class="container-artist">
-    <div class="banner-show-artist">
-      <div class="img-artist-container">
-        <img src=<%= @artist.image_url %>>
+<div class="card">
+  <div class="imgBx">
+    <img src=<%= @artist.image_url %>>
+  </div>
+  <div class="content">
+    <div class="details">
+      <h2><%= @artist.name %><br><span><%= @artist.category %></span></h2>
+      <div class="data">
+        <% if @events.present? %>
+          <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Next Event</span></h3>
+          <% formatted_date = (@events.first.date).strftime("%b %e, %y") %>
+          <h3><%= formatted_date %><br><span>Date</span></h3>
+        <% end %>
+        <h3><%= @artist.rating %><br><span>Rating</span></h3>
       </div>
-    </div>
-
-    <div class="show-artist-details">
-      <h2><%= @artist.name %></h2>
-      <h4>Category: <%= @artist.category %></h3>
-      <h5><%= @artist.rating %></h5>
-    </div>
-
-    <div class="artist-description">
-      <p>Bio: <%= @artist.biography %></p>
-    </div>
-
-    <div class="artist-description">
-      <% if @events.present? %>
-        <p>Upcoming Events: <%= link_to @events.first.name, event_path(@events.first) %></p>
-        <p>Upcoming Date: <%= @events.first.date %></p>
-      <% end %>
-    </div>
-
-    <div class="text-center">
-      <%= link_to "Back", :back, class: "button-event" %>
-      <%= link_to "Home", root_path, class: "btn btn-primary" %>
+      <%# <div class="data-bio"> %>
+        <%# <h3><span>Bio:</span><br><p><%= @artist.biography</p></h3> %>
+      <%# </div> %>
+      <div class="actionBtn">
+        <button>Follow</button>
+        <button>Message</button>
+      </div>
     </div>
   </div>
 </div>

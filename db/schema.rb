@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_04_114112) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_083202) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_114112) do
     t.bigint "user_id"
     t.string "category"
     t.string "biography"
-    t.integer "rating"
+    t.decimal "rating", precision: 10, scale: 2
     t.integer "hourly_rate"
     t.string "media_link"
     t.string "image_url"
