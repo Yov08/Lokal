@@ -22,12 +22,13 @@ body .login-form {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.container h2 {
+.login-form h2 {
   text-align: center;
   font-weight: bold;
   padding-top: 20px;
   font-size: 24px;
   color: white;
+  letter-spacing: 0.1rem;
 }
 
 .form-inputs input {
