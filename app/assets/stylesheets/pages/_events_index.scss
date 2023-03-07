@@ -1,5 +1,92 @@
-.card
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+// body
+// {
+//   display: flex;
+//   justify-content: center;
+//   al ign-items: center;
+//   min-height: 100vh;
+//   background: linear-gradient(45deg, #fbda61, #ff5acd);
+// }
+
+.ei-card
 {
   position: relative;
   width: 320px;
+  height: 450px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.ei-card .ei-poster
+{
+  position: relative;
+  // overflow: hidden;
+}
+
+.ei-card .ei-poster::before
+{
+  content: '';
+  position: absolute;
+  bottom: -180px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #ebdca3 50%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+
+}
+
+.ei-card:hover .ei-poster::before
+{
+  bottom: 0px;
+}
+
+.ei-card .ei-poster img
+{
+  width: 100%;
+  transition: 0.5s;
+}
+
+.ei-card:hover .ei-poster img
+{
+  transform: translateY(-50px);
+  filter: blur(5px);
+}
+
+.ei-card .ei-details
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;;
+  width: 100%;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.ei-card:hover .ei-details
+{
+  bottom: 40px;
+}
+
+.ei-card .ei-details .logo
+{
+  max-width: 180px;
+}
+
+.ei-card .ei-details h2
+{
+  font-size: 20px;
+  color: #5CA3B3;
+
 }
