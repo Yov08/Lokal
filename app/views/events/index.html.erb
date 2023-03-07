@@ -7,6 +7,7 @@
     <div class="ei-cards flex-container">
       <% @events.each do |event| %>
         <%# <swiper-slide class="ei-slider"> %>
+          <%= link_to "", event_path(event) %>
           <div class="ei-card">
             <div class="ei-poster">
             <img src= <%= event.image_url%> alt="">
