@@ -1,9 +1,15 @@
-<div class="card">
-  <div class="imgBx">
-    <img src=<%= @artist.image_url %>>
-  </div>
+<div class="show-artist-card">
+  <div class="container">
+
+    <div class="artist-card">
+
+      <div class="artist-show-img">
+        <img src=<%= @artist.image_url %>>
+      </div>
+  <br>
+  <br>
   <div class="content">
-    <div class="details">
+    <div class="artist-show-details">
       <h2><%= @artist.name %><br><span><%= @artist.category %></span></h2>
       <div class="data">
         <% if @events.present? %>
@@ -14,17 +20,15 @@
         <h3><%= @artist.rating %><br><span>Rating</span></h3>
       </div>
       <div class="data-bio">
-        <h3><span>Bio:</span><br><p><%= @artist.biography %></p> </h3>
-        <%= truncate(@artist.biography, length: 100) %><br><span>Bio</span></p>
+        <h3><span>About</span><br></h3>
+        <%= truncate(@artist.biography, length: 100) %></p>
       </div>
       <div class="actionBtn">
         <button>Follow</button>
         <button>Message</button>
       </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-
-<!DOCTYPE html>
-<html lang="en">
