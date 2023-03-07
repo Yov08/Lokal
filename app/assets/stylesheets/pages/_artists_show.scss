@@ -1,125 +1,92 @@
-// body
-// {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   min-height: 100vh;
-//   background: linear-gradient(45deg, #fbda61, #ff5acd);
-// }
-
-.artist-card{
-  position: relative;
-  width: 350px;
-  height: 190px;
-  // height: 450px;
-  background: #fff;
-  border-radius: 20px;
-  transition: 0.5s;
+body .show-artist-card {
+  height: 100vh;
+  background-image:url("https://res.cloudinary.com/dqjdq06qv/image/upload/v1677093292/LOKAL/Blakkayo_fh0f8s.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.artist-show-img
-{
-  position: absolute;
-  left: 50%;
-  top: -50px;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.artist-show-img img
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.artist-card .content
-{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-}
-.artist-show-details
-{
-  padding: 40px;
-  text-align: center;
-  width: 100%;
-  transform: 0.5s;
-  transform: translateY(450px);
-
-}
-.artist-card:hover .content .artist-show-details
-{
-  transform: translateY(0px);
-
-}
-
-.artist-show-details h2
-{
-  font-size: 1.25em;
-  font-weight: 600;
-  color: #555;
-  line-height: 1.2em;
-
-}
-.artist-card .content .artist-show-details h2 span
-{
-  font-size: 0.75em;
-  font-weight: 500;
-  opacity: 0.5;
-}
-.artist-card .content .artist-show-details .data
-{
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-.artist-card .content .artist-show-details .data h3
-{
-  font-size: 1em;
-  color: #555;
-  line-height: 1.2em;
-  font-weight: 600;
-}
-.artist-card .content .artist-show-details .data h3 span
-{
-  font-size: 0.85em;
-  font-weight: 400;
-  opacity: 0.5;
-}
-.artist-card .content .artist-show-details .actionBtn
-{
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-.artist-card .content .artist-show-details .actionBtn button
-{
-  padding: 10px 30px;
+.profile-artist {
+  width: auto;
+  height: 800px;
+  margin: auto;
+  background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 5px;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  font-weight: 500;
-  background: $violet;
-  color: #fff;
-  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
-// .card .content .details .actionBtn button:nth-child(2)
-// {
-//   border: 1px solid #999;
-//   color: #999;
-//   background: #fff;
 
-// }
+.profile-artist img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.profile-artist h1 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
+}
+
+.profile-artist h5 {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 12px 0;
+}
+
+.profile-artist p {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.profile-artist ul li{
+  margin: 0px 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+.social-artist .youtube-artist {
+  color: white;
+  font-size: 30px;
+  transition: 0.2s;
+}
+
+.social-artist .youtube-artist:hover {
+  color: #c4302b;
+}
+
+
+.social-artist .spotify-artist {
+  color: white;
+  font-size: 30px;
+  transition: 0.2s;
+
+}
+
+.social-artist .spotify-artist:hover {
+  color: #1db954;
+
+}
+
+.social-artist .deezer-artist {
+  color: white;
+  font-size: 30px;
+  transition: 0.2s;
+
+}
+
+.social-artist .deezer-artist:hover {
+  color: #ffed00;
+
+}
