@@ -3,33 +3,37 @@
     <h1>Upcoming Music Festivals</h1>
     <h4>We found <%= @events.count %> music festivals</h4>
   </div>
-  <div class="ei-cards flex-container">
-    <% @events.each do |event| %>
-      <div class="ei-card">
-        <div class="ei-poster">
-          <img src= <%= event.image_url%> alt="">
-        </div>
-        <div class="ei-details">
-          <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png" class="logo">
-          <h2> <%= event.name %> </h3>
-          <!-- <div class="ei-rating">
-            <h4 class="ei-star-icon"><ion-icon name="star-half-outline"></ion-icon><span><%= event.rating %></span></h4>
-          </div> -->
-          <div class="ei-tags">
-            <span>House</span>
-            <span>Festival</span>
+  <%# <swiper-container class="ei-swiper"> %>
+    <div class="ei-cards flex-container">
+      <% @events.each do |event| %>
+        <%# <swiper-slide class="ei-slider"> %>
+          <div class="ei-card">
+            <div class="ei-poster">
+            <img src= <%= event.image_url%> alt="">
+            </div>
+            <div class="ei-details">
+              <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png" class="logo">
+              <h2> <%= event.name %> </h3>
+              <!-- <div class="ei-rating">
+                <h4 class="ei-star-icon"><ion-icon name="star-half-outline"></ion-icon><span><%= event.rating %></span></h4>
+              </div> -->
+              <div class="ei-tags">
+                <span>House</span>
+                <span>Festival</span>
+              </div>
+              <div class="ei-location">
+                <h4><ion-icon name="location-outline"></ion-icon><span><%= event.venue %></span></h4>
+              </div>
+              <div class="ei-date">
+                <% formatted_date = (event.date).strftime("%b %e") %>
+                <h4><ion-icon name="today-outline"></ion-icon><span><%= formatted_date %></span></h4>
+              </div>
+            </div>
           </div>
-          <div class="ei-location">
-            <h4><ion-icon name="location-outline"></ion-icon><span><%= event.venue %></span></h4>
-          </div>
-          <div class="ei-date">
-            <% formatted_date = (event.date).strftime("%b %e") %>
-            <h4><ion-icon name="today-outline"></ion-icon><span><%= formatted_date %></span></h4>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+        <%# </swiper-slide> %>
+      <% end %>
+    </div>
+  <%# </swiper-container> %>
 </div>
 
 
