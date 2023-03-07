@@ -15,7 +15,6 @@ body
   background: #fff;
   border-radius: 20px;
   transition: 0.5s;
-  margin-top: 10px;
 }
 
 .artist-show-img
@@ -62,7 +61,6 @@ body
 }
 .artist-card:hover .content .artist-show-details
 {
-  margin-top: 50px;
   transform: translateY(0px);
 
 }
