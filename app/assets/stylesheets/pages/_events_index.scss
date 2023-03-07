@@ -16,6 +16,18 @@
 //   background: linear-gradient(45deg, #fbda61, #ff5acd);
 // }
 
+// .ei-cards .flex-container
+// {
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.flex-container
+{
+  display: flex;
+  justify-content: space-around;
+}
+
 .ei-card
 {
   position: relative;
@@ -88,5 +100,45 @@
 {
   font-size: 20px;
   color: #5CA3B3;
+}
 
+.ei-card .ei-details .ei-rating
+{
+  position: relative;
+  padding: 5px 0;
+}
+
+.ei-card .ei-details .ei-rating .ei-star-icon
+{
+  color: #f7f406;
+  font-size: 1em;
+}
+
+.ei-card .ei-details .ei-rating
+{
+  color: #fff;
+}
+
+.ei-card .ei-details .ei-tags
+{
+  position: relative;
+  margin-top: 5px;
+}
+
+.ei-card .ei-details .ei-tags span
+{
+  padding: 2px 5px;
+  color: #fff;
+  background: #5CA3B3;
+  border-radius: 4px;
+}
+
+.ei-card .ei-details .ei-tags span:nth-child(2)
+{
+  background: #EB7C36;
+}
+
+.ei-card .ei-details .ei-location
+{
+  
 }
