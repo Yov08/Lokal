@@ -7,7 +7,6 @@
     <div class="ei-cards flex-container">
       <% @events.each do |event| %>
         <%# <swiper-slide class="ei-slider"> %>
-          <%= link_to "", event_path(event) %>
           <div class="ei-card">
             <div class="ei-poster">
             <img src= <%= event.image_url%> alt="">
@@ -23,12 +22,13 @@
                 <span>Festival</span>
               </div>
               <div class="ei-location">
-                <h4><ion-icon name="location-outline"></ion-icon><span><%= event.venue %></span></h4>
+                <h4><ion-icon name="location-outline"></ion-icon> <span><%= event.venue %></span></h4>
               </div>
               <div class="ei-date">
                 <% formatted_date = (event.date).strftime("%b %e") %>
-                <h4><ion-icon name="today-outline"></ion-icon><span><%= formatted_date %></span></h4>
+                <h4><ion-icon name="today-outline"></ion-icon> <span><%= formatted_date %></span></h4>
               </div>
+              <%= link_to "More", event_path(event), class: "button-event" %>
             </div>
           </div>
         <%# </swiper-slide> %>
