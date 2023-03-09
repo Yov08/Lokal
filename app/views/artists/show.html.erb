@@ -1,21 +1,27 @@
 <body>
-  <div class="show-artist-card">
-    <div class="container">
-      <div class="profile-artist">
-        <img src=<%= @artist.image_url %>>
+  <div class="show-artist-image">
+      <img src=<%= @artist.image_url %>>
         <h1><%= @artist.name %></h1>
         <h5><%= @artist.category %></h5>
-        <p><strong><%= @artist.rating %></strong></p>
-        <br>
-        <p><%= @artist.biography %>
-        </p>
-        <br>
-        <ul class="social-artist">
-        <li><a class="youtube-artist" href="www.youtube.com"><i class="fa-brands fa-youtube""></i></a>
-        <li><a class="spotify-artist" href="www.spotify.com"><i class="fa-brands fa-spotify""></i></a>
-        <li><a class="deezer-artist" href="www.deezer.com"><i class="fa-brands fa-deezer""></i></a>
+
+        <div class="show-message-artist">
+        <h3>Message</h3>
+        </div>
+
+
+        <div class="show-artist-details">
+           <p><%= @artist.biography %></p>
+        </div>
+
+            <ul class="social-artist">
+        <li><a class="youtube-artist" href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        <li><a class="spotify-artist" href="www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
+        <li><a class="deezer-artist" href="www.deezer.com"><i class="fa-brands fa-deezer"></i></a>
 </li>
         </ul>
-      </div>
+
+
+
+
   </div>
 </body>
