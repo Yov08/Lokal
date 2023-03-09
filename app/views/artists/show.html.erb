@@ -6,13 +6,16 @@
     <div class="details">
       <h2><%= @artist.name %><br><span><%= @artist.category %></span></h2>
       <div class="data">
-        <% if @events.present? %>
-          <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Next Event</span></h3>
-          <% formatted_date = (@events.first.date).strftime("%b %e, %y") %>
-          <h3><%= formatted_date %><br><span>Date</span></h3>
-        <% end %>
         <h3><%= @artist.rating %><br><span>Rating</span></h3>
       </div>
+      <% if @events.present? %>
+        <h3>Upcoming Events</h3>
+        <div class="upcoming-events">
+          <% @events.select{ |event| event.date >= Date.today }.each do |event| %>
+            <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
+          <% end %>
+        </div>
+      <% end %>
       <div class="data-bio">
         <h3><span>Bio:</span><br><p><%= @artist.biography %></p> </h3>
         <%= truncate(@artist.biography, length: 100) %><br><span>Bio</span></p>
@@ -21,10 +24,20 @@
         <button>Follow</button>
         <button>Message</button>
       </div>
+      <% if @events.present? %>
+        <h3>Past Events</h3>
+        <div class="card-past-events">
+          <div class="past-events">
+            <% @events.select{ |event| event.date < Date.today }.each do |event| %>
+              <div class="past-event-card">
+                <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
+                <div class="past-event-name">
+                  <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-
-
-<!DOCTYPE html>
-<html lang="en">

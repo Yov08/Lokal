@@ -18,7 +18,7 @@ EventArtist.destroy_all
 puts "Creating events"
 pure = Event.create!(
   name: "Pure at Lux",
-  date: "30.07.2023",
+  date: "30.07.2022",
   venue: "Grand Gaube ",
   description: "This 3-day Music & Beach festival will occur on the 7th, 8th, and 9th of August. For the first time in Mauritius, an entire resort is being privatised for a 3-day festival. ",
   price_normal: 2000,
@@ -193,6 +193,10 @@ puts "Creating Event Artists"
 EventArtist.create!(
   artist_id: kaya_artist.id,
   event_id: pure.id
+)
+EventArtist.create!(
+  artist_id: kaya_artist.id,
+  event_id: moaf.id
 )
 EventArtist.create!(
   artist_id: annega_artist.id,
