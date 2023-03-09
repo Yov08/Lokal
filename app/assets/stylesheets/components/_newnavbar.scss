@@ -1,25 +1,10 @@
 
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 :root
 {
   --clr: white;
 
 }
-body
-{
-  // display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: var(--clr);
-}
+
 .nav-container
 {
   display: block;
@@ -36,7 +21,6 @@ body
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 10px;
 }
 .navigation ul
 {
