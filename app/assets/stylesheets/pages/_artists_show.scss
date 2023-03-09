@@ -58,21 +58,24 @@
 
 }
 
+.show-artist-past-event h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  color: $violet;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 20px;
+
+}
+
 .show-artist-image ul li{
-  margin: 0px 10px;
+  margin: 0px 4px;
   list-style: none;
   display: inline-block;
 }
-.social-artist .youtube-artist {
-  color: black;
-  font-size: 30px;
-  transition: 0.2s;
-}
-.social-artist .youtube-artist:hover {
-  color: #C4302B;
-}
+
 .social-artist .spotify-artist {
-  color: black;
+  color: grey;
   font-size: 30px;
   transition: 0.2s;
 }
@@ -80,10 +83,15 @@
   color: #1DB954;
 }
 .social-artist .deezer-artist {
-  color: black;
+  color: grey;
   font-size: 30px;
   transition: 0.2s;
 }
 .social-artist .deezer-artist:hover {
   color: #FFED00;
+}
+.youtube-video {
+  width: 380px;
+  height: 281px;
+  align-items: center;
 }
