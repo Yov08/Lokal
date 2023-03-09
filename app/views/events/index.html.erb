@@ -1,4 +1,4 @@
-<div class="col">
+<div class="col-12">
   <div class="ei-row text-center align-items-center">
     <h1>Upcoming Music Festivals</h1>
     <h4>We found <%= @events.count %> music festivals</h4>
@@ -17,6 +17,19 @@
               <!-- <div class="ei-rating">
                 <h4 class="ei-star-icon"><ion-icon name="star-half-outline"></ion-icon><span><%= event.rating %></span></h4>
               </div> -->
+              <div class="ei-like">
+                <% if user_signed_in? %>
+                  <% if current_user.likes?(event) %>
+                    <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked" do %>
+                      <i class="fas fa-heart"></i>
+                    <% end %>
+                  <% else %>
+                    <%= button_to event_likes_path(event), method: :post, class: "like-button" do %>
+                      <i class="far fa-heart"></i>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
               <div class="ei-tags">
                 <span>House</span>
                 <span>Festival</span>
