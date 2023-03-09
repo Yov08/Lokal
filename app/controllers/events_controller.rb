@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     if params[:query].present?
       @events = Event.global_search(params[:query])
     else
-      @events = Event.all
+      @events = Event.where('date >= ?', Date.today).order(date: :asc)
     end
   end
 

@@ -18,7 +18,7 @@ EventArtist.destroy_all
 puts "Creating events"
 pure = Event.create!(
   name: "Pure at Lux",
-  date: "30.07.2023",
+  date: "30.07.2022",
   venue: "Grand Gaube ",
   description: "This 3-day Music & Beach festival will occur on the 7th, 8th, and 9th of August. For the first time in Mauritius, an entire resort is being privatised for a 3-day festival. ",
   price_normal: 2000,
@@ -37,7 +37,19 @@ moaf = Event.create!(
   price_vip: 1000,
   address: "Royal Road, Coteau Raffin, Black River",
   capacity: 2000,
-  image_url: "https://scontent.fmru3-1.fna.fbcdn.net/v/t39.30808-6/328333023_699301461669729_1901966523216265308_n.png?stp=dst-png_p720x720&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=KCpKpyRej8IAX8Ngwn5&_nc_ht=scontent.fmru3-1.fna&oh=00_AfCDA7meYB3f2qUEFSHO8Z4Drxv7xLSBHuPvzZyZHIVNhg&oe=6407B6F1",
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678258607/LOKAL/Events/moaf-banner_z7vdl9.png",
+  rating: 4.2
+)
+mystik6 = Event.create!(
+  name: "The Mystik Garden VI",
+  date: "11.03.2023",
+  venue: "Ruins of Balaclava",
+  description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
+  price_normal: 2000,
+  price_vip: 4000,
+  address: "Turtle Bay Balaclava, Terre Rouge",
+  capacity: 2000,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678260100/LOKAL/Events/mystikgarden-banner_nmu9na.jpg",
   rating: 4.2
 )
 sakifo = Event.create!(
@@ -61,7 +73,7 @@ kaya = User.create!(
   last_name: "Popise",
   password: "123456",
   email: "kayaman@gmail.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/Kaya-1.jpg"
 )
 annega = User.create!(
@@ -69,7 +81,7 @@ annega = User.create!(
   last_name: " ",
   password: "123456",
   email: "annega@gmail.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg"
 )
 blakkayo = User.create!(
@@ -77,15 +89,23 @@ blakkayo = User.create!(
   last_name: "Ayo",
   password: "123456",
   email: "blakkayo@gmail.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/blakkayo-1.jpg"
+)
+davidjay = User.create!(
+  first_name: "David",
+  last_name: "Jay",
+  password: "123456",
+  email: "davidjay@gmail.com",
+  user_type: false,
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/david-jay-1.jpg"
 )
 rouslan = User.create!(
   first_name: "Rouslan",
   last_name: "Chimeea",
   password: "123456",
   email: "rous@lokal.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/dj-ash-1.jpg"
 )
 yov = User.create!(
@@ -93,7 +113,7 @@ yov = User.create!(
   last_name: "Bosco",
   password: "123456",
   email: "yov@lokal.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/Emmanuel-Savannah-1.jpg"
 )
 silvio = User.create!(
@@ -101,7 +121,7 @@ silvio = User.create!(
   last_name: "",
   password: "123456",
   email: "silvio@lokal.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/justice-lecoq-1.jpg"
 )
 test_user = User.create!(
@@ -109,7 +129,7 @@ test_user = User.create!(
   last_name: "User",
   password: "123456",
   email: "dummy@lokal.com",
-  user_type: true,
+  user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/david-jay-1.jpg"
 )
 puts "Users Created!"
@@ -150,6 +170,22 @@ blakkayo_artist = Artist.create!(
   image_url: "https://otayo.com/wp-content/uploads/2022/07/blakkayo-1.jpg",
   social_media_links: " "
 )
+davidjay_artist = Artist.create!(
+  name: "David Jay",
+  user_id: davidjay.id,
+  category: "DJ",
+  biography: "David Jay is a music alchemist, the one who blends all types of music. He is very well known for mastering sound like a pro. He started mixing in 1996 at the age of 17 for the first time. For David, music is a way for him to express his feelings and whichever mood he is in. David Jay is mostly in Deep House music. He can also mix a diverse variety of tracks, from 80’s classics to more contemporary styles. David Jay and his music are alike. He has performed in many international events for the Ministry of Sound, Hedkandi, Cream, Global Underground and Social Buzz Music Festival. He also performed in nightclubs internationally such Ministry of Sound, London, Macumba and Bora Bora in France, Spain, Sri Lanka, Kenya and South Africa.
+
+  David Jay has been very lucky in his profession as he has been able to share his love for deejaying with DJs such as David Guetta, Tiesto, Paul Oakenfold, Nick Bridges, Dave Seaman, Nick Warren, David Vendetta, Global DJs and Martin Solveig.
+
+  David is now exploring the world where he is trying to mix all the experience he gathered throughout his growth, to make himself a better DJ and also to make people love what they are experiencing while listening to his music.",
+  rating: "4.6",
+  hourly_rate: "20000",
+  media_link: " ",
+  image_url: "https://otayo.com/wp-content/uploads/2022/07/david-jay-1.jpg",
+  social_media_links: " "
+)
+
 puts "Artists Created!"
 
 
@@ -159,6 +195,10 @@ EventArtist.create!(
   event_id: pure.id
 )
 EventArtist.create!(
+  artist_id: kaya_artist.id,
+  event_id: moaf.id
+)
+EventArtist.create!(
   artist_id: annega_artist.id,
   event_id: moaf.id
 )
@@ -166,4 +206,9 @@ EventArtist.create!(
   artist_id: blakkayo_artist.id,
   event_id: sakifo.id
 )
+EventArtist.create!(
+  artist_id: davidjay_artist.id,
+  event_id: pure.id
+)
+
 puts "Events Artists Created!"

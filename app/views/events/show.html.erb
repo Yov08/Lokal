@@ -1,8 +1,4 @@
 <div class="container">
-  <div class="back-space col-2 col-sm-2 col-md-2 col-lg-2">
-    <%= link_to "<", events_path, class: "back-button" %>
-  </div>
-
   <div class="banner-show-event col-8 col-sm-8 col-md-8 col-lg-8">
     <div class="container-event">
       <div class="img-event-container">
@@ -14,7 +10,19 @@
       <div class="show-event-details">
         <h2><%= @event.name if @event.present? %></h2>
       </div>
-
+      <div class="es-like">
+        <% if user_signed_in? %>
+          <% if current_user.likes?(@event) %>
+            <%= button_to event_like_path(@event, current_user.likes.find_by(event: @event)), method: :delete, class: "like-button liked" do %>
+              <i class="fa fa-heart like-icon red"></i>
+            <% end %>
+          <% else %>
+            <%= button_to event_likes_path(@event), method: :post, class: "like-button" do %>
+              <i class="fa fa-heart like-icon"></i>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
       <div class="row">
         <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
           <div class="circle-text">
@@ -22,12 +30,11 @@
           </div>
         </div>
         <div class="col-9 col-sm-9 col-md-9 col-lg-9">
-          <div class="event-date">
+          <div class="es-date">
             <p><%= @event.date if @event.present? %></p>
           </div>
         </div>
       </div><br>
-
       <div class="row">
         <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
           <div class="circle-map">
@@ -43,23 +50,28 @@
           </div>
         </div>
       </div><br>
-
+      <div class="performing-artists">
+        <% if @artists.present? %>
+          <h3>Performing Artists</h3>
+            <% @artists.each do |artist| %>
+              <div class="artist-name">
+                <%= link_to @artists.first.name, artist_path(@artists.first) %>
+              <div class="artist-image">
+                <%= link_to image_tag(artist.image_url, class: "artist-photo"), artist_path(artist) %>
+              </div>
+            <% end %>
+        <% end %>
+      </div>
       <div class="event-description">
         <% if @event.present? %>
-          <p><%= @event.description %></p>
+          <p>Description: <%= @event.description %></p>
         <% end %>
       </div>
-
-      <div>
-        <% if @artists.present? %>
-          <p>Artist: <%= link_to @artists.first.name, artist_path(@artists.first) %> </p>
-        <% end %>
       </div>
-
       <div class="text-center">
         <% if @event.present? %>
           <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
-          <%= link_to "Back", request.referrer, class: "button-event" %>
+          <%= link_to "Back", events_path, class: "button-event" %>
         <% end %>
       </div><br>
     </div>

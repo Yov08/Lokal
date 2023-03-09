@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'likes/create'
+  get 'likes/destroy'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: "pages#home"
   # get "/home", to: "pages#home", as: "home"
@@ -16,4 +18,8 @@ Rails.application.routes.draw do
   resources :event_artists
   resources :bookings
   resources :artists
+  resources :events do
+    resources :likes, only: [:create, :destroy]
+  end
+
 end

@@ -1,5 +1,160 @@
-.card
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+// body
+// {
+//   display: flex;
+//   justify-content: center;
+//   al ign-items: center;
+//   min-height: 100vh;
+//   background: linear-gradient(45deg, #fbda61, #ff5acd);
+// }
+
+// .ei-cards .flex-container
+// {
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.flex-container
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.ei-card
 {
   position: relative;
   width: 320px;
+  height: 450px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.ei-card .ei-poster
+{
+  position: relative;
+  // overflow: hidden;
+}
+
+.ei-card:before
+{
+  content: '';
+  position: absolute;
+  bottom: -180px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #5CA3B3 50%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+
+}
+
+.ei-card:hover .ei-poster::before
+{
+  bottom: 0px;
+}
+
+.ei-card .ei-poster img
+{
+  width: 100%;
+  transition: 0.5s;
+}
+
+.ei-card:hover .ei-poster img
+{
+  transform: translateY(-50px);
+  filter: blur(5px);
+}
+
+.like-icon.liked {
+  color: red;
+}
+
+.ei-card .ei-details
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;;
+  width: 100%;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.ei-card:hover .ei-details
+{
+  bottom: 40px;
+}
+
+.ei-card .ei-details .logo
+{
+  max-width: 180px;
+}
+
+.ei-card .ei-details h2
+{
+  font-size: 20px;
+  font-weight: bold;
+  color: #EB7C36;
+}
+
+.ei-card .ei-details .ei-rating
+{
+  position: relative;
+  padding: 5px 0;
+}
+
+.ei-card .ei-details .ei-rating .ei-star-icon
+{
+  color: #f7f406;
+  font-size: 1em;
+}
+
+.ei-card .ei-details .ei-rating
+{
+  color: #fff;
+}
+
+.ei-card .ei-details .ei-tags
+{
+  position: relative;
+  margin-top: 5px;
+}
+
+.ei-card .ei-details .ei-tags span
+{
+  padding: 2px 5px;
+  color: #fff;
+  background: #d2d167;
+  border-radius: 4px;
+}
+
+.ei-card .ei-details .ei-tags span:nth-child(2)
+{
+  background: #745383;
+}
+
+.ei-card .ei-details .ei-location h4
+{
+  font-size: 1em;
+  padding-top: 15px;
+  // padding: 10px 5px;
+  color: #fff;
+}
+
+.ei-card .ei-details .ei-date h4
+{
+  font-size: 1em;
+  // padding-top: 10px;
+  // padding: 10px 5px;
+  color: #fff;
 }
