@@ -23,8 +23,20 @@
         <h4>Past event</h4>
         </div>
 
-
-
-
+      <% if @events.present? %>
+        <h3>Past Events</h3>
+        <div class="card-past-events">
+          <div class="past-events">
+            <% @events.select{ |event| event.date < Date.today }.each do |event| %>
+              <div class="past-event-card">
+                <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
+                <div class="past-event-name">
+                  <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </body>
