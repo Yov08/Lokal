@@ -136,14 +136,34 @@
 {
   padding: 2px 5px;
   color: #fff;
-  background: #d2d167;
   border-radius: 4px;
 }
 
-.ei-card .ei-details .ei-tags span:nth-child(2)
-{
-  background: #745383;
+.tag-house {
+  background-color: #d2d167;
 }
+
+.tag-techno {
+  background-color: red;
+}
+
+.tag-festival {
+  background-color: green;
+}
+
+.tag-jazz {
+  background-color: blue;
+}
+
+.ei-card .ei-details .ei-tags .tag-concert {
+  color: black;
+  background-color: antiquewhite;
+}
+
+// .ei-card .ei-details .ei-tags span:nth-child(2)
+// {
+//   background: #745383;
+// }
 
 .ei-card .ei-details .ei-location h4
 {

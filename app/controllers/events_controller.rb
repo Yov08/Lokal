@@ -7,11 +7,17 @@ class EventsController < ApplicationController
     else
       @events = Event.where('date >= ?', Date.today).order(date: :asc)
     end
+    if params[:tag].present?
+      @events = @events.joins(:tags).where(tags: { name: params[:tag] })
+    end
   end
 
   def show
     @event = Event.find(params[:id])
     @artists = @event.artists
+    @longitude = @event.longitude
+    @latitude = @event.latitude
+
   end
 
   def new
