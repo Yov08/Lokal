@@ -4,14 +4,14 @@ body .login-form {
   background-color: rgba(0, 0, 0, 0.1);
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: cover;
-  height: 700px;
+  background-position: cover;
+  height: 1000px;
 }
 
 .login-form .container {
   width: auto;
   margin: auto;
-  height: 700px;
+  height: 1000px;
   background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);

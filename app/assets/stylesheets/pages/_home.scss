@@ -11,11 +11,21 @@ body {
 }
 
 .artist-banner h5{
+  font-family: 'Quicksand', sans-serif;
   font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
+
+
 .artist-banner p {
-  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-align: center;
 }
 
 .background-clip {
@@ -56,18 +66,19 @@ body {
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
 
 
-.footer .container{
+.footer-home .container{
   height: 50px;
   max-width: 100%;
+  margin-top: 90px;
 }
 
-.footer h6 {
+.footer-home h6 {
   color: white;
   font-family: 'Quicksand', sans-serif;
   padding-bottom: 10px;
 }
 
-.footer p {
+.footer-home p {
   color: white;
 }
 

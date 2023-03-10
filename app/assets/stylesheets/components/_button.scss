@@ -10,6 +10,7 @@
   display: inline;
   transition: 0.2s;
   letter-spacing: 0.1rem;
+  margin-right: 5px;
 }
 
 .button-outline:hover{
@@ -35,6 +36,7 @@
   display: inline;
   transition: 0.2s;
   letter-spacing: 0.1rem;
+  margin-left: 5px;
 }
 
 .button-main:hover{
@@ -201,5 +203,19 @@
   text-decoration: none;
   display: inline;
   letter-spacing: 0.1rem;
+
+}
+
+.login-sign {
+  background-color: $violet;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  flex-direction: row;
+  margin-top: 4px;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  text-align: left;
 
 }
