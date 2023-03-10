@@ -31,8 +31,9 @@
                 <% end %>
               </div>
               <div class="ei-tags">
-                <span>House</span>
-                <span>Festival</span>
+                <% event.tags.each do |tag| %>
+                  <span class="<%= tag_class(tag) %>"><%= tag.name %></span>
+                <% end %>
               </div>
               <div class="row ei-location-date">
                 <div class="col">

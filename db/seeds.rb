@@ -119,6 +119,22 @@ live_dan_moka = Event.create!(
 
 puts "Events Created!"
 
+puts "Creating Tags"
+techno = Tag.create!(name: "Techno")
+house = Tag.create!(name: "House")
+festival = Tag.create!(name: "Festival")
+jazz = Tag.create!(name: "Jazz")
+concert = Tag.create!(name: "Concert")
+puts "Tags Created!"
+
+puts "Creating Event Tags"
+mystik_garden_vi.tags << techno
+mystik_garden_vi.tags << house
+mystik_garden_vi.tags << festival
+live_dan_moka.tags << jazz
+live_dan_moka.tags << concert
+puts "Event Tags Created!"
+
 
 puts "Creating users"
 kaya = User.create!(
