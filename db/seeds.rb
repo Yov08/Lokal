@@ -35,7 +35,7 @@ moaf = Event.create!(
   description: "Discover Mauritius paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
   price_normal: 400,
   price_vip: 1000,
-  address: "Motorway M3, Trianon, Mauritius",
+  address: "Morcellement Villaze, M938+G29, Black River",
   capacity: 2000,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678258607/LOKAL/Events/moaf-banner_z7vdl9.png",
   rating: 4.2
