@@ -15,6 +15,9 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @artists = @event.artists
+    @longitude = @event.longitude
+    @latitude = @event.latitude
+
   end
 
   def new

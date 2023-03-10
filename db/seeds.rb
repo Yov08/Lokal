@@ -44,7 +44,9 @@ soiree_zulu = Event.create!(
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433453/LOKAL/Events/Soir%C3%A9e-with-Zulu-Carousel_p35wzp.jpg",
   rating: 4.7,
   start_time: "19:00",
-  end_time: "23:00"
+  end_time: "23:00",
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
 )
 moaf = Event.create!(
   name: "Mauritius Open Air Festival",
@@ -56,7 +58,9 @@ moaf = Event.create!(
   address: "Royal Road, Coteau Raffin, Black River",
   capacity: 2000,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678258607/LOKAL/Events/moaf-banner_z7vdl9.png",
-  rating: 4.2
+  rating: 4.2,
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
 )
 mystik_garden_vi = Event.create!(
   name: "The Mystik Garden VI",
@@ -70,7 +74,9 @@ mystik_garden_vi = Event.create!(
   image_url: "https://otayo.com/wp-content/uploads/2023/01/mystikgarden6-1.jpg",
   rating: 4.2,
   start_time: "14:00",
-  end_time: "00:00"
+  end_time: "00:00",
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
 )
 sakifo = Event.create!(
   name: "Sakifo Music Festival",
@@ -84,7 +90,9 @@ sakifo = Event.create!(
   image_url: "https://www.monticket.re/storage/4043/affiche-4X3-sakifo-2023.jpg",
   rating: 4.5,
   start_time: "13:00",
-  end_time: "22:00"
+  end_time: "22:00",
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
 )
 
 luna_night_festival = Event.create!(
@@ -99,7 +107,9 @@ luna_night_festival = Event.create!(
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678431206/LOKAL/Events/Luna_nigth_festival_vimayw.png",
   rating: 4.5,
   start_time: "17:00",
-  end_time: "02:00"
+  end_time: "02:00",
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
 )
 
 live_dan_moka = Event.create!(
@@ -114,7 +124,9 @@ live_dan_moka = Event.create!(
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678431208/LOKAL/Events/live-dan-moka-philippe-thomas-syndicate-4_tdpla6.jpg",
   rating: 4.0,
   start_time: "14:00",
-  end_time: "00:00"
+  end_time: "00:00",
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
 )
 
 puts "Events Created!"
