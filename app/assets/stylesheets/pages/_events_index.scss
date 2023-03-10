@@ -7,11 +7,11 @@
 //   box-sizing: border-box;
 //   font-family: 'Poppins', sans-serif;
 // }
-// body
+// .ei-container
 // {
 //   display: flex;
 //   justify-content: center;
-//   al ign-items: center;
+//   align-items: center;
 //   min-height: 100vh;
 //   background: linear-gradient(45deg, #fbda61, #ff5acd);
 // }
@@ -66,7 +66,7 @@
 
 .ei-card .ei-poster img
 {
-  width: 100%;
+  background-size: contain ;
   transition: 0.5s;
 }
 
@@ -147,7 +147,7 @@
 .ei-card .ei-details .ei-location h4
 {
   font-size: 1em;
-  padding-top: 15px;
+  padding-top: 10px;
   // padding: 10px 5px;
   color: #fff;
 }
@@ -155,7 +155,13 @@
 .ei-card .ei-details .ei-date h4
 {
   font-size: 1em;
-  // padding-top: 10px;
+  padding-top: 10px;
   // padding: 10px 5px;
   color: #fff;
+}
+
+.row .ei-location-date
+{
+  display: flex;
+  // justify-content: space-between;
 }

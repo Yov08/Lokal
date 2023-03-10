@@ -1,14 +1,13 @@
-
-  <%# <div class="banner-event"> %>
-    <%# <div class="container"> %>
-      <%# <h1>Viewing Artists</h1> %>
-    <%# </div> %>
-  <%# </div> %>
+<div class="banner-event">
+  <div class="container">
+    <h1>Viewing Artists</h1>
+  </div>
+</div>
 
 <div class="swiper">
   <div class="container">
     <% @artists.each do |artist| %><br>
-      <%# <swiper-slide class="slider"> %>
+      <swiper-slide class="slider">
         <div class="artist-card">
             <div class="imgBx">
               <img src=<%= artist.image_url %>>
@@ -31,7 +30,7 @@
               </div>
             </div>
         </div>
-      <%# </swiper-slide> %>
+      </swiper-slide>
     <% end %>
   </div>
 </div>

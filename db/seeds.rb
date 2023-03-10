@@ -28,6 +28,24 @@ pure = Event.create!(
   image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t1.6435-9/106805838_3207637609282733_6413803682731626488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Dfz130joYH0AX-vG_zM&_nc_ht=scontent.fmru4-1.fna&oh=00_AfCLZros5_KXnwMaKt5bVa3qg-PaNqDhcFxeAYz_6P2u-Q&oe=64130F68",
   rating: 4.9
 )
+soiree_zulu = Event.create!(
+  name: "Soirée with Zulu",
+  date: "29.04.2023",
+  venue: "Om Art Tamarin",
+  description: "To get you in the mood, Zulu ek so tribu offers you a wonderful evening at the Om Art Tamarin on Saturday April 29, 2023. Head west for the Soirée with Zulu event, where this music enthusiast concocts a live gig, ft. Akoustika which promises to be unforgettable.
+  Zulu marked his first name in bold in the musical landscape. And for the Evening with Zulu, the emblematic local artist will take the stage of the Om Art Tamarin and will make you vibrate with his emblematic songs, accompanied by his Tribe. He is one of the favorite artists of Mauritians and has touched several generations of fans with his catchy melodies.
+  Known for his lyrical talents and his iconic timbre of voice which has won over many since the release of his single 'Gabriella', the artist Zulu promises a very entertaining live concert for all music lovers.
+  La Soirée avec Zulu will also welcome the band of the moment, Akoustika, which is slowly but surely becoming known on the local music scene. Mauritian musical group founded by Jonas ROBERT, Akoustika will delight you with a variety of acoustic music on April 29, 2023.
+  Nothing can resist the power of good music! Gather your team and join Zulu ek So Tribu and Akoustika during the Soirée with Zulu at Om Art Tamarin, from 7:00 p.m. to 11:00 p.m.!",
+  price_normal: 2200,
+  price_vip: 0,
+  address: "Tamarin",
+  capacity: 400,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433453/LOKAL/Events/Soir%C3%A9e-with-Zulu-Carousel_p35wzp.jpg",
+  rating: 4.7,
+  start_time: "19h00",
+  end_time: "23h00"
+)
 moaf = Event.create!(
   name: "Mauritius Open Air Festival",
   date: "23.07.2023",
@@ -40,7 +58,7 @@ moaf = Event.create!(
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678258607/LOKAL/Events/moaf-banner_z7vdl9.png",
   rating: 4.2
 )
-mystik6 = Event.create!(
+mystik_garden_vi = Event.create!(
   name: "The Mystik Garden VI",
   date: "11.03.2023",
   venue: "Ruins of Balaclava",
@@ -49,8 +67,10 @@ mystik6 = Event.create!(
   price_vip: 4000,
   address: "Turtle Bay Balaclava, Terre Rouge",
   capacity: 2000,
-  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678260100/LOKAL/Events/mystikgarden-banner_nmu9na.jpg",
-  rating: 4.2
+  image_url: "https://otayo.com/wp-content/uploads/2023/01/mystikgarden6-1.jpg",
+  rating: 4.2,
+  start_time: "14h00",
+  end_time: "00h00"
 )
 sakifo = Event.create!(
   name: "Sakifo Music Festival",
@@ -64,6 +84,33 @@ sakifo = Event.create!(
   image_url: "https://www.monticket.re/storage/4043/affiche-4X3-sakifo-2023.jpg",
   rating: 4.5
 )
+
+luna_night_festival = Event.create!(
+  name: "Luna Night Festival",
+  date: "21.06.2023",
+  venue: "Domaine Les Pailles",
+  description: "Get ready for the Luna Night Festival, an electrifying evening of music and dance under the stars. This year's line-up features top local and international artists, including DJ Sash, Eli & Fur, and Massane. Join us on June 21st at Domaine Les Pailles, the perfect natural setting for this unforgettable night.",
+  price_normal: 2500,
+  price_vip: 5000,
+  address: "Domaine Les Pailles, Pailles",
+  capacity: 3000,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678431206/LOKAL/Events/Luna_nigth_festival_vimayw.png",
+  rating: 4.5
+)
+
+live_dan_moka = Event.create!(
+  name: "Live Dan Moka",
+  date: "15.04.2023",
+  venue: "Moka",
+  description: "Live Dan Moka revient pour une édition spéciale à ne pas manquer. L’événement aura lieu à Moka le 15 avril 2023. Venez profiter d'une soirée avec un line-up de DJ's de renom dont Philippe Thomas, Syndicate et bien d'autres. Cette soirée sera l'occasion de découvrir les derniers talents locaux et internationaux. Réservez dès maintenant vos places pour cette soirée exceptionnelle !",
+  price_normal: 1000,
+  price_vip: 3000,
+  address: "Moka",
+  capacity: 1500,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678431208/LOKAL/Events/live-dan-moka-philippe-thomas-syndicate-4_tdpla6.jpg",
+  rating: 4.0
+)
+
 puts "Events Created!"
 
 
@@ -124,19 +171,115 @@ silvio = User.create!(
   user_type: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/justice-lecoq-1.jpg"
 )
-test_user = User.create!(
-  first_name: "Dummy",
-  last_name: "User",
+dj_sash = User.create!(
+  first_name: "DJ",
+  last_name: "Sash",
   password: "123456",
-  email: "dummy@lokal.com",
+  email: "djsash@lokal.com",
   user_type: false,
-  image_url: "https://otayo.com/wp-content/uploads/2022/07/david-jay-1.jpg"
+  image_url: "https://otayo.com/wp-content/uploads/2023/02/DJ-Sash.jpg"
+)
+eli_fur = User.create!(
+  first_name: "Eli",
+  last_name: "& Fur",
+  password: "123456",
+  email: "elinfur@lokal.com",
+  user_type: false,
+  image_url: "https://otayo.com/wp-content/uploads/2023/01/Eli-Fur.jpg"
+)
+massane = User.create!(
+  first_name: "Massane",
+  last_name: "",
+  password: "123456",
+  email: "massane@lokal.com",
+  user_type: false,
+  image_url: "https://otayo.com/wp-content/uploads/2023/01/massane.jpg"
+)
+philippe = User.create!(
+  first_name: "Philippe",
+  last_name: "Thomas",
+  password: "123456",
+  email: "philippethomas@lokal.com",
+  user_type: false,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678431268/LOKAL/artists/philippe-thomas_gwqhgv.jpg"
+)
+zulu = User.create!(
+  first_name: "Zulu",
+  last_name: "",
+  password: "123456",
+  email: "zulu@gmail.com",
+  user_type: false,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433599/LOKAL/artists/zulu-4_cnordr.jpg"
 )
 puts "Users Created!"
 
 
 
 puts "Creating artists"
+zulu_artist = Artist.create!(
+  name: "Zulu",
+  user_id: zulu.id,
+  category: "Blues",
+  biography: "Born in 1964, Michel Bavajee earned the stage name, Zulu, due to his darker skin colour compared to his siblings. Zulu also owns a boat which he used as a fisherman. Zulu considers himself as an artist engaged in the difficulties of life and does not hesitate to turn to his songs for subjects that matter to him.
+  Zulu’s first musical experience dates back to his teenage years when, at the age of 14 years, he participated in a show interpreting the song ‘Leaving on the Jet Plane’ by John Denver. Zulu then decides to learn how to play the guitar and at the age of 16, he joins the group Gérard Seeta Ramdoo for shows in hotels. Unsatisfied with the salary he was earning, he decided to quit and participated in the Sar Show where all the juries were charmed by his rendition of ‘La Bohème’ by Charles Aznavour
+  In 2008, together with Lionel Permal, they formed the band Blackmen Bluz which was well appreciated by the locals with hits such as ‘Gabrielle’ and ‘Tir Boison’ which eventually disbanded in 2012. The following year, Zulu released his first album titled Zulu with 12 tracks. Among the 12 tracks is the famous hit, ‘Metisse’ a collaboration with Mario Ramsamy which also got voted song of the year by Radio One.
+  After facing many financial difficulties, Zulu managed to release his second album in 2016 titled Intimiste and his third album, Tango Bluz, in 2018 which did conquer the hearts of many Mauritians. He prides himself of being an artist who likes to perform on different stages to convey the message through his songs to a wider audience.
+  Zulu is undoubtedly one of the artists that is very demanded in Mauritius however he stays true to his roots and still takes out his boat to work after his concerts.",
+  rating: "4.3",
+  hourly_rate: "15000",
+  media_link: "https://www.youtube.com/watch?v=EUFpT8RyP70",
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433599/LOKAL/artists/zulu-4_cnordr.jpg",
+  social_media_links: "https://www.facebook.com/ZuluBavajee/",
+  youtube: "https://www.youtube.com/watch?v=EUFpT8RyP70",
+  spotify: "https://open.spotify.com/artist/5CkVLGKUJkIc1pmSk10QP4?si=7v0DNMJuToOcHBf5BCyBVg",
+  deezer: "https://deezer.page.link/S1gJBCPMZRL5pex67",
+  instagram: "https://www.instagram.com/"
+)
+eli_fur_artist = Artist.create!(
+  name: "Eli",
+  user_id: eli_fur.id,
+  category: "House Techno",
+  biography: "Eli & Fur ont une passion inébranlable pour la production, l’écriture et l’interprétation. Leur flair pour la création d’hymnes sombres et émotifs, a placé ce duo londonien au premier plan de la scène house et techno internationale. Leur chimie sur les platines est enivrante et elles ont séduit les dancefloors de LA à Berlin et ont honoré les grandes scènes de festivals tels que Coachella, Tomorrowland et Creamfields, ainsi qu’apparaître sur Boiler Room et BBC Radio 1’s Essential Mix. Leur esthétique sonore marie une ambiance mystérieuse et énigmatique avec des voix évocatrices, des synthés en cascade et des lignes de basse ondulantes – un mélange enivrant qui crée une dépendance et un envoûtement. Qu’il s’agisse d’histoires de clubs et de soirées, d’amour, de vie, de rires et de rébellion, leurs productions ont captivé l’imagination de leurs fans dans le monde entier.",
+  rating: "4.8",
+  hourly_rate: "30000",
+  media_link: "https://www.youtube.com/watch?v=d_1qExe2PWk&ab_channel=Eli%26Fur",
+  image_url: "https://otayo.com/wp-content/uploads/2023/01/Eli-Fur.jpg",
+  social_media_links: "https://www.instagram.com/eliandfur/?igshid=YmMyMTA2M2Y%3D",
+  youtube: "https://www.youtube.com/@eliandfur",
+  spotify: "https://open.spotify.com/artist/5CkVLGKUJkIc1pmSk10QP4?si=7v0DNMJuToOcHBf5BCyBVg",
+  deezer: "https://deezer.page.link/S1gJBCPMZRL5pex67",
+  instagram: "https://www.instagram.com/eliandfur/"
+)
+massane_artist = Artist.create!(
+  name: "Massane",
+  user_id: massane.id,
+  category: "House Techno",
+  biography: "Massane is a young producer and DJ who has quickly gained a reputation for his emotive and melodic sound. Drawing from his influences in classical music and contemporary art, his productions are filled with intricate melodies, lush soundscapes and driving basslines. His debut EP 'Another Dawn' on Anjunadeep was a critical and commercial success, receiving support from industry heavyweights such as Lane 8, Above & Beyond and Joris Voorn. His music has also been featured on major playlists such as 'NMF' and 'mint' on Spotify. With a rapidly growing fanbase and a busy touring schedule, Massane is quickly establishing himself as a rising star in the electronic music scene.",
+  rating: "4.5",
+  hourly_rate: "25000",
+  media_link: "https://www.youtube.com/watch?v=gf4s4lGTLBc&ab_channel=Massane",
+  image_url: "https://otayo.com/wp-content/uploads/2023/01/massane.jpg",
+  social_media_links: "https://www.instagram.com/massanemusic/?igshid=ryd16t3qfu3w",
+  youtube: "https://www.youtube.com/channel/UCHTy_XC6fbep_HD2VUy7ZFA",
+  spotify: "https://open.spotify.com/artist/0cjvrTtv350Ls87eGY80iz?autoplay=true",
+  deezer: "https://deezer.page.link/WUCbwK9xQ2hLfmz79",
+  instagram: "https://www.instagram.com/massanemusic/"
+)
+dj_sash_artist = Artist.create!(
+  name: "DJ Sash",
+  user_id: dj_sash.id,
+  category: "Trance",
+  biography: "DJ Sash is a German DJ and record producer who rose to fame in the 1990s with his hit singles 'Encore Une Fois' and 'Ecuador'. With his infectious beats and high-energy performances, he has become one of the most sought-after DJs in the world. He has played at some of the biggest music festivals and events, including Tomorrowland, Creamfields, and Ultra Music Festival. His music is a fusion of trance, techno, and house, and his sets are always guaranteed to get the crowd moving.",
+  rating: "4.7",
+  hourly_rate: "35000",
+  media_link: "https://www.youtube.com/watch?v=baKMg1W-LK8&ab_channel=DJSashVEVO",
+  image_url: "https://otayo.com/wp-content/uploads/2023/02/DJ-Sash.jpg",
+  social_media_links: "https://www.instagram.com/djsashofficial/?hl=en",
+  youtube: "https://www.youtube.com/channel/UCHTy_XC6fbep_HD2VUy7ZFA",
+  spotify: "https://open.spotify.com/artist/0cjvrTtv350Ls87eGY80iz?autoplay=true",
+  deezer: "https://deezer.page.link/WUCbwK9xQ2hLfmz79",
+  instagram: "https://www.instagram.com/massanemusic/"
+)
 kaya_artist = Artist.create!(
   name: "Kaya Popise",
   user_id: kaya.id,
@@ -174,11 +317,7 @@ davidjay_artist = Artist.create!(
   name: "David Jay",
   user_id: davidjay.id,
   category: "DJ",
-  biography: "David Jay is a music alchemist, the one who blends all types of music. He is very well known for mastering sound like a pro. He started mixing in 1996 at the age of 17 for the first time. For David, music is a way for him to express his feelings and whichever mood he is in. David Jay is mostly in Deep House music. He can also mix a diverse variety of tracks, from 80’s classics to more contemporary styles. David Jay and his music are alike. He has performed in many international events for the Ministry of Sound, Hedkandi, Cream, Global Underground and Social Buzz Music Festival. He also performed in nightclubs internationally such Ministry of Sound, London, Macumba and Bora Bora in France, Spain, Sri Lanka, Kenya and South Africa.
-
-  David Jay has been very lucky in his profession as he has been able to share his love for deejaying with DJs such as David Guetta, Tiesto, Paul Oakenfold, Nick Bridges, Dave Seaman, Nick Warren, David Vendetta, Global DJs and Martin Solveig.
-
-  David is now exploring the world where he is trying to mix all the experience he gathered throughout his growth, to make himself a better DJ and also to make people love what they are experiencing while listening to his music.",
+  biography: "David Jay is a music alchemist, the one who blends all types of music. He is very well known for mastering sound like a pro. He started mixing in 1996 at the age of 17 for the first time. For David, music is a way for him to express his feelings and whichever mood he is in. David Jay is mostly in Deep House music. He can also mix a diverse variety of tracks, from 80’s classics to more contemporary styles. David Jay and his music are alike. He has performed in many international events for the Ministry of Sound, Hedkandi, Cream, Global Underground and Social Buzz Music Festival. He also performed in nightclubs internationally such Ministry of Sound, London, Macumba and Bora Bora in France, Spain, Sri Lanka, Kenya and South Africa. David Jay has been very lucky in his profession as he has been able to share his love for deejaying with DJs such as David Guetta, Tiesto, Paul Oakenfold, Nick Bridges, Dave Seaman, Nick Warren, David Vendetta, Global DJs and Martin Solveig. David is now exploring the world where he is trying to mix all the experience he gathered throughout his growth, to make himself a better DJ and also to make people love what they are experiencing while listening to his music.",
   rating: "4.6",
   hourly_rate: "20000",
   media_link: " ",
@@ -190,6 +329,26 @@ puts "Artists Created!"
 
 
 puts "Creating Event Artists"
+EventArtist.create!(
+  artist_id: eli_fur_artist.id,
+  event_id: mystik_garden_vi.id
+)
+EventArtist.create!(
+  artist_id: massane_artist.id,
+  event_id: mystik_garden_vi.id
+)
+EventArtist.create!(
+  artist_id: eli_fur_artist.id,
+  event_id: luna_night_festival.id
+)
+EventArtist.create!(
+  artist_id: massane_artist.id,
+  event_id: luna_night_festival.id
+)
+EventArtist.create!(
+  artist_id: dj_sash_artist.id,
+  event_id: luna_night_festival.id
+)
 EventArtist.create!(
   artist_id: kaya_artist.id,
   event_id: pure.id
@@ -209,6 +368,10 @@ EventArtist.create!(
 EventArtist.create!(
   artist_id: davidjay_artist.id,
   event_id: pure.id
+)
+EventArtist.create!(
+  artist_id: zulu_artist.id,
+  event_id: soiree_zulu.id
 )
 
 puts "Events Artists Created!"
