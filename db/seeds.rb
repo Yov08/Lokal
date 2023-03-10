@@ -47,7 +47,7 @@ mystik6 = Event.create!(
   description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
   price_normal: 2000,
   price_vip: 4000,
-  address: "Motorway M2, Arsenal, Mauritius",
+  address: "Balaclava, Pamplemousses, Mauritius",
   capacity: 2000,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678260100/LOKAL/Events/mystikgarden-banner_nmu9na.jpg",
   rating: 4.2
