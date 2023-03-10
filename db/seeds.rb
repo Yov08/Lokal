@@ -133,6 +133,7 @@ mystik_garden_vi.tags << house
 mystik_garden_vi.tags << festival
 live_dan_moka.tags << jazz
 live_dan_moka.tags << concert
+luna_night_festival.tags << techno
 puts "Event Tags Created!"
 
 

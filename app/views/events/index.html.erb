@@ -1,7 +1,17 @@
 <div class="col ei-container">
   <div class="ei-row text-center align-items-center">
     <h1>Upcoming Music Festivals</h1>
-    <h4>We found <%= @events.count %> music festivals</h4>
+    <h4>
+      <% if params[:tag].present? %>
+        <% count = @events.count %>
+        <% festival_plural = count > 1 ? "events" : "event" %>
+        We found <%= count %> <%= params[:tag] %> <%= festival_plural %>
+      <% else %>
+        <% count = @events.count %>
+        <% festival_plural = count > 1 ? "festivals" : "festival" %>
+        We found <%= count %> music <%= festival_plural %>
+      <% end %>
+    </h4>
   </div>
   <div class="row">
     <swiper-container>
@@ -32,7 +42,8 @@
               </div>
               <div class="ei-tags">
                 <% event.tags.each do |tag| %>
-                  <span class="<%= tag_class(tag) %>"><%= tag.name %></span>
+                  <!-- <span class="<%= tag_class(tag) %>"><%= tag.name %></span> -->
+                  <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
                 <% end %>
               </div>
               <div class="row ei-location-date">
@@ -57,6 +68,10 @@
         </swiper-slide>
       <% end %>
     </swiper-container>
+    <% if params[:tag].present? %>
+      <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn btn-danger" %>
+    <% end %>
+
 </div>
 <!-- <div class="col">
   <div class="ei-row text-center align-items-center">
