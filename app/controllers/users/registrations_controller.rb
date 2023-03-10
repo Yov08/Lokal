@@ -13,7 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super do |resource|
       if params[:user][:user_type] == 'false'
-        @artist = Artist.create!(user_id: resource.id, name: "#{resource.first_name} #{resource.last_name}")
+        @artist = Artist.create!(user_id: resource.id, name: "#{resource.first_name}")
         # redirect_to edit_artist_path(@artist)
       end
     end

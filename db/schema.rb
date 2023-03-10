@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_182807) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_10_072043) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_182807) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "youtube"
+    t.string "spotify"
+    t.string "deezer"
+    t.string "instagram"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -87,6 +91,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_182807) do
     t.datetime "updated_at", null: false
     t.date "date"
     t.decimal "rating"
+    t.datetime "start_time"
+    t.datetime "end_time"
   end
 
   create_table "likes", force: :cascade do |t|
