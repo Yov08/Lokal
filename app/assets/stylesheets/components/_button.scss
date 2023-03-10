@@ -203,7 +203,6 @@
   text-decoration: none;
   display: inline;
   letter-spacing: 0.1rem;
-
 }
 
 .login-sign {
@@ -213,9 +212,22 @@
   padding: 8px 12px 8px 12px;
   text-decoration: none;
   flex-direction: row;
-  margin-top: 4px;
+  margin-top: 2px;
   transition: 0.2s;
   letter-spacing: 0.1rem;
-  text-align: left;
+  justify-content: left;
+}
 
+.forgot-password {
+  background-color: transparent;
+  color: white;
+  border: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  // margin-right: 30px;
+  display: inline;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
 }
