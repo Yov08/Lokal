@@ -7,6 +7,12 @@ class EventsController < ApplicationController
     else
       @events = Event.where('date >= ?', Date.today).order(date: :asc)
     end
+    @markers = Event.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude
+      }
+    end
   end
 
   def show

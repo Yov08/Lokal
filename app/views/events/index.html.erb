@@ -41,6 +41,13 @@
     </swiper-slide>
   <% end %>
 </swiper-container>
+
+
+<div style="width: 100%; height: 150px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 <!-- <div class="col">
   <div class="ei-row text-center align-items-center">
     <h1>Upcoming Music Festivals</h1>
