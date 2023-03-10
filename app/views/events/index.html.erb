@@ -43,7 +43,10 @@
                 <div class="col">
                   <div class="ei-date">
                     <% formatted_date = (event.date).strftime("%b %e") %>
+                    <% formatted_start_time = (event.start_time.present? ? event.start_time.strftime("%H:%M") : '') %>
+                    <% formatted_end_time = (event.end_time.present? ? event.end_time.strftime("%H:%M") : '') %>
                     <h4><ion-icon name="today-outline"></ion-icon> <span><%= formatted_date %></span></h4>
+                    <h4><ion-icon name="time-outline"></ion-icon><span><%= formatted_start_time %> - <%= formatted_end_time %></span></h4>
                   </div>
                 </div>
               </div>
