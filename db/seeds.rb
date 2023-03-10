@@ -23,7 +23,7 @@ pure = Event.create!(
   description: "This 3-day Music & Beach festival will occur on the 7th, 8th, and 9th of August. For the first time in Mauritius, an entire resort is being privatised for a 3-day festival. ",
   price_normal: 2000,
   price_vip: 3000,
-  address: "Motorway M2, Terre Rouge, Mauritius",
+  address: "Grand Gaube, Rivière du Rempart, Mauritius",
   capacity: 1000,
   image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t1.6435-9/106805838_3207637609282733_6413803682731626488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Dfz130joYH0AX-vG_zM&_nc_ht=scontent.fmru4-1.fna&oh=00_AfCLZros5_KXnwMaKt5bVa3qg-PaNqDhcFxeAYz_6P2u-Q&oe=64130F68",
   rating: 4.9
