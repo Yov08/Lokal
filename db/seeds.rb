@@ -19,11 +19,11 @@ puts "Creating events"
 pure = Event.create!(
   name: "Pure at Lux",
   date: "30.07.2022",
-  venue: "Grand Gaube ",
+  venue: "Lux Grand Gaube",
   description: "This 3-day Music & Beach festival will occur on the 7th, 8th, and 9th of August. For the first time in Mauritius, an entire resort is being privatised for a 3-day festival. ",
   price_normal: 2000,
   price_vip: 3000,
-  address: "Lux Grand Gaube",
+  address: "Motorway M2, Terre Rouge, Mauritius",
   capacity: 1000,
   image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t1.6435-9/106805838_3207637609282733_6413803682731626488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Dfz130joYH0AX-vG_zM&_nc_ht=scontent.fmru4-1.fna&oh=00_AfCLZros5_KXnwMaKt5bVa3qg-PaNqDhcFxeAYz_6P2u-Q&oe=64130F68",
   rating: 4.9
@@ -35,7 +35,7 @@ moaf = Event.create!(
   description: "Discover Mauritius paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
   price_normal: 400,
   price_vip: 1000,
-  address: "Royal Road, Coteau Raffin, Black River",
+  address: "Motorway M3, Trianon, Mauritius",
   capacity: 2000,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678258607/LOKAL/Events/moaf-banner_z7vdl9.png",
   rating: 4.2
@@ -47,7 +47,7 @@ mystik6 = Event.create!(
   description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
   price_normal: 2000,
   price_vip: 4000,
-  address: "Turtle Bay Balaclava, Terre Rouge",
+  address: "Motorway M2, Arsenal, Mauritius",
   capacity: 2000,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678260100/LOKAL/Events/mystikgarden-banner_nmu9na.jpg",
   rating: 4.2
@@ -59,7 +59,7 @@ sakifo = Event.create!(
   description: "Since 2004, the Sakifo Musik Festival has thrilled festival-goers over 3 days to pop, rock, electro, maloya, etc. rhythms. More than 50 local, national and international artists will be welcomed on the 5 stages of the festival.",
   price_normal: 2000,
   price_vip: 4000,
-  address: " Motorway M3, Cote D'Or, St Pierre",
+  address: "Motorway M3, Saint Pierre, Mauritius",
   capacity: 5000,
   image_url: "https://www.monticket.re/storage/4043/affiche-4X3-sakifo-2023.jpg",
   rating: 4.5
