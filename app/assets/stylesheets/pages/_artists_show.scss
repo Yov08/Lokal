@@ -8,13 +8,19 @@
   display: flex;
   background-size: cover;
   background-position: cover;
+
+}
+
+.show-artist-image .container-profile-names {
+  margin-left: 100px;
+  display: flex;
+
 }
 
 .show-artist-image h1 {
   position: absolute;
   top: 0;
   margin-top: 300px;
-  margin-left: 110px;
   font-size: 50px;
   letter-spacing: 2px;
   font-family: 'Quicksand', sans-serif;
@@ -26,7 +32,6 @@
   position: absolute;
   top: 0;
   margin-top: 360px;
-  margin-left: 160px;
   font-size: 28px;
   font-family: 'Quicksand', sans-serif;
   color: white;
