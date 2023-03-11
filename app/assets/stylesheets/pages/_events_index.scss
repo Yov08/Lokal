@@ -21,7 +21,7 @@
   padding-right: 30px;
   padding-top: 14px;
   padding-bottom: 10px;
-
+  margin-bottom: 20px;
 }
 
 .events-slide {
@@ -122,33 +122,59 @@
 {
   color: #fff;
 }
-.ei-card .ei-details .ei-tags
+.gender-events .ei-tags
 {
   position: relative;
-  margin-top: 5px;
-}
-.ei-card .ei-details .ei-tags span
-{
-  padding: 2px 5px;
-  color: #fff;
-  border-radius: 4px;
+  padding-left: 10px;
+  display: inline;
+  max-width: 100%;
 }
 
 .tag-house {
-  background-color: #D2D167;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
 .tag-techno {
-  background-color: red;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
+
 .tag-festival {
-  background-color: green;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
 .tag-jazz {
-  background-color: blue;
-}
-.ei-card .ei-details .ei-tags .tag-concert {
+  background-color: transparent;
+  text-decoration: none;
   color: black;
-  background-color: antiquewhite;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
+}
+.tag-concert {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
 // .ei-card .ei-details .ei-tags span:nth-child(2)
 // {

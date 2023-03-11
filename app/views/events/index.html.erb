@@ -19,15 +19,14 @@
 
         <div class="gender-events">
         <% @events.each do |event| %>
-                              <div class="ei-tags">
+           <div class="ei-tags">
 
-                        <% event.tags.each do |tag| %>
-                          <!-- <span class="<%= tag_class(tag) %>"><%= tag.name %></span> -->
-                          <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
-                        <% end %>
-                      </div>
-                      <% end %>
-
+            <% event.tags.each do |tag| %>
+              <!-- <span class="<%= tag_class(tag) %>"><%= tag.name %></span> -->
+               <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
+              <% end %>
+            </div>
+           <% end %>
         </div>
 
 
