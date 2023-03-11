@@ -1,49 +1,56 @@
-<div>
-  <div class="banner">
-    <div class="container">
-      <div class="logo-lokal">
-          <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png">
-          <video autoplay loop muted plays-inline class="background-clip">
-          <source src="https://res.cloudinary.com/dqjdq06qv/video/upload/v1678014210/LOKAL/VIDEO/LOKAL_Video_powfrz.mp4" type="video/mp4">
-      </div>
-      <div class="homepage-search">
-
-          <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-            <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1 bg-transparent", placeholder: "Find an event"%>
-          <% end %>
-      </div><br>
-      <div class="artist-banner">
-          <h5>Artists</h5>
-          <p>Book your favorite artist now,
-          with a simple click.</p>
-      </div><br>
-      <div class="homepage-buttons">
-          <% if user_signed_in? %>
-            <%= link_to "View Events", events_path, class: "button-main" %>
-            <%= link_to "View Artists", artists_path, class: "button-outline" %> <br><br><br>
-          <% else %>
-            <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
-            <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
-          <% end %>
-      </div>
-    </div>
-  </div><br>
-  <div class="footer-home">
-    <div class="container"><br>
-      <h6>Join our social community</h6>
-      <div class="text-center">
-          <ul class="social">
-            <li>
-              <a class="ease-all" href="www.facebook.com"><i class="fa-brands fa-facebook"></i><span class="hide-text">Facebook</span></a>
-            </li>
-            <li>
-              <a class="ease-all" href="www.twitter.com"><i class="fa-brands fa-twitter""></i><span class="hide-text">Twitter</span></a>
-            </li>
-            <li>
-              <a class="ease-all" href="wwww.instagram.com"><i class="fa-brands fa-instagram"></i><span class="hide-text">Instagram</span></a>
-            </li>
-          </ul>
-      </div><br>
-    </div>
+<div class="homepage-of-lokal">
+  <div class="overlay-home">
   </div>
+    <div class="banner">
+      <div class="container">
+        <div class="logo-lokal">
+            <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png">
+            <video autoplay loop muted plays-inline class="background-clip">
+            <source src="https://res.cloudinary.com/dqjdq06qv/video/upload/v1678014210/LOKAL/VIDEO/LOKAL_Video_powfrz.mp4" type="video/mp4">
+        </div>
+
+        <div class="homepage-content-text">
+          <div class="homepage-search">
+
+              <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+                <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1 bg-transparent search-field",placeholder: "Find an event"%>
+              <% end %>
+          </div><br>
+          <div class="artist-banner">
+              <h5>Artists</h5>
+              <p>Book your favorite artist now,
+              with a simple click.</p>
+          </div><br>
+          <div class="homepage-buttons">
+              <% if user_signed_in? %>
+                <%= link_to "View Events", events_path, class: "button-main" %>
+                <%= link_to "View Artists", artists_path, class: "button-outline" %> <br><br><br>
+              <% else %>
+                <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
+                <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-home">
+      <div class="container"><br>
+        <h6>Join our social community</h6>
+        <div class="text-center">
+            <ul class="social">
+              <li>
+                <a class="ease-all" href="www.facebook.com"><i class="fa-brands fa-facebook"></i><span class="hide-text">Facebook</span></a>
+              </li>
+              <li>
+                <a class="ease-all" href="www.twitter.com"><i class="fa-brands fa-twitter""></i><span class="hide-text">Twitter</span></a>
+              </li>
+              <li>
+                <a class="ease-all" href="wwww.instagram.com"><i class="fa-brands fa-instagram"></i><span class="hide-text">Instagram</span></a>
+              </li>
+            </ul>
+        </div><br>
+      </div>
+    </div>
+
 </div>

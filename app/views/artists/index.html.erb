@@ -1,60 +1,58 @@
-<div class="banner-event">
-  <div class="container">
-    <h1>Viewing Artists</h1>
-  </div>
+<div class="banner-artist-all">
+  <h1>View artists</h1>
 </div>
 
-<div class="swiper">
-  <div class="container">
-    <% @artists.each do |artist| %><br>
-      <swiper-slide class="slider">
-        <div class="artist-card">
-            <div class="imgBx">
-              <img src=<%= artist.image_url %>>
-            </div>
-            <div class="content">
-              <div class="details">
-                <div class="data">
-                  <div class="col">
-                    <div class="row">
-                      <% if @events.present? %>
-                        <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
-                      <% end %>
+  <div class="swiper">
+    <div class="container-index-artist">
+      <% @artists.each do |artist| %><br>
+        <swiper-slide class="slider">
+          <div class="artist-card">
+              <div class="imgBx">
+                <img src=<%= artist.image_url %>>
+              </div>
+              <div class="content">
+                <div class="details">
+                  <div class="data">
+                    <div class="col">
                       <div class="row">
-                        <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
-                        <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %></p></h3>
+                        <% if @events.present? %>
+                          <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
+                        <% end %>
+                        <div class="row">
+                          <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
+                          <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %></p></h3>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-        </div>
-      </swiper-slide>
-    <% end %>
+          </div>
+        </swiper-slide>
+      <% end %>
+    </div>
   </div>
-</div>
 
 
-<!-- <div class="container">
-  <% @artists.each do |artist| %>
-    <div class="card">
-      <div class="imgBx">
-        <img src=<%= artist.image_url %>>
-      </div>
-      <div class="content">
-        <div class="details">
-          <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
-          <div class="data">
-            <% if @events.present? %>
-              <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
-            <% end %>
-            <h3><%= artist.rating %><br><span>Rating</span> </h3>
-            <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %><br><span>Bio</span></p>
+  <!-- <div class="container">
+    <% @artists.each do |artist| %>
+      <div class="card">
+        <div class="imgBx">
+          <img src=<%= artist.image_url %>>
+        </div>
+        <div class="content">
+          <div class="details">
+            <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
+            <div class="data">
+              <% if @events.present? %>
+                <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
+              <% end %>
+              <h3><%= artist.rating %><br><span>Rating</span> </h3>
+              <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %><br><span>Bio</span></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
-  <%= link_to "Back", root_path, class: "button-event" %>
-</div> -->
+    <% end %>
+    <%= link_to "Back", root_path, class: "button-event" %>
+  </div> -->

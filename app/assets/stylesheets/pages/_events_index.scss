@@ -1,43 +1,52 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-// *
-// {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-//   font-family: 'Poppins', sans-serif;
-// }
-// .ei-container
-// {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   min-height: 100vh;
-//   background: linear-gradient(45deg, #fbda61, #ff5acd);
-// }
+.banner-upcoming {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: $violet;
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  padding-top: 70px;
+  text-decoration: none;
+}
 
-// .ei-cards .flex-container
-// {
-//   display: flex;
-//   justify-content: space-around;
-// }
+.ei-container h4 {
+  background-color: $yellow;
+  color: black;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
 
-.flex-container
-{
-  display: flex;
-  justify-content: space-around;
+.events-slide {
+  padding-top: 20px;
+  padding-left: 50px;
+  max-width: 87%;
 }
 
 .ei-card
 {
   position: relative;
-  // width: 100%;
   height: 90vw;
   width: 70vw;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  // box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.ei-like {
+  font-size: 25px;
+  text-align: center;
+  top: 0;
+  position: relative;
+  padding-left: 80px;
 }
 
 .ei-card .ei-poster
@@ -46,7 +55,6 @@
   // overflow: hidden;
   width: 100vw;
 }
-
 .ei-card:before
 {
   content: '';
@@ -57,30 +65,25 @@
   background: linear-gradient(0deg, #5CA3B3 50%, transparent);
   transition: 0.5s;
   z-index: 1;
-
 }
-
 .ei-card:hover .ei-poster::before
 {
   bottom: 0px;
 }
-
 .ei-card .ei-poster img
 {
   background-size: contain ;
   transition: 0.5s;
+  position: absolute;
 }
-
 .ei-card:hover .ei-poster img
 {
   transform: translateY(-50px);
   filter: blur(5px);
 }
-
 .like-icon.liked {
   color: red;
 }
-
 .ei-card .ei-details
 {
   position: absolute;
@@ -91,80 +94,92 @@
   z-index: 2;
   transition: 0.5s;
 }
-
 .ei-card:hover .ei-details
 {
   bottom: 40px;
 }
-
 .ei-card .ei-details .logo
 {
   max-width: 180px;
 }
-
 .ei-card .ei-details h2
 {
   font-size: 20px;
   font-weight: bold;
-  color: #EB7C36;
+  color: $white;
 }
-
 .ei-card .ei-details .ei-rating
 {
   position: relative;
   padding: 5px 0;
 }
-
 .ei-card .ei-details .ei-rating .ei-star-icon
 {
-  color: #f7f406;
+  color: #F7F406;
   font-size: 1em;
 }
-
 .ei-card .ei-details .ei-rating
 {
   color: #fff;
 }
-
-.ei-card .ei-details .ei-tags
+.gender-events .ei-tags
 {
   position: relative;
-  margin-top: 5px;
-}
-
-.ei-card .ei-details .ei-tags span
-{
-  padding: 2px 5px;
-  color: #fff;
-  border-radius: 4px;
+  padding-left: 10px;
+  display: inline;
+  max-width: 100%;
 }
 
 .tag-house {
-  background-color: #d2d167;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
-
 .tag-techno {
-  background-color: red;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
 
 .tag-festival {
-  background-color: green;
-}
-
-.tag-jazz {
-  background-color: blue;
-}
-
-.ei-card .ei-details .ei-tags .tag-concert {
+  background-color: transparent;
+  text-decoration: none;
   color: black;
-  background-color: antiquewhite;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
 }
-
+.tag-jazz {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
+}
+.tag-concert {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-right: 4px;
+}
 // .ei-card .ei-details .ei-tags span:nth-child(2)
 // {
 //   background: #745383;
 // }
-
 .ei-card .ei-details .ei-location h4
 {
   font-size: 1em;
@@ -172,7 +187,6 @@
   // padding: 10px 5px;
   color: #fff;
 }
-
 .ei-card .ei-details .ei-date h4
 {
   font-size: 1em;
@@ -180,7 +194,6 @@
   // padding: 10px 5px;
   color: #fff;
 }
-
 .row .ei-location-date
 {
   display: flex;

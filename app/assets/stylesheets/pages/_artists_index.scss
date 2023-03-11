@@ -1,11 +1,25 @@
-// body .swiper
-// {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   min-height: 100vh;
-//   background: linear-gradient(45deg, #fbda61, #ff5acd);
-// }
+body .swiper
+{
+  background: linear-gradient(45deg, #fbda61, #ff5acd);
+}
+
+.banner-artist-all h1{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  background-color: $yellow;
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  padding-top: 70px;
+  text-decoration: none;
+}
+
+.container-index-artist {
+  margin-left: 20px;
+  padding-top: 40px;
+}
 
 .artist-card{
   position: relative;
