@@ -5,12 +5,14 @@ body .registration-form {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  background-size: cover;
+  background-position: cover;
+  height: 1000px;
 }
 
 .registration-form .container {
   width: auto;
   margin: auto;
+  height: 1000px;
   background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -25,8 +27,8 @@ body .registration-form {
 .registration-form h2 {
   text-align: center;
   font-weight: bold;
-  padding-top: 20px;
   font-size: 24px;
+  padding-bottom: 10px;
   color: white;
   letter-spacing: 0.1rem;
 

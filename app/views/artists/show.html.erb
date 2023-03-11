@@ -1,8 +1,15 @@
 <body>
   <div class="show-artist-image">
-      <img src=<%= @artist.image_url %>>
+    <div class="artist-image-profile" style="background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(<%= @artist.image_url %>)">
+
+    </div>
+
+        <div class="container-profile-names">
+
         <h1><%= @artist.name %></h1>
         <h5><%= @artist.category %></h5>
+
+        </div>
 
         <div class="show-message-artist">
         <h3>Message</h3>
@@ -18,10 +25,6 @@
         <li><a class="deezer-artist" href="www.deezer.com"><i class="fa-brands fa-deezer"></i></a>
 </li>
         </ul>
-
-        <div class="show-artist-past-event">
-        <h4>Past event</h4>
-        </div>
 
       <% if @events.present? %>
         <h3>Past Events</h3>

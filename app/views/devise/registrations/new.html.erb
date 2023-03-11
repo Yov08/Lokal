@@ -1,8 +1,3 @@
-<div class="back-space">
-<%= link_to "<", root_path, class: "back-button" %>
-</div>
-
-
 <body>
 <div class="registration-form">
   <div class="container">
@@ -38,7 +33,7 @@
                   placeholder: '******',
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :user_type,
+      <%= f.input :normal_user,
                   as: :radio_buttons,
                   collection: [['I am casual user', true], ['I am an artist', false]],
                   required: true,

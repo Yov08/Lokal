@@ -14,11 +14,17 @@ class EventsController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {event: event})
       }
     end
+    if params[:tag].present?
+      @events = @events.joins(:tags).where(tags: { name: params[:tag] })
+    end
   end
 
   def show
     @event = Event.find(params[:id])
     @artists = @event.artists
+    @longitude = @event.longitude
+    @latitude = @event.latitude
+
   end
 
   def new

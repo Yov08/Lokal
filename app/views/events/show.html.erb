@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="banner-show-event col-8 col-sm-8 col-md-8 col-lg-8">
     <div class="container-event">
@@ -10,7 +11,7 @@
       <div class="show-event-details">
         <h2><%= @event.name if @event.present? %></h2>
       </div>
-      <div class="es-like">
+      <!-- <div class="es-like">
         <% if user_signed_in? %>
           <% if current_user.likes?(@event) %>
             <%= button_to event_like_path(@event, current_user.likes.find_by(event: @event)), method: :delete, class: "like-button liked" do %>
@@ -22,58 +23,139 @@
             <% end %>
           <% end %>
         <% end %>
+      </div> -->
+      <div class="ei-like">
+        <% if user_signed_in? %>
+          <% if current_user.likes?(@event) %>
+            <%= button_to event_like_path(@event, current_user.likes.find_by(event: @event)), method: :delete, class: "like-button liked", remote: true, data: { turbo: false } do %>
+              <i class="fas fa-heart"></i>
+            <% end %>
+          <% else %>
+            <%= button_to event_likes_path(@event), method: :post, class: "like-button", remote: true, data: { turbo: false } do %>
+              <i class="far fa-heart"></i>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
       <div class="row">
         <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
           <div class="circle-text">
             <p><%= @event.rating %></p>
           </div>
+          
+<div class="booking-an-event">
+  <div class="container">
+    <div class="banner-show-event col-8 col-sm-8 col-md-8 col-lg-8">
+      <div class="container-event">
+        <div class="img-event-container">
+          <% if @event.present? %>
+            <img src="<%= @event.image_url %>">
+            <p class="price-event">As from Rs <%= @event.price_normal %></p>
+          <% end %>
         </div>
-        <div class="col-9 col-sm-9 col-md-9 col-lg-9">
-          <div class="es-date">
-            <p><%= @event.date if @event.present? %></p>
-          </div>
+        <div class="show-event-details">
+          <h2><%= @event.name if @event.present? %></h2>
         </div>
-      </div><br>
-      <div class="row">
-        <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
-          <div class="circle-map">
-            <p>Map</p>
-          </div>
-        </div>
-        <div class="col-9 col-sm-9 col-md-9 col-lg-9">
-          <div class="event-address">
-            <% if @event.present? %>
-              <p><strong><%= @event.venue %></strong></p>
-              <p><%= @event.address %></p>
+        <div class="es-like">
+          <% if user_signed_in? %>
+            <% if current_user.likes?(@event) %>
+              <%= button_to event_like_path(@event, current_user.likes.find_by(event: @event)), method: :delete, class: "like-button liked" do %>
+                <i class="fa fa-heart like-icon red"></i>
+              <% end %>
+            <% else %>
+              <%= button_to event_likes_path(@event), method: :post, class: "like-button" do %>
+                <i class="fa fa-heart like-icon"></i>
+              <% end %>
             <% end %>
-          </div>
+          <% end %>
         </div>
-      </div><br>
-      <div class="performing-artists">
-        <% if @artists.present? %>
-          <h3>Performing Artists</h3>
-            <% @artists.each do |artist| %>
-              <div class="artist-name">
-                <%= link_to @artists.first.name, artist_path(@artists.first) %>
-              <div class="artist-image">
-                <%= link_to image_tag(artist.image_url, class: "artist-photo"), artist_path(artist) %>
-              </div>
-            <% end %>
-        <% end %>
+        <div class="row">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
+            <div class="circle-text">
+              <p><%= @event.rating %></p>
+            </div>
+          </div>
+          <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="es-date">
+              <p><%= @event.date if @event.present? %></p>
+            </div>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
+            <div class="circle-map">
+              <p>Map</p>
+            </div>
+          </div>
+          <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="event-address">
+              <% if @event.present? %>
+                <p><strong><%= @event.venue %></strong></p>
+                <p><%= @event.address %></p>
+              <% end %>
+            </div>
+            <div id='map' style='width: 100%; height: 400px;'></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3747.157843611402!2d57.51844267976792!3d-20.085687586582686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c530b0ad2eef7%3A0xcdc414f5a4ec753e!2sHistorical%20Ruins%20of%20Balaclava!5e0!3m2!1sen!2smu!4v1678454829382!5m2!1sen!2smu" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div><br>
+        <div class="performing-artists">
+          <% if @artists.present? %>
+            <h3>Performing Artists</h3>
+              <% @artists.each do |artist| %>
+                <div class="artist-name">
+                  <%= link_to @artists.first.name, artist_path(@artists.first) %>
+                <div class="artist-image">
+                  <%= link_to image_tag(artist.image_url, class: "artist-photo"), artist_path(artist) %>
+                </div>
+              <% end %>
+          <% end %>
+        </div>
+        <div class="event-description">
+          <% if @event.present? %>
+            <p>Description: <%= @event.description %></p>
+          <% end %>
+        </div>
+        </div>
+        <br>
+  /T02NE0241-U044QM5K6F5-96811b8abf9b-192      <div class="text-center">
+          <% if @event.present? %>
+            <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
+            <%= link_to "Back", events_path, class: "button-event" %>
+          <% end %>
+        </div><br>
+        <br>
+        <br>
+        <br>
       </div>
-      <div class="event-description">
-        <% if @event.present? %>
-          <p>Description: <%= @event.description %></p>
-        <% end %>
-      </div>
-      </div>
-      <div class="text-center">
-        <% if @event.present? %>
-          <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
-          <%= link_to "Back", events_path, class: "button-event" %>
-        <% end %>
-      </div><br>
     </div>
   </div>
 </div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoicm91czAzMDgiLCJhIjoiY2xmMms4a3I1MGpjYzQ0cGp4YTJma2JreCJ9.bLj7i7gUF_7Q2VWsbDchzQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [@longitude, @latitude],
+      zoom: 12
+    });
+    var marker = new mapboxgl.Marker()
+      .setLngLat([@longitude, @latitude])
+      .addTo(map);
+  </script>
+
+  <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: {lat: <%= @latitude %>, lng: <%= @longitude %> }
+      });
+      var marker = new google.maps.Marker({
+        position: {lat: <%= @latitude %>, lng: <%= @longitude %> },
+        map: map
+      });
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2mtoNTeTDs1AQhPdK9G9RIp1gsfBdsbM&callback=initMap"
+      async defer></script>
