@@ -10,6 +10,13 @@ body {
   opacity: 0.8;
 }
 
+.overlay-home {
+  background-color: red;opacity: 0.9;
+  height: 100vh;
+  width: auto;
+  z-index: 1;
+}
+
 .artist-banner h5{
   font-family: 'Quicksand', sans-serif;
   font-size: 25px;
@@ -17,8 +24,6 @@ body {
   text-align: center;
   letter-spacing: 1px;
 }
-
-
 
 .artist-banner p {
   font-family: 'Quicksand', sans-serif;
@@ -37,7 +42,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -3;
+
 }
 
 .banner .container {
