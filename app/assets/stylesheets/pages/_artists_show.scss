@@ -8,25 +8,34 @@
   display: flex;
   background-size: cover;
   background-position: cover;
+
+}
+
+.show-artist-image .container-profile-names {
+  // margin-left: 100px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .show-artist-image h1 {
   position: absolute;
   top: 0;
   margin-top: 300px;
-  margin-left: 110px;
   font-size: 50px;
   letter-spacing: 2px;
   font-family: 'Quicksand', sans-serif;
   color: white;
-  opacity: 0.6;
+  opacity: 0.9;
+
 }
 
 .show-artist-image h5 {
   position: absolute;
   top: 0;
   margin-top: 360px;
-  margin-left: 160px;
   font-size: 28px;
   font-family: 'Quicksand', sans-serif;
   color: white;
@@ -35,10 +44,29 @@
 
 .show-message-artist {
   position: absolute;
-  top: 50%;
-  margin-left: 136px;
+  top: 0;
+  margin-left: 123px;
+  margin-top: 420px;
   background-color: $violet;
   color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 15px 20px 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  transition: 0.2s;
+
+}
+
+.show-message-artist:hover {
+  position: absolute;
+  top: 0;
+  margin-left: 123px;
+  margin-top: 420px;
+  background-color: $yellow;
+  color: black;
   font-family: 'Quicksand', sans-serif;
   font-size: 8px;
   letter-spacing: 1px;
