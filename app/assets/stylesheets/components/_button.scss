@@ -236,22 +236,9 @@
 .forgot-password {
   background-color: transparent;
   color: white;
-  border: 3px;
-  padding: 8px 12px 8px 12px;
   text-decoration: none;
   display: inline;
   transition: 0.2s;
   letter-spacing: 0.1rem;
-  margin-left: 20px;
-}
-
-.forgot-password:hover {
-  background-color: transparent;
-  color: $yellow;
-  border: 3px;
-  padding: 8px 12px 8px 12px;
-  text-decoration: none;
-  display: inline;
-  transition: 0.2s;
-  margin-left: 20px;
+  margin-top: 10px;
 }
