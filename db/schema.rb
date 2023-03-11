@@ -93,8 +93,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_065141) do
     t.decimal "rating"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.decimal "longitude"
-    t.decimal "latitude"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "events_tags", force: :cascade do |t|

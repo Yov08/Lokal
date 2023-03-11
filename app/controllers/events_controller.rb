@@ -7,6 +7,13 @@ class EventsController < ApplicationController
     else
       @events = Event.where('date >= ?', Date.today).order(date: :asc)
     end
+    @markers = Event.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {event: event})
+      }
+    end
     if params[:tag].present?
       @events = @events.joins(:tags).where(tags: { name: params[:tag] })
     end
