@@ -172,7 +172,7 @@ blakkayo = User.create!(
   password: "123456",
   email: "blakkayo@gmail.com",
   normal_user: false,
-  image_url: "https://otayo.com/wp-content/uploads/2022/07/blakkayo-1.jpg"
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678529471/LOKAL/artists/blakkayo_show_mkxzsc.jpg"
 )
 davidjay = User.create!(
   first_name: "David",
@@ -345,7 +345,7 @@ blakkayo_artist = Artist.create!(
   rating: "4.8",
   hourly_rate: "30000",
   media_link: " ",
-  image_url: "https://otayo.com/wp-content/uploads/2022/07/blakkayo-1.jpg",
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678529471/LOKAL/artists/blakkayo_show_mkxzsc.jpg",
   social_media_links: " "
 )
 davidjay_artist = Artist.create!(
