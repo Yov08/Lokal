@@ -1,0 +1,42 @@
+body .confirmation-template {
+  height: 900px;
+  max-width: 100%;
+  background-color: white;
+}
+
+.confirmation-template .thank-you {
+  height: 470px;
+  background-color: $violet;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.confirmation-thanks h2 {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 200px;
+}
+
+.confirmation-check p {
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+}
+
+.confirmation-check h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+.confirmation-details {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.confirmation-links {
+  padding-top: 20px;
+  text-align: center;
+}

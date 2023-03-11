@@ -1,11 +1,26 @@
-<div class="container">
-  <div class="text-center">
-    <h1>Booking Confirmed!</h1>
-    <h2>Thank You</h2>
-    <p>Please check your email for confirmation and details</p>
-  </div>
 
-  <div class="text-center">
-    <%= link_to "Home", root_path, class: "button-event" %>
+<body>
+  <div class="confirmation-template">
+    <div class="thank-you">
+
+      <div class="container">
+        <div class="confirmation-thanks">
+          <h2>Thank you</h2>
+        </div>
+      </div>
+    </div>
+
+      <div class="confirmation-details">
+        <div class="container">
+          <div class="confirmation-check">
+            <h1><i class="fa-regular fa-circle-check"></i></h1>
+            <p>Please check your email for confirmation and details</p>
+          </div>
+
+          <div class="confirmation-links">
+            <%= link_to "Home", root_path, class: "button-event" %>
+          </div>
+      </div>
+    </div>
   </div>
-</div>
+</body>
