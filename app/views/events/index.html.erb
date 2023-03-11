@@ -16,6 +16,21 @@
             <% end %>
           </h4>
         </div>
+
+        <div class="gender-events">
+        <% @events.each do |event| %>
+                              <div class="ei-tags">
+
+                        <% event.tags.each do |tag| %>
+                          <!-- <span class="<%= tag_class(tag) %>"><%= tag.name %></span> -->
+                          <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
+                        <% end %>
+                      </div>
+                      <% end %>
+
+        </div>
+
+
         <div class="events-slide">
           <div class="row">
             <swiper-container>
@@ -28,11 +43,11 @@
                              <% if user_signed_in? %>
                               <% if current_user.likes?(event) %>
                                 <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked" do %>
-                              <i class="fas fa-heart"></i>
+                              <i class="fa-regular fa-heart"></i>
                               <% end %>
                               <% else %>
                               <%= button_to event_likes_path(event), method: :post, class: "like-button" do %>
-                              <i class="far fa-heart"></i>
+                              <i class="fa-regular fa-heart"></i>
                             <% end %>
                           <% end %>
                         <% end %>
@@ -40,18 +55,8 @@
                     </div>
 
                     <div class="ei-details">
-                      <%# <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png" class="logo"> %>
                       <h2> <%= event.name %> </h3>
-                      <!-- <div class="ei-rating">
-                        <h4 class="ei-star-icon"><ion-icon name="star-half-outline"></ion-icon><span><%= event.rating %></span></h4>
-                      </div> -->
 
-                      <div class="ei-tags">
-                        <% event.tags.each do |tag| %>
-                          <!-- <span class="<%= tag_class(tag) %>"><%= tag.name %></span> -->
-                          <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
-                        <% end %>
-                      </div>
                       <div class="row ei-location-date">
                         <div class="col">
                           <div class="ei-location">

@@ -27,7 +27,7 @@
 .events-slide {
   padding-top: 20px;
   padding-left: 50px;
-  max-width: 88%;
+  max-width: 87%;
 }
 
 .ei-card
@@ -46,7 +46,7 @@
   text-align: center;
   top: 0;
   position: relative;
-  padding-left: 70px;
+  padding-left: 80px;
 }
 
 .ei-card .ei-poster
@@ -106,7 +106,7 @@
 {
   font-size: 20px;
   font-weight: bold;
-  color: #EB7C36;
+  color: $white;
 }
 .ei-card .ei-details .ei-rating
 {
@@ -133,6 +133,7 @@
   color: #fff;
   border-radius: 4px;
 }
+
 .tag-house {
   background-color: #D2D167;
 }

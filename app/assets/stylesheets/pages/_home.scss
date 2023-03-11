@@ -10,11 +10,20 @@ body {
   opacity: 0.8;
 }
 
-.overlay-home {
-  background-color: red;opacity: 0.9;
-  height: 100vh;
-  width: auto;
-  z-index: 1;
+// .overlay-home {
+//   background-color: red;opacity: 0.9;
+//   height: 900px;
+//   width: auto;
+//   // z-index: -1;
+// }
+
+.homepage-content-text {
+  z-index: 3 !important;
+
+}
+
+.homepage-of-lokal {
+  position: relative;
 }
 
 .artist-banner h5{
@@ -42,8 +51,13 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -3;
+  z-index: -2;
 
+}
+
+.homepage-search input {
+
+  border: 2px solid white;
 }
 
 .banner .container {
