@@ -1,1 +1,28 @@
 <h1>Test</h1>
+
+
+<h1>Viewing my Bookings</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Booking ID</th>
+      <th>Event Name</th>
+      <th>Event Date</th>
+      <<th>Booking Date</th>
+      <th>Booking User</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.id %></td>
+        <td><%= booking.event.name %></td>
+        <td><%= booking.event.date %></td>
+        <td><%= booking.created_at.strftime("%m/%d/%Y %I:%M %p") %></td>
+        <td><%= booking.user.email %></td>
+        <td><%= link_to "View", booking_path(booking) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
