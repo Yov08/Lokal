@@ -41,10 +41,27 @@
 .show-message-artist {
   position: absolute;
   top: 0;
-  margin-left: 170px;
+  margin-left: 173px;
   margin-top: 420px;
   background-color: $violet;
   color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 15px 20px 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  transition: 0.2s;
+}
+
+.show-message-artist:hover {
+  position: absolute;
+  top: 0;
+  margin-left: 173px;
+  margin-top: 420px;
+  background-color: $yellow;
+  color: black;
   font-family: 'Quicksand', sans-serif;
   font-size: 8px;
   letter-spacing: 1px;
