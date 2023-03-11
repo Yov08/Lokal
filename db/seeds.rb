@@ -155,7 +155,7 @@ kaya = User.create!(
   last_name: "Popise",
   password: "123456",
   email: "kayaman@gmail.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/Kaya-1.jpg"
 )
 annega = User.create!(
@@ -163,7 +163,7 @@ annega = User.create!(
   last_name: " ",
   password: "123456",
   email: "annega@gmail.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg"
 )
 blakkayo = User.create!(
@@ -171,7 +171,7 @@ blakkayo = User.create!(
   last_name: "Ayo",
   password: "123456",
   email: "blakkayo@gmail.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/blakkayo-1.jpg"
 )
 davidjay = User.create!(
@@ -179,7 +179,7 @@ davidjay = User.create!(
   last_name: "Jay",
   password: "123456",
   email: "davidjay@gmail.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/david-jay-1.jpg"
 )
 rouslan = User.create!(
@@ -187,7 +187,7 @@ rouslan = User.create!(
   last_name: "Chimeea",
   password: "123456",
   email: "rous@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/dj-ash-1.jpg"
 )
 yov = User.create!(
@@ -195,7 +195,7 @@ yov = User.create!(
   last_name: "Bosco",
   password: "123456",
   email: "yov@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/Emmanuel-Savannah-1.jpg"
 )
 silvio = User.create!(
@@ -203,7 +203,7 @@ silvio = User.create!(
   last_name: "",
   password: "123456",
   email: "silvio@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2022/07/justice-lecoq-1.jpg"
 )
 dj_sash = User.create!(
@@ -211,7 +211,7 @@ dj_sash = User.create!(
   last_name: "Sash",
   password: "123456",
   email: "djsash@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2023/02/DJ-Sash.jpg"
 )
 eli_fur = User.create!(
@@ -219,7 +219,7 @@ eli_fur = User.create!(
   last_name: "& Fur",
   password: "123456",
   email: "elinfur@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2023/01/Eli-Fur.jpg"
 )
 massane = User.create!(
@@ -227,7 +227,7 @@ massane = User.create!(
   last_name: "",
   password: "123456",
   email: "massane@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://otayo.com/wp-content/uploads/2023/01/massane.jpg"
 )
 philippe = User.create!(
@@ -235,7 +235,7 @@ philippe = User.create!(
   last_name: "Thomas",
   password: "123456",
   email: "philippethomas@lokal.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678431268/LOKAL/artists/philippe-thomas_gwqhgv.jpg"
 )
 zulu = User.create!(
@@ -243,7 +243,7 @@ zulu = User.create!(
   last_name: "",
   password: "123456",
   email: "zulu@gmail.com",
-  user_type: false,
+  normal_user: false,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433599/LOKAL/artists/zulu-4_cnordr.jpg"
 )
 puts "Users Created!"
