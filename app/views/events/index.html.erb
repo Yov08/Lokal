@@ -27,14 +27,27 @@
               <!-- <div class="ei-rating">
                 <h4 class="ei-star-icon"><ion-icon name="star-half-outline"></ion-icon><span><%= event.rating %></span></h4>
               </div> -->
-              <div class="ei-like">
+              <!-- <div class="ei-like">
                 <% if user_signed_in? %>
                   <% if current_user.likes?(event) %>
-                    <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked" do %>
+                    <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked", remote: true do %>
                       <i class="fas fa-heart"></i>
                     <% end %>
                   <% else %>
-                    <%= button_to event_likes_path(event), method: :post, class: "like-button" do %>
+                    <%= button_to event_likes_path(event), method: :post, class: "like-button", remote: true do %>
+                      <i class="far fa-heart"></i>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div> -->
+              <div class="ei-like">
+                <% if user_signed_in? %>
+                  <% if current_user.likes?(event) %>
+                    <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked", remote: true, data: { turbo: false } do %>
+                      <i class="fas fa-heart"></i>
+                    <% end %>
+                  <% else %>
+                    <%= button_to event_likes_path(event), method: :post, class: "like-button", remote: true, data: { turbo: false } do %>
                       <i class="far fa-heart"></i>
                     <% end %>
                   <% end %>
@@ -73,6 +86,20 @@
     <% end %>
 
 </div>
+
+
+<script>
+  document.querySelectorAll('.like-button').forEach(button => {
+    button.addEventListener('ajax:success', (event) => {
+      const icon = event.currentTarget.querySelector('i');
+      icon.classList.toggle('far');
+      icon.classList.toggle('fas');
+      icon.classList.toggle('liked');
+    });
+  });
+</script>
+
+
 <!-- <div class="col">
   <div class="ei-row text-center align-items-center">
     <h1>Upcoming Music Festivals</h1>
