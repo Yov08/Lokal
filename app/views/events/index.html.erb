@@ -1,20 +1,21 @@
 <body>
   <div class="upcoming-events-lokal">
-      <div class="banner-upcoming">
-          <h1>Upcoming Music Festivals</h1>
-      </div>
+    <div class="banner-upcoming">
+      <h1>Upcoming Music Festivals</h1>
+    </div>
       <div class="ei-container">
-            <h4><% if params[:tag].present? %>
-              <% count = @events.count %>
-              <% festival_plural = count > 1 ? "events" : "event" %>
-              We found <%= count %> <%= params[:tag] %> <%= festival_plural %>
-            <% else %>
-              <% count = @events.count %>
-              <% festival_plural = count > 1 ? "festivals" : "festival" %>
-              We found <%= count %> music <%= festival_plural %>
-            <% end %>
-          </h4>
-        </div>
+        <h4 class="ei-count">
+          <% if params[:tag].present? %>
+            <% count = @events.count %>
+            <% festival_plural = count > 1 ? "events" : "event" %>
+            We found <%= count %> <%= params[:tag] %> <%= festival_plural %>
+          <% else %>
+            <% count = @events.count %>
+            <% festival_plural = count > 1 ? "festivals" : "festival" %>
+            We found <%= count %> music <%= festival_plural %>
+          <% end %>
+        </h4>
+      </div>
         <div class="gender-events">
           <% @events.each do |event| %>
              <div class="ei-tags">
