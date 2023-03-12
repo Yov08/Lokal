@@ -25,24 +25,24 @@
           <% end %>
         </div>
         <div class="row">
-          <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
+          <div class="col border-right">
             <div class="circle-text">
               <p><%= @event.rating %></p>
             </div>
           </div>
-          <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+          <div class="col">
             <div class="es-date">
               <p><%= @event.date if @event.present? %></p>
             </div>
           </div>
         </div><br>
         <div class="row">
-          <div class="col-3 col-sm-3 col-md-3 col-lg-3 border-right">
+          <div class="col border-right">
             <div class="circle-map">
               <p>Map</p>
             </div>
           </div>
-          <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+          <div class="col">
             <div class="event-address">
               <% if @event.present? %>
                 <p><strong><%= @event.venue %></strong></p>
