@@ -174,17 +174,17 @@
                     <div class="ei-poster">
                       <img src= <%= event.image_url%> alt="">
                             <div class="ei-like">
-                             <% if user_signed_in? %>
+                            <% if user_signed_in? %>
                               <% if current_user.likes?(event) %>
                                 <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked" do %>
-                              <i class="fa-regular fa-heart"></i>
-                              <% end %>
+                                  <i class="fa-regular fa-heart"></i>
+                                 <% end %>
                               <% else %>
-                              <%= button_to event_likes_path(event), method: :post, class: "like-button" do %>
-                              <i class="fa-regular fa-heart"></i>
+                                <%= button_to event_likes_path(event), method: :post, class: "like-button" do %>
+                                  <i class="fa-regular fa-heart"></i>
+                                <% end %>
+                              <% end %>
                             <% end %>
-                          <% end %>
-                        <% end %>
                       </div>
                     </div>
 
