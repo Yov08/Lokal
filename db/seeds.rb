@@ -64,7 +64,7 @@ moaf = Event.create!(
 )
 mystik_garden_vi = Event.create!(
   name: "The Mystik Garden VI",
-  date: "11.03.2023",
+  date: "19.03.2023",
   venue: "Ruins of Balaclava",
   description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
   price_normal: 2000,
@@ -137,6 +137,7 @@ house = Tag.create!(name: "House")
 festival = Tag.create!(name: "Festival")
 jazz = Tag.create!(name: "Jazz")
 concert = Tag.create!(name: "Concert")
+rock = Tag.create!(name: "Rock")
 puts "Tags Created!"
 
 puts "Creating Event Tags"
@@ -146,6 +147,7 @@ mystik_garden_vi.tags << festival
 live_dan_moka.tags << jazz
 live_dan_moka.tags << concert
 luna_night_festival.tags << techno
+luna_night_festival.tags << festival
 puts "Event Tags Created!"
 
 
@@ -212,7 +214,7 @@ dj_sash = User.create!(
   password: "123456",
   email: "djsash@lokal.com",
   normal_user: false,
-  image_url: "https://otayo.com/wp-content/uploads/2023/02/DJ-Sash.jpg"
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678614197/LOKAL/artists/dj_sash_azdcus.jpg"
 )
 eli_fur = User.create!(
   first_name: "Eli",
@@ -246,7 +248,53 @@ zulu = User.create!(
   normal_user: false,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433599/LOKAL/artists/zulu-4_cnordr.jpg"
 )
-puts "Users Created!"
+dummy1 = User.create!(
+  first_name: "Dummy",
+  last_name: "One",
+  password: "123456",
+  email: "dummy1@gmail.com",
+  normal_user: true,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678613935/LOKAL/users/dummy1_rr7n6f.jpg"
+)
+
+dummy2 = User.create!(
+  first_name: "Dummy",
+  last_name: "Two",
+  password: "123456",
+  email: "dummy2@gmail.com",
+  normal_user: true,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678613935/LOKAL/users/dummy4_mi6v2c.jpg"
+)
+
+dummy3 = User.create!(
+  first_name: "Dummy",
+  last_name: "Three",
+  password: "123456",
+  email: "dummy3@gmail.com",
+  normal_user: true,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678613935/LOKAL/users/dummy3_lfc2dj.jpg"
+)
+
+dummy4 = User.create!(
+  first_name: "Dummy",
+  last_name: "Four",
+  password: "123456",
+  email: "dummy4@gmail.com",
+  normal_user: true,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678613935/LOKAL/users/dummy5_k9q2o0.jpg"
+)
+
+dummy5 = User.create!(
+  first_name: "Dummy",
+  last_name: "Five",
+  password: "123456",
+  email: "dummy5@gmail.com",
+  normal_user: true,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678613936/LOKAL/users/dummy2_omzlsp.jpg"
+)
+
+
+
 
 
 
@@ -308,7 +356,7 @@ dj_sash_artist = Artist.create!(
   rating: "4.7",
   hourly_rate: "35000",
   media_link: "https://www.youtube.com/watch?v=baKMg1W-LK8&ab_channel=DJSashVEVO",
-  image_url: "https://otayo.com/wp-content/uploads/2023/02/DJ-Sash.jpg",
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678614197/LOKAL/artists/dj_sash_azdcus.jpg",
   social_media_links: "https://www.instagram.com/djsashofficial/?hl=en",
   youtube: "https://www.youtube.com/channel/UCHTy_XC6fbep_HD2VUy7ZFA",
   spotify: "https://open.spotify.com/artist/0cjvrTtv350Ls87eGY80iz?autoplay=true",
@@ -422,4 +470,55 @@ Booking.create!(
   pax_vip: 0
 )
 
+puts "Bookings Created!"
+
+puts "Creating Likes"
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: dummy1.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: dummy2.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: dummy3.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: dummy4.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: dummy5.id,
+)
+Like.create!(
+  event_id: soiree_zulu.id,
+  user_id: dummy4.id,
+)
+Like.create!(
+  event_id: soiree_zulu.id,
+  user_id: dummy2.id,
+)
+Like.create!(
+  event_id: soiree_zulu.id,
+  user_id: dummy3.id,
+)
+Like.create!(
+  event_id: soiree_zulu.id,
+  user_id: dummy1.id,
+)
+
+
+# kaya = User.create!(
+#   annega = User.create!(
+#   blakkayo = User.create!(
+#   davidjay = User.create!(
+#   yov = User.create!(
+#   dj_sash = User.create!(
+#   eli_fur = User.create!(
+#   massane = User.create!(
+#   philippe = User.create!(
+#   zulu = User.create!(
 puts "Bookings Created!"

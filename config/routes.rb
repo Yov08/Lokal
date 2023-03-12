@@ -21,5 +21,4 @@ Rails.application.routes.draw do
   resources :events do
     resources :likes, only: [:create, :destroy]
   end
-
 end
