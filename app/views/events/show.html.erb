@@ -2,6 +2,11 @@
   <div class="container">
     <div class="banner-show-event">
       <div class="container-event">
+        <div class="event-back-btn">
+          <%= link_to events_path, class: "button-icon" do %>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          <% end %>
+        </div>
         <div class="img-event-container">
           <% if @event.present? %>
             <img src="<%= @event.image_url %>">
@@ -80,12 +85,13 @@
             </div>
             <div class="interested">
               <% likes = @event.likes.limit(4) %>
-              <% likes.each do |like| %>
-                <%= image_tag like.user.image_url, class: "liked-user-photo" %>
+              <% normal_users = likes.map(&:user).select(&:normal_user?) %>
+              <% normal_users.each do |user| %>
+                <%= image_tag user.image_url, class: "liked-user-photo" %>
               <% end %>
-              <% remaining_likes = @event.likes.count - 4 %>
-              <% if remaining_likes > 0 %>
-                <% total_likes = remaining_likes + 333 %>
+              <% likes = @event.likes.count %>
+              <% if likes > 0 %>
+                <% total_likes = likes + rand(260..530) %>
                 <div class="total-likes-circle">
                   <div class="total-likes-number">
                     <%= "#{total_likes}+" %>
@@ -96,8 +102,7 @@
           </div>
           <div class="text-center">
           <% if @event.present? %>
-            <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
-            <%= link_to "Back", events_path, class: "button-event" %>
+            <%= link_to "Buy Ticket Rs#{number_with_delimiter(@event.price_normal)}", new_booking_path(event_id: @event.id), class: "button-main" %>
           <% end %>
           </div>
           <br>
