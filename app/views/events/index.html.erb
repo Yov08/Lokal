@@ -3,6 +3,15 @@
     <div class="banner-upcoming">
       <h1>Upcoming Music Festivals</h1>
     </div>
+    <%# <swiper-container> %>
+    <div class="ei-tags-index">
+        <% Tag.all.each do |tag| %>
+          <%# <swiper-slide> %>
+            <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
+          <%# </swiper-slide> %>
+        <% end %>
+    </div>
+    <%# </swiper-container> %>
     <div class="ei-container">
         <h4 class="ei-count">
           <% if params[:tag].present? %>
@@ -16,15 +25,6 @@
           <% end %>
         </h4>
     </div>
-    <%# <swiper-container> %>
-    <div class="ei-tags-index">
-        <% Tag.all.each do |tag| %>
-          <%# <swiper-slide> %>
-            <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
-          <%# </swiper-slide> %>
-        <% end %>
-    </div>
-    <%# </swiper-container> %>
     <div class="events-slide">
       <div class="row">
         <swiper-container>

@@ -37,7 +37,7 @@ soiree_zulu = Event.create!(
   Known for his lyrical talents and his iconic timbre of voice which has won over many since the release of his single 'Gabriella', the artist Zulu promises a very entertaining live concert for all music lovers.
   La Soirée avec Zulu will also welcome the band of the moment, Akoustika, which is slowly but surely becoming known on the local music scene. Mauritian musical group founded by Jonas ROBERT, Akoustika will delight you with a variety of acoustic music on April 29, 2023.
   Nothing can resist the power of good music! Gather your team and join Zulu ek So Tribu and Akoustika during the Soirée with Zulu at Om Art Tamarin, from 7:00 p.m. to 11:00 p.m.!",
-  price_normal: 2200,
+  price_normal: 200,
   price_vip: 0,
   address: "Tamarin",
   capacity: 400,
@@ -456,7 +456,6 @@ EventArtist.create!(
   artist_id: zulu_artist.id,
   event_id: soiree_zulu.id
 )
-
 puts "Events Artists Created!"
 
 
@@ -469,8 +468,24 @@ Booking.create!(
   total_price: 2000,
   pax_vip: 0
 )
-
+Booking.create!(
+  event_id: mystik_garden_vi.id,
+  user_id: rouslan.id,
+  pax: 0,
+  booking_type: "",
+  total_price: 8000,
+  pax_vip: 2
+)
+Booking.create!(
+  event_id: soiree_zulu.id,
+  user_id: rouslan.id,
+  pax: 4,
+  booking_type: "",
+  total_price: 800,
+  pax_vip: 0
+)
 puts "Bookings Created!"
+
 
 puts "Creating Likes"
 Like.create!(
@@ -509,7 +524,7 @@ Like.create!(
   event_id: soiree_zulu.id,
   user_id: dummy1.id,
 )
-
+puts "Likes Created!"
 
 # kaya = User.create!(
 #   annega = User.create!(
@@ -521,4 +536,3 @@ Like.create!(
 #   massane = User.create!(
 #   philippe = User.create!(
 #   zulu = User.create!(
-puts "Bookings Created!"
