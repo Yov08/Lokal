@@ -192,14 +192,14 @@
   // justify-content: space-between;
 }
 
-.ei-tags {
+.ei-tags-index {
   white-space: nowrap;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.ei-tags::-webkit-scrollbar {
+.ei-tags-index::-webkit-scrollbar {
   display: none;
 }
 
@@ -223,4 +223,3 @@
   background-color: #333;
   color: #fff;
 }
-
