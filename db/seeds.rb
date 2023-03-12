@@ -64,7 +64,7 @@ moaf = Event.create!(
 )
 mystik_garden_vi = Event.create!(
   name: "The Mystik Garden VI",
-  date: "11.03.2023",
+  date: "19.03.2023",
   venue: "Ruins of Balaclava",
   description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
   price_normal: 2000,
@@ -147,6 +147,7 @@ mystik_garden_vi.tags << festival
 live_dan_moka.tags << jazz
 live_dan_moka.tags << concert
 luna_night_festival.tags << techno
+luna_night_festival.tags << festival
 puts "Event Tags Created!"
 
 
@@ -423,4 +424,42 @@ Booking.create!(
   pax_vip: 0
 )
 
+puts "Bookings Created!"
+
+puts "Creating Likes"
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: rouslan.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: kaya.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: annega.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: davidjay.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: yov.id,
+)
+Like.create!(
+  event_id: luna_night_festival.id,
+  user_id: dj_sash.id,
+)
+
+# kaya = User.create!(
+#   annega = User.create!(
+#   blakkayo = User.create!(
+#   davidjay = User.create!(
+#   yov = User.create!(
+#   dj_sash = User.create!(
+#   eli_fur = User.create!(
+#   massane = User.create!(
+#   philippe = User.create!(
+#   zulu = User.create!(
 puts "Bookings Created!"

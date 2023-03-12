@@ -50,7 +50,7 @@
 }
 .show-event-details {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   margin: 1rem;
 }
@@ -128,4 +128,47 @@
   margin-left: -60px;
   position: relative;
   z-index: 0;
+}
+
+.event-likes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.event-likes h4 {
+  margin-right: 1rem;
+}
+
+.event-likes .interested {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.liked-user-photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: -12px;
+  border: 2px solid white;
+}
+
+.total-likes-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: #F8F8FF;
+  margin-left: 1rem;
+}
+
+.total-likes-number {
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
 }

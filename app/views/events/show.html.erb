@@ -74,6 +74,26 @@
           <% end %>
           </div>
           </div>
+          <div class="event-likes">
+            <div>
+              <h4>Interested</h4>
+            </div>
+            <div class="interested">
+              <% likes = @event.likes.limit(4) %>
+              <% likes.each do |like| %>
+                <%= image_tag like.user.image_url, class: "liked-user-photo" %>
+              <% end %>
+              <% remaining_likes = @event.likes.count - 4 %>
+              <% if remaining_likes > 0 %>
+                <% total_likes = remaining_likes + 333 %>
+                <div class="total-likes-circle">
+                  <div class="total-likes-number">
+                    <%= "#{total_likes}+" %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
           <div class="text-center">
           <% if @event.present? %>
             <%= link_to "Buy Tickets", new_booking_path(event_id: @event.id), class: "button-main" %>
