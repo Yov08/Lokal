@@ -1,4 +1,3 @@
-
 .banner-upcoming {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
@@ -10,11 +9,10 @@
   padding-top: 70px;
   text-decoration: none;
 }
-
 .ei-container h4 {
-  background-color: $yellow;
+  background-color: white;
   color: black;
-  text-align: center;
+  text-align: left;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   padding-left: 30px;
@@ -23,13 +21,11 @@
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-
 .events-slide {
   padding-top: 20px;
   padding-left: 50px;
   max-width: 87%;
 }
-
 .ei-card
 {
   position: relative;
@@ -40,7 +36,6 @@
   overflow: hidden;
   // box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
-
 .ei-like {
   font-size: 25px;
   text-align: center;
@@ -48,7 +43,6 @@
   position: relative;
   padding-left: 80px;
 }
-
 .ei-card .ei-poster
 {
   position: relative;
@@ -124,20 +118,18 @@
 }
 .gender-events .ei-tags
 {
-  position: relative;
-  padding-left: 10px;
-  display: inline;
+  padding: 10px;
   max-width: 100%;
-}
+  display: inline-flex;
 
+}
 .tag-house {
   background-color: transparent;
   text-decoration: none;
   color: black;
   padding: 10px;
   border: 0.5px solid black;
-  border-radius: 5px;
-  margin-right: 4px;
+  border-radius: 20px;
 }
 .tag-techno {
   background-color: transparent;
@@ -145,18 +137,15 @@
   color: black;
   padding: 10px;
   border: 0.5px solid black;
-  border-radius: 5px;
-  margin-right: 4px;
+  border-radius: 20px;
 }
-
 .tag-festival {
   background-color: transparent;
   text-decoration: none;
   color: black;
   padding: 10px;
   border: 0.5px solid black;
-  border-radius: 5px;
-  margin-right: 4px;
+  border-radius: 20px;
 }
 .tag-jazz {
   background-color: transparent;
@@ -164,8 +153,7 @@
   color: black;
   padding: 10px;
   border: 0.5px solid black;
-  border-radius: 5px;
-  margin-right: 4px;
+  border-radius: 20px;
 }
 .tag-concert {
   background-color: transparent;
@@ -173,8 +161,7 @@
   color: black;
   padding: 10px;
   border: 0.5px solid black;
-  border-radius: 5px;
-  margin-right: 4px;
+  border-radius: 20px;
 }
 // .ei-card .ei-details .ei-tags span:nth-child(2)
 // {
@@ -198,4 +185,57 @@
 {
   display: flex;
   // justify-content: space-between;
+}
+
+.ei-tags-index {
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ei-tags-index::-webkit-scrollbar {
+  display: none;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.ei-card .ei-details .ei-tags .tag-house {
+  background-color: #d2d167;
+}
+
+.ei-card .ei-details .ei-tags .tag-techno {
+  background-color: red;
+}
+
+.ei-card .ei-details .ei-tags .tag-festival {
+  background-color: green;
+}
+
+.ei-card .ei-details .ei-tags .tag-jazz {
+  background-color: blue;
+}
+
+.ei-card .ei-details .ei-tags .tag-concert {
+  color: black;
+  background-color: antiquewhite;
 }

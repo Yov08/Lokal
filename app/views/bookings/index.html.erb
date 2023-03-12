@@ -1,28 +1,24 @@
-<h1>Test</h1>
+<h1>My Bookings</h1>
 
-
-<h1>Viewing my Bookings</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Booking ID</th>
-      <th>Event Name</th>
-      <th>Event Date</th>
-      <<th>Booking Date</th>
-      <th>Booking User</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.id %></td>
-        <td><%= booking.event.name %></td>
-        <td><%= booking.event.date %></td>
-        <td><%= booking.created_at.strftime("%m/%d/%Y %I:%M %p") %></td>
-        <td><%= booking.user.email %></td>
-        <td><%= link_to "View", booking_path(booking) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @bookings.each do |booking| %>
+    <div class="col">
+      <div class="booking-card">
+        <div class="card-img-top" style="background-image: url(<%= booking.event.image_url %>);">
+        <div class="booking-card-image" style="background-image: url(<%= booking.event.image_url %>)" width="600" height="400">
+        <div class="booking-card-body">
+          <h5 class="booking-title"><%= booking.event.name %></h5>
+          <h6 class="booking-address text-muted"><%= booking.event.address %></h6>
+          <% if booking.event.date < Date.today %>
+            <p class="booking-over text-danger">EVENT OVER</p>
+          <% else %>
+            <p class="booking-event-date">Event Date: <%= booking.event.date.strftime("%B %d, %Y") %></p>
+          <% end %>
+          <p class="booking-normal">Normal Tickets: <%= booking.pax %></p>
+          <p class="booking-vip">VIP Tickets: <%= booking.pax_vip %></p>
+          <p class="booking-total">Total Price: <%= number_to_currency(booking.total_price) %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
