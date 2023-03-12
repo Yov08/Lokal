@@ -191,3 +191,36 @@
   display: flex;
   // justify-content: space-between;
 }
+
+.ei-tags {
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ei-tags::-webkit-scrollbar {
+  display: none;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #333;
+  color: #fff;
+}
+

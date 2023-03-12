@@ -16,15 +16,15 @@
           <% end %>
         </h4>
       </div>
-        <div class="gender-events">
-          <% @events.each do |event| %>
-             <div class="ei-tags">
-              <% event.tags.each do |tag| %>
-                 <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+      <%# <swiper-container> %>
+      <div class="ei-tags">
+        <% Tag.all.each do |tag| %>
+          <%# <swiper-slide> %>
+            <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
+          <%# </swiper-slide> %>
+        <% end %>
+      </div>
+      <%# </swiper-container> %>
         <div class="events-slide">
           <div class="row">
             <swiper-container>
@@ -97,54 +97,13 @@
 </script>
 
 
-<!-- <div class="col">
-  <div class="ei-row text-center align-items-center">
-    <h1>Upcoming Music Festivals</h1>
-    <h4>We found <%= @events.count %> music festivals</h4>
-  </div>
-  <swiper-container class="ei-swiper">
-    <div class="ei-cards flex-container">
-      <% @events.each do |event| %>
-        <swiper-slide class="ei-slider">
-          <div class="ei-card">
-            <div class="ei-poster">
-            <img src= <%= event.image_url%> alt="">
-            </div>
-            <div class="ei-details">
-              <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1677876816/LOKAL/Lokal_-_logo_v3sszc.png" class="logo">
-              <h2> <%= event.name %> </h3>
-              <div class="ei-rating">
-                <h4 class="ei-star-icon"><ion-icon name="star-half-outline"></ion-icon><span><%= event.rating %></span></h4>
-              </div>
-              <div class="ei-like">
-                <% if user_signed_in? %>
-                  <% if current_user.likes?(event) %>
-                    <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked" do %>
-                      <i class="fas fa-heart"></i>
-                    <% end %>
-                  <% else %>
-                    <%= button_to event_likes_path(event), method: :post, class: "like-button" do %>
-                      <i class="far fa-heart"></i>
-                    <% end %>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="ei-tags">
-                <span>House</span>
-                <span>Festival</span>
-              </div>
-              <div class="ei-location">
-                <h4><ion-icon name="location-outline"></ion-icon> <span><%= event.venue %></span></h4>
-              </div>
-              <div class="ei-date">
-                <% formatted_date = (event.date).strftime("%b %e") %>
-                <h4><ion-icon name="today-outline"></ion-icon> <span><%= formatted_date %></span></h4>
-              </div>
-              <%= link_to "More", event_path(event), class: "button-event" %>
-            </div>
-          </div>
-        </swiper-slide>
+
+<!-- <div class="gender-events">
+  <% @events.each do |event| %>
+    <div class="ei-tags">
+      <% event.tags.each do |tag| %>
+        <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
       <% end %>
     </div>
-  </swiper-container>
+  <% end %>
 </div> -->

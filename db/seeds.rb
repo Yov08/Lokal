@@ -137,6 +137,7 @@ house = Tag.create!(name: "House")
 festival = Tag.create!(name: "Festival")
 jazz = Tag.create!(name: "Jazz")
 concert = Tag.create!(name: "Concert")
+rock = Tag.create!(name: "Rock")
 puts "Tags Created!"
 
 puts "Creating Event Tags"
