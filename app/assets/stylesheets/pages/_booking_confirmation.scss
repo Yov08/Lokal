@@ -15,8 +15,9 @@ body .confirmation-template {
   color: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  font-size: 50px;
-  padding-top: 200px;
+  font-size: 38px;
+  padding-top: 220px;
+  letter-spacing: 1px;
 }
 
 .confirmation-check p {
@@ -29,6 +30,7 @@ body .confirmation-template {
 .confirmation-check h1 {
   font-size: 80px;
   text-align: center;
+  color: $yellow;
 }
 
 .confirmation-details {
