@@ -31,7 +31,7 @@
 }
 
 .events-slide {
-  padding-top: 250px;
+  padding-top: 230px;
   padding-left: 50px;
   max-width: 87%;
   top: 0;
@@ -138,87 +138,55 @@
 
 }
 
-.tag-techno {
+.ei-tags-index .tag-techno {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  font-size: 10px;
+  color: white;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 14px;
   transition: 0.4s;
 }
 
-.tag-techno:hover {
-  background-color: $violet;
+.ei-tags-index .tag-house {
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   color: white;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-.tag-house {
-  background-color: transparent;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  font-size: 10px;
-  transition: 0.4s
-}
-
-.tag-house:hover {
-  background-color: $violet;
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-
-.tag-festival {
-  background-color: transparent;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  font-size: 10px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 14px;
   transition: 0.4s;
 }
 
-.tag-festival:hover {
-  background-color: $violet;
+.ei-tags-index .tag-festival {
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   color: white;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-.tag-jazz {
-  background-color: transparent;
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  font-size: 10px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 14px;
   transition: 0.4s;
 }
 
-.tag-jazz:hover {
+.ei-tags-index .tag-jazz {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  font-size: 10px;
+  color: white;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.4s;
 }
+
+
 
 .tag-concert {
   background-color: transparent;
@@ -286,36 +254,36 @@
   transition: all 0.3s ease;
 }
 
-.tag:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-.ei-card .ei-details .ei-tags .tag-house {
-  background-color: #d2d167;
-}
 
 .ei-card .ei-details .ei-tags .tag-techno {
   background-color: mediumaquamarine;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+
 }
 
-.ei-card .ei-details .ei-tags .tag-festival {
-  background-color: green;
-}
 
 .ei-card .ei-details .ei-tags .tag-jazz {
   background-color: $violet;
   color: white;
-  font-size: 14px;
-  border-color: transparent;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
 
 }
 
 .ei-card .ei-details .ei-tags .tag-concert {
   color: white;
   background-color: orangered;
-  font-size: 14px;
+  font-size: 15px;
   border-color: transparent;
+  border-radius: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
 }
