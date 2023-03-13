@@ -2,7 +2,6 @@
         <div class="img-event-container">
           <% if @event.present? %>
             <img src="<%= @event.image_url %>">
-            <p class="price-event">As from Rs <%= @event.price_normal %></p>
           <% end %>
         </div>
   <div class="container">
@@ -15,6 +14,18 @@
         </div>
         <div class="show-event-details">
           <h2><%= @event.name if @event.present? %></h2>
+            <div class="row">
+              <div class="col">
+                  <div class="es-date">
+                  <p><i class="fa-regular fa-calendar" class="date-symbol-show"></i> <span><%= @event.date if @event.present? %></span></p>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="es-price">
+                  <p><i class="fa-solid fa-tag"></i> As from Rs <%= @event.price_normal %></p>
+                  </div>
+              </div>
+            </div>
         </div>
         <div class="es-like">
           <% if user_signed_in? %>
@@ -36,9 +47,6 @@
             </div>
           </div>
           <div class="col">
-            <div class="es-date">
-              <p><%= @event.date if @event.present? %></p>
-            </div>
           </div>
         </div><br>
         <div class="row">
