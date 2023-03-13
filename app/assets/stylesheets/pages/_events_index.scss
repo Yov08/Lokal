@@ -67,7 +67,7 @@
   bottom: -180px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #5CA3B3 50%, transparent);
+  background: linear-gradient(0deg, #745383 40%, transparent);height:500px;
   transition: 0.5s;
   z-index: 1;
 }
@@ -109,9 +109,11 @@
 }
 .ei-card .ei-details h2
 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  color: $white;
+  color: white;
+  letter-spacing: 0.5px;
+  padding-bottom: 4px;
 }
 .ei-card .ei-details .ei-rating
 {
@@ -230,11 +232,10 @@
 // {
 //   background: #745383;
 // }
-.ei-card .ei-details .ei-location h4
+.ei-location h4
 {
-  font-size: 1em;
-  padding-top: 10px;
-  // padding: 10px 5px;
+  font-size: 20px;
+  padding-top: 15px;
   color: #fff;
 }
 .ei-card .ei-details .ei-date h4
@@ -295,10 +296,14 @@
 }
 
 .ei-card .ei-details .ei-tags .tag-jazz {
-  background-color: blue;
+  background-color: $violet;
+  color: white;
+  font-size: 14px;
+
 }
 
 .ei-card .ei-details .ei-tags .tag-concert {
   color: black;
-  background-color: antiquewhite;
+  background-color: $yellow;
+  font-size: 14px;
 }
