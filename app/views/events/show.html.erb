@@ -1,16 +1,16 @@
 <div class="booking-an-event">
+        <div class="img-event-container">
+          <% if @event.present? %>
+            <img src="<%= @event.image_url %>">
+            <p class="price-event">As from Rs <%= @event.price_normal %></p>
+          <% end %>
+        </div>
   <div class="container">
     <div class="banner-show-event">
       <div class="container-event">
         <div class="event-back-btn">
           <%= link_to events_path, class: "button-icon" do %>
             <ion-icon name="arrow-back-outline"></ion-icon>
-          <% end %>
-        </div>
-        <div class="img-event-container">
-          <% if @event.present? %>
-            <img src="<%= @event.image_url %>">
-            <p class="price-event">As from Rs <%= @event.price_normal %></p>
           <% end %>
         </div>
         <div class="show-event-details">

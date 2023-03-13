@@ -1,4 +1,4 @@
-.booking-an-event .container {
+.booking-an-event{
   height: 900px;
   max-width: 100%;
 }
@@ -25,7 +25,9 @@
 .img-event-container {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 300px;
+  background-image: cover;
+  background-position: cover;
   padding-bottom: 25%;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -38,6 +40,7 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
+
 }
 .img-event-container:after {
   content: "";

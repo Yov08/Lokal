@@ -6,7 +6,7 @@ body {
 .logo-lokal img {
   display: block;
   margin: 0 auto;
-  width: 400px;
+  max-width: 100%;
   opacity: 0.8;
 }
 
@@ -24,6 +24,7 @@ body {
 
 .homepage-of-lokal {
   position: relative;
+
 }
 
 .artist-banner h5{
@@ -58,7 +59,10 @@ body {
 .homepage-search input {
 
   border: 2px solid white;
+
 }
+
+
 
 .banner .container {
   font-family: 'Quicksand', sans-serif;
