@@ -1,15 +1,20 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-
   def index
     if params[:query].present?
       @events = Event.global_search(params[:query])
     else
-      @events = Event.where('date >= ?', Date.today).order(date: :asc)
+      @events = Event.where(‘date >= ?’, Date.today).order(date: :asc)
     end
     if params[:tag].present?
       @events = @events.joins(:tags).where(tags: { name: params[:tag] })
     end
+    @top_rated_events = Event.left_joins(:likes).group(:id).order(‘COUNT(likes.id) DESC’)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    @upcoming_events = Event.where(‘date BETWEEN ? AND ?’, Date.today, 4.weeks.from_now).order(date: :asc)
   end
 
   def show
@@ -17,7 +22,6 @@ class EventsController < ApplicationController
     @artists = @event.artists
     @longitude = @event.longitude
     @latitude = @event.latitude
-
   end
 
   def new
@@ -46,9 +50,14 @@ class EventsController < ApplicationController
     redirect_to events_path, status: :see_other
   end
 
+  def top_rated_events
+    Event.left_joins(:likes).group(:id).order(‘COUNT(likes.id) DESC’)
+  end
+
   private
 
   def event_params
     params.require(:event).permit(:name, :date, :venue, :description, :price_normal, :price_vip, :address, :capacity, :image_url)
   end
+  
 end

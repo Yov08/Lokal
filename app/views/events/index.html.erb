@@ -91,9 +91,62 @@
             <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn btn-danger" %>
           <% end %>
 
-
+          <div class=“nav-bar-filters”>
+            <ul class=“nav nav-tabs”>
+              <li class=“nav-item”>
+                <a class=“nav-link active” data-toggle=“tab” href=“#toprated”>Top Rated</a>
+              </li>
+              <li class=“nav-item”>
+                <a class=“nav-link” data-toggle=“tab” href=“#upcoming”>Upcoming</a>
+              </li>
+            </ul>
+            <div class=“tab-content”>
+              <div class=“tab-pane fade” id=“upcoming”>
+                <div class=“upcoming-events”>
+                  <% @upcoming_events.each do |event| %>
+                    <div class=“row card upcoming-event”>
+                      <div class=“card-body”>
+                        <div class=“card-img-top” style=“background-image: url(<%= event.image_url %>)“></div>
+                        <div class=“col”>
+                          <p class=“card-text”><%= event.date %></p>
+                          <h6 class=“card-title”><%= event.name %></h6>
+                          <p class=“card-text”><%= event.venue %></p>
+                        </div>
+                        <div class=“col”>
+                          <p class=“card-text”><%= number_to_currency(event.price_normal, unit: “Rs “, precision: 0) %></p>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <div class=“tab-pane fade” id=“toprated”>
+                <div class=“top-rated-events”>
+                  <% @top_rated_events.each do |event| %>
+                    <div class=“row card top-rated-event”>
+                      <div class=“card-body”>
+                        <div class=“card-img-top” style=“background-image: url(<%= event.image_url %>)“></div>
+                        <div class=“col”>
+                          <p class=“card-text”><%= event.date %></p>
+                          <h6 class=“card-title”><%= event.name %></h6>
+                          <p class=“card-text”><%= event.venue %></p>
+                        </div>
+                        <div class=“col”>
+                          <p class=“card-text”><%= number_to_currency(event.price_normal, unit: “Rs “, precision: 0) %></p>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src=“https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js”></script>
+  <script src=“https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js”></script>
 </body>
 
 
@@ -106,4 +159,42 @@
       icon.classList.toggle('liked');
     });
   });
+</script>
+
+<!-- JS for loading UPCOMING & TOP-RATED events tabs data-->
+<script>
+$(document).ready(function() {
+  // Load the content of the "top-rated" tab when the page loads
+  fetch("/top_rated_events")
+    .then(response => response.text())
+    .then(data => {
+      $("#top-rated").html(data);
+    });
+  // Load the content of the "upcoming" tab when the "Upcoming" tab is clicked
+  $("#upcoming").click(function() {
+    fetch("/upcoming_events")
+      .then(response => response.text())
+      .then(data => {
+        $("#upcoming-events").html(data);
+      });
+  });
+  // Load the content of the "top-rated" tab when the "Top Rated" tab is clicked
+  $("#top-rated").click(function() {
+    fetch("/top_rated_events")
+      .then(response => response.text())
+      .then(data => {
+        $("#top-rated-events").html(data);
+      });
+  });
+});
+</script>
+
+
+<!-- JS code for switching tabs -->
+<script>
+$(document).ready(function() {
+  $('.nav-tabs a').click(function(){
+    $(this).tab('show');
+  });
+});
 </script>
