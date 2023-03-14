@@ -186,17 +186,18 @@
   transition: 0.4s;
 }
 
-
-
-.tag-concert {
+.ei-tags-index .tag-concert {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  font-size: 10px;
+  color: white;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.4s;
 }
+
 // .ei-card .ei-details .ei-tags span:nth-child(2)
 // {
 //   background: #745383;
@@ -278,12 +279,13 @@
 
 }
 
-.ei-card .ei-details .ei-tags .tag-concert {
+.ei-tags .tag-concert {
   color: white;
   background-color: orangered;
   font-size: 15px;
   border-color: transparent;
   border-radius: 20px;
+  padding: 10px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
 }

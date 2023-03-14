@@ -13,7 +13,7 @@
           <div class="homepage-search">
 
               <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-                <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1 bg-transparent s",placeholder: "Find an event"%>
+                <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1 bg-transparent s",placeholder: "Find an event", style:"color: white"%>
               <% end %>
           </div><br>
           <div class="artist-banner">

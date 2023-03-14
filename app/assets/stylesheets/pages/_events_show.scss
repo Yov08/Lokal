@@ -1,43 +1,23 @@
-.booking-an-event .container {
-  height: 900px;
-  max-width: 100%;
+body .booking-an-event{
+  background-color: white;
 }
-.banner-show-event {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 480px;
-  margin-top: 1rem;
-}
-.container-event {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  width: 100%;
-  // padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.24);
-}
+
 .img-event-container {
   position: relative;
   width: 100%;
-  height: 250px;
-  padding-bottom: 25%;
-  overflow: hidden;
-  border-radius: 0.5rem;
+  height: 300px;
+  background-image: cover;
+  background-position: cover;
 }
+
 .img-event-container img {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
+
 }
 .img-event-container:after {
   content: "";
@@ -46,21 +26,23 @@
   left: 0;
   width: 100%;
   height: 40%;
-  background: linear-gradient(to top, rgba(24, 75, 165, 0.95) 0%, rgba(24, 75, 165, 0) 100%);
+  background: linear-gradient(to top, rgba(24, 75, 165, 0.95) 0%, rgba(24, 75, 165, 0) 100%);height: 300px;
 }
+
 .show-event-details {
   position: absolute;
   top: 0;
-  left: 0;
-  margin: 1rem;
+  padding-top: 168px;
+  font-family: 'Quicksand', sans-serif;
 }
 .show-event-details h2 {
-  margin: 0;
   color: #fff;
   font-size: 1.5rem;
+  padding-left: 10px;
+  padding-top: 22px;
 }
+
 .event-date {
-  margin-top: 0.5rem;
   color: #fff;
   font-size: 1rem;
 }
@@ -68,28 +50,113 @@
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1rem;
+  padding-top: 5px;
+  padding-right: 10px;
 }
-.event-description {
-  width: 100%;
-  margin-top: 1rem;
+
+.container .lokal-map {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.lokal-map h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: black;
+  padding-top: 18px;
+  padding-left: 10px;
+}
+
+.circle-text h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: black;
   text-align: center;
+  padding-bottom: 10px;
 }
-.event-description p {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-.event-address {
-  margin-top: 1rem;
-  width: 100%;
+
+.circle-text p {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: $violet;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+
+.event-address h3 {
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 10px;
+  margin-left: 36px;
 }
 .event-address p {
-  margin: 0;
   font-size: 1rem;
   color: #777;
+  text-align: center;
+  margin-right: 10px;
 }
+
+.border-right {
+  border-right: 0.5px solid $violet;
+  height: 160px;
+  margin-right: 10px;
+}
+
+.event-description h3 {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.event-description p {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  text-align: justify;
+}
+
+.interested-title h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+
+
+.es-date p {
+  color: white;
+  padding-left: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+}
+
+.es-price p {
+  color: white;
+  padding-left: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+
 .artists
 {
   display: inline-block;
@@ -146,6 +213,7 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
 
 .liked-user-photo {
   width: 3rem;
