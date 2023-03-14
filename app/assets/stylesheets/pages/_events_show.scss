@@ -1,5 +1,6 @@
 body .booking-an-event{
   background-color: white;
+  max-width: 100%;
 }
 
 .img-event-container {
@@ -54,18 +55,21 @@ body .booking-an-event{
   padding-right: 10px;
 }
 
-.container .lokal-map {
+.container-event .lokal-map {
   max-width: 100%;
   height: auto;
   padding-bottom: 20px;
+  text-align: center;
+
+
 }
 
-.lokal-map h3 {
+.location-title h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   color: black;
   padding-top: 18px;
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
 .circle-text h3 {
@@ -97,19 +101,18 @@ body .booking-an-event{
   font-size: 20px;
   color: black;
   padding-bottom: 10px;
-  margin-left: 36px;
+  text-align: left;
 }
 .event-address p {
   font-size: 1rem;
   color: #777;
-  text-align: center;
-  margin-right: 10px;
+  text-align: left;
+
 }
 
 .border-right {
   border-right: 0.5px solid $violet;
   height: 160px;
-  margin-right: 10px;
 }
 
 .event-description h3 {
@@ -230,7 +233,7 @@ body .booking-an-event{
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 1px solid black;
   background-color: #F8F8FF;
   margin-left: 1rem;
 }
