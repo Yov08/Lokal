@@ -87,8 +87,8 @@
 
 }
 
-.show-artist-image ul li{
-  margin: 0px 4px;
+.social-artist {
+  padding-left: 12px;
   list-style: none;
   display: inline-block;
 }
@@ -97,14 +97,30 @@
   color: grey;
   font-size: 30px;
   transition: 0.2s;
+  padding: 10px;
 }
 .social-artist .spotify-artist:hover {
   color: #1DB954;
 }
+
+.social-artist .youtube-artist {
+  color: 	grey;
+  font-size: 30px;
+  transition: 0.2s;
+  padding: 10px;
+}
+.social-artist .youtube-artist:hover {
+  color: #FF0000;
+}
+
+
+
+
 .social-artist .deezer-artist {
   color: grey;
   font-size: 30px;
   transition: 0.2s;
+  padding: 10px;
 }
 .social-artist .deezer-artist:hover {
   color: #FFED00;
