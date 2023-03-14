@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # get "/home", to: "pages#home", as: "home"
   get '/view_artists', to: 'artists#index', as: 'view_artists'
   get 'bookings/confirmation', to: 'bookings#confirmation', as: 'booking_confirmation'
+  get '/top_rated_events', to: 'events#top_rated_events', as: 'top_rated_events'
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
