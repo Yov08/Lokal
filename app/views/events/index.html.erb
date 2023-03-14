@@ -91,28 +91,28 @@
             <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn btn-danger" %>
           <% end %>
 
-          <div class=“nav-bar-filters”>
-            <ul class=“nav nav-tabs”>
-              <li class=“nav-item”>
-                <a class=“nav-link active” data-toggle=“tab” href=“#toprated”>Top Rated</a>
+          <div class="nav-bar-filters">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#toprated">Top Rated</a>
               </li>
-              <li class=“nav-item”>
-                <a class=“nav-link” data-toggle=“tab” href=“#upcoming”>Upcoming</a>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#upcoming">Upcoming</a>
               </li>
             </ul>
-            <div class=“tab-content”>
-              <div class=“tab-pane fade” id=“upcoming”>
-                <div class=“upcoming-events”>
+            <div class="tab-content">
+              <div class="tab-pane fade" id="upcoming">
+                <div class="upcoming-events">
                   <% @upcoming_events.each do |event| %>
-                    <div class=“row card upcoming-event”>
-                      <div class=“card-body”>
-                        <div class=“card-img-top” style=“background-image: url(<%= event.image_url %>)“></div>
-                        <div class=“col”>
-                          <p class=“card-text”><%= event.date %></p>
-                          <h6 class=“card-title”><%= event.name %></h6>
-                          <p class=“card-text”><%= event.venue %></p>
+                    <div class="row card upcoming-event">
+                      <div class="card-body">
+                        <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                        <div class="col">
+                          <p class="card-text"><%= event.date %></p>
+                          <h6 class="card-title"><%= event.name %></h6>
+                          <p class="card-text"><%= event.venue %></p>
                         </div>
-                        <div class=“col”>
+                        <div class="col">
                           <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
                         </div>
                       </div>
@@ -120,18 +120,18 @@
                   <% end %>
                 </div>
               </div>
-              <div class=“tab-pane fade” id=“toprated”>
-                <div class=“top-rated-events”>
+              <div class="tab-pane fade" id="toprated">
+                <div class="top-rated-events">
                   <% @top_rated_events.each do |event| %>
-                    <div class=“row card top-rated-event”>
-                      <div class=“card-body”>
-                        <div class=“card-img-top” style=“background-image: url(<%= event.image_url %>)“></div>
-                        <div class=“col”>
-                          <p class=“card-text”><%= event.date %></p>
-                          <h6 class=“card-title”><%= event.name %></h6>
-                          <p class=“card-text”><%= event.venue %></p>
+                    <div class="row card top-rated-event">
+                      <div class="card-body">
+                        <div class="card-img-top" style=“background-image: url(<%= event.image_url %>)“></div>
+                        <div class="col">
+                          <p class="card-text"><%= event.date %></p>
+                          <h6 class="card-title"><%= event.name %></h6>
+                          <p class="card-text"><%= event.venue %></p>
                         </div>
-                        <div class=“col”>
+                        <div class="col">
                           <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
                         </div>
                       </div>
@@ -141,6 +141,18 @@
               </div>
             </div>
           </div>
+          <% @upcoming_events.each do |event| %>
+            <div class="row card upcoming-event">
+              <div class="card-body">
+                <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                <div class="col">
+                  <p class="card-text"><%= event.date %></p>
+                  <h6 class="card-title"><%= event.name %></h6>
+                  <p class="card-text"><%= event.venue %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
     </div>
   </div>
 
