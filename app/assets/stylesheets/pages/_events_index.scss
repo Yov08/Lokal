@@ -198,6 +198,18 @@
   transition: 0.4s;
 }
 
+.ei-tags-index .tag-rock {
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
 // .ei-card .ei-details .ei-tags span:nth-child(2)
 // {
 //   background: #745383;
@@ -282,6 +294,28 @@
 .ei-tags .tag-concert {
   color: white;
   background-color: orangered;
+  font-size: 15px;
+  border-color: transparent;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+}
+
+.ei-tags .tag-house {
+  color: white;
+  background-color: $yellow;
+  font-size: 15px;
+  border-color: transparent;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+}
+
+.ei-tags .tag-festival {
+  color: white;
+  background-color: green;
   font-size: 15px;
   border-color: transparent;
   border-radius: 20px;
