@@ -17,13 +17,13 @@
                 <% end %>
               </h4>
           </div>
-       <div class="events-search">
 
-              <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-                <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1",placeholder: "Find an event", style:"color: white"%>
-              <% end %>
-          </div>
-        </div>
+            <div class="events-search">
+                  <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+                    <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1 s",placeholder: "Find an event", style:"color: white"%>
+                  <% end %>
+              </div>
+            </div>
         <%# <swiper-container> %>
 
         <div class="ei-tags-index">
