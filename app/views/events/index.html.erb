@@ -2,157 +2,137 @@
   <div class="upcoming-events-lokal">
     <div class="banner-upcoming">
       <h1>Upcoming Music Festivals</h1>
-
-
-          <div class="ei-container">
-              <h4 class="ei-count">
-                <% if params[:tag].present? %>
-                  <% count = @events.count %>
-                  <% festival_plural = count > 1 ? "events" : "event" %>
-                  We found <strong><%= count %></strong> <%= params[:tag] %> <%= festival_plural %>
-                <% else %>
-                  <% count = @events.count %>
-                  <% festival_plural = count > 1 ? "festivals" : "festival" %>
-                  We found <strong><%= count %></strong> music <%= festival_plural %>
-                <% end %>
-              </h4>
-          </div>
-       <div class="events-search">
-
-              <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-                <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1",placeholder: "Find an event", style:"color: white"%>
-              <% end %>
-          </div>
-        </div>
-        <%# <swiper-container> %>
-
-        <div class="ei-tags-index">
-            <% Tag.all.each do |tag| %>
-              <%# <swiper-slide> %>
-                <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
-              <%# </swiper-slide> %>
+        <div class="ei-container">
+          <h4 class="ei-count">
+            <% if params[:tag].present? %>
+              <% count = @events.count %>
+              <% festival_plural = count > 1 ? "events" : "event" %>
+              We found <strong><%= count %></strong> <%= params[:tag] %> <%= festival_plural %>
+            <% else %>
+              <% count = @events.count %>
+              <% festival_plural = count > 1 ? "festivals" : "festival" %>
+              We found <strong><%= count %></strong> music <%= festival_plural %>
             <% end %>
+          </h4>
         </div>
-            <%# </swiper-container> %>
-            <div class="events-slide">
-              <div class="row">
-                <swiper-container>
-                  <% @events.each do |event| %>
-                    <swiper-slide>
-                      <div class="ei-card">
-                        <div class="ei-poster">
-                              <img src= <%= event.image_url%> alt="">
-                              <div class="ei-like">
-                                  <% if user_signed_in? %>
-                                    <% if current_user.likes?(event) %>
-                                      <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked", remote: true, data: { turbo: false } do %>
-                                        <i class="fas fa-heart"></i>
-                                      <% end %>
-                                    <% else %>
-                                      <%= button_to event_likes_path(event), method: :post, class: "like-button", remote: true, data: { turbo: false } do %>
-                                        <i class="far fa-heart"></i>
-                                      <% end %>
-                                    <% end %>
-                                  <% end %>
-                              </div>
-                        </div>
-                    <div class="ei-details">
-                          <div class="ei-tags">
-                            <% event.tags.each do |tag| %>
-                              <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
-
+        <!-- <div class="events-search">
+          <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1",placeholder: "Find an event", style:"color: white"%>
+          <% end %>
+          </div>
+        </div> -->
+        <%# <swiper-container> %>
+        <div class="ei-tags-index">
+          <% Tag.all.each do |tag| %>
+            <%# <swiper-slide> %>
+            <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
+            <%# </swiper-slide> %>
+          <% end %>
+        </div>
+        <%# </swiper-container> %>
+        <%# <div class="events-container"> %>
+          <div class="events-slide">
+            <div class="row container-event">
+              <swiper-container>
+                <% @events.each do |event| %>
+                  <swiper-slide>
+                    <div class="ei-card">
+                      <div class="ei-poster">
+                        <img src= <%= event.image_url%> alt="">
+                        <div class="ei-like">
+                          <% if user_signed_in? %>
+                            <% if current_user.likes?(event) %>
+                              <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked", remote: true, data: { turbo: false } do %>
+                                <i class="fas fa-heart"></i>
+                              <% end %>
+                            <% else %>
+                              <%= button_to event_likes_path(event), method: :post, class: "like-button", remote: true, data: { turbo: false } do %>
+                                <i class="far fa-heart"></i>
+                              <% end %>
                             <% end %>
-                          </div>
-
-                                <br>
-
-
-                              <div class="ei-date">
-                                <% formatted_date = (event.date).strftime("%b %e") %>
-                                <% formatted_start_time = (event.start_time.present? ? event.start_time.strftime("%H:%M") : '') %>
-                                <% formatted_end_time = (event.end_time.present? ? event.end_time.strftime("%H:%M") : '') %>
-                                <p><i class="fa-regular fa-calendar" class="date-symbol"></i> <span><%= formatted_date %></span></p>
-                                <p><i class="fa-regular fa-clock" class="time-symbol"></i> <span><%= formatted_start_time %> - <%= formatted_end_time %></span></p>
-                              </div>
-                          <h2> <%= event.name %> </h2>
-                              <div class="ei-location">
-                                <p><i class="fa-solid fa-location-dot"></i> <span><%= event.venue %></span></p>
-                              <br>
-
-                          </div>
-                          <%= link_to "More", event_path(event), class: "button-event" %>
+                          <% end %>
+                        </div>
+                      </div>
+                      <div class="ei-details">
+                        <div class="ei-tags">
+                          <% event.tags.each do |tag| %>
+                            <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
+                          <% end %>
+                        </div><br>
+                            <div class="ei-date">
+                              <% formatted_date = (event.date).strftime("%b %e") %>
+                              <% formatted_start_time = (event.start_time.present? ? event.start_time.strftime("%H:%M") : '') %>
+                              <% formatted_end_time = (event.end_time.present? ? event.end_time.strftime("%H:%M") : '') %>
+                              <p><i class="fa-regular fa-calendar" class="date-symbol"></i> <span><%= formatted_date %></span></p>
+                              <p><i class="fa-regular fa-clock" class="time-symbol"></i> <span><%= formatted_start_time %> - <%= formatted_end_time %></span></p>
+                            </div>
+                        <h2> <%= event.name %> </h2>
+                            <div class="ei-location">
+                              <p><i class="fa-solid fa-location-dot"></i> <span><%= event.venue %></span></p>
+                            <br>
+                        </div>
+                        <%= link_to "More", event_path(event), class: "button-event" %>
+                      </div>
                     </div>
+                  </swiper-slide>
+                <% end %>
+              </swiper-container>
+            </div>
+            <% if params[:tag].present? %>
+              <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn btn-danger" %>
+            <% end %>
+
+            <div class="nav-bar-filters">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#toprated">Top Rated</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#upcoming">Upcoming</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade" id="upcoming">
+                  <div class="upcoming-events">
+                    <% @upcoming_events.each do |event| %>
+                      <div class="row card upcoming-event">
+                        <div class="card-body">
+                          <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                          <div class="col">
+                            <p class="card-text"><%= event.date %></p>
+                            <h6 class="card-title"><%= event.name %></h6>
+                            <p class="card-text"><%= event.venue %></p>
+                          </div>
+                          <div class="col">
+                            <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %>
                   </div>
-                </swiper-slide>
-              <% end %>
-            </swiper-container>
-          </div>
-          <% if params[:tag].present? %>
-            <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn btn-danger" %>
-          <% end %>
-
-          <div class="nav-bar-filters">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#toprated">Top Rated</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#upcoming">Upcoming</a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade" id="upcoming">
-                <div class="upcoming-events">
-                  <% @upcoming_events.each do |event| %>
-                    <div class="row card upcoming-event">
-                      <div class="card-body">
-                        <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
-                        <div class="col">
-                          <p class="card-text"><%= event.date %></p>
-                          <h6 class="card-title"><%= event.name %></h6>
-                          <p class="card-text"><%= event.venue %></p>
-                        </div>
-                        <div class="col">
-                          <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
-                        </div>
-                      </div>
-                    </div>
-                  <% end %>
                 </div>
-              </div>
-              <div class="tab-pane fade" id="toprated">
-                <div class="top-rated-events">
-                  <% @top_rated_events.each do |event| %>
-                    <div class="row card top-rated-event">
-                      <div class="card-body">
-                        <div class="card-img-top" style=“background-image: url(<%= event.image_url %>)“></div>
-                        <div class="col">
-                          <p class="card-text"><%= event.date %></p>
-                          <h6 class="card-title"><%= event.name %></h6>
-                          <p class="card-text"><%= event.venue %></p>
-                        </div>
-                        <div class="col">
-                          <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+                <div class="tab-pane fade" id="toprated">
+                  <div class="top-rated-events">
+                    <% @top_rated_events.each do |event| %>
+                      <div class="row card top-rated-event">
+                        <div class="card-body">
+                          <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                          <div class="col">
+                            <p class="card-text"><%= event.date %></p>
+                            <h6 class="card-title"><%= event.name %></h6>
+                            <p class="card-text"><%= event.venue %></p>
+                          </div>
+                          <div class="col">
+                            <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  <% end %>
+                    <% end %>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <% @upcoming_events.each do |event| %>
-            <div class="row card upcoming-event">
-              <div class="card-body">
-                <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
-                <div class="col">
-                  <p class="card-text"><%= event.date %></p>
-                  <h6 class="card-title"><%= event.name %></h6>
-                  <p class="card-text"><%= event.venue %></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
+        </div>
     </div>
   </div>
 
@@ -162,6 +142,7 @@
 </body>
 
 
+<!-- JS for likes button -->
 <script>
   document.querySelectorAll('.like-button').forEach(button => {
     button.addEventListener('ajax:success', (event) => {

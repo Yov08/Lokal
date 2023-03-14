@@ -1,3 +1,7 @@
+// body {
+//   overflow: hidden;
+// }
+
 .banner-upcoming {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
@@ -247,13 +251,31 @@
   color: white;
 }
 
-
 .ei-tags-index {
-  white-space: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  row-gap: 0.4rem;
 }
+
+.container-event{
+  margin-top: 1rem;
+  // border: 2px solid red;
+}
+
+
+// MODFICATIONS BY ROUS
+// .ei-tags-index > * {
+  // overflow-x: scroll;
+  // overflow-y: hidden;
+  // // white-space: nowrap;
+  // scroll-snap-type: x mandatory;
+  // overflow-x: auto;
+  // -ms-overflow-style: none;
+  // scrollbar-width: none;
+  // margin-bottom: 1.5rem;
+  // gap: 1rem;
+// }
 
 .ei-tags-index::-webkit-scrollbar {
   display: none;
@@ -329,4 +351,75 @@
   padding: 10px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
+}
+
+// upcoming events cards CSS
+.upcoming-event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px; */
+}
+
+.upcoming-event .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.upcoming-event .card-img-top {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.upcoming-event .col {
+  flex-grow: 1;
+}
+
+.upcoming-event .col:last-child p {
+  font-weight: bold;
+}
+
+// top-rated events cards CSS
+.top-rated-event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 10px; */
+}
+
+.top-rated-event .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-rated-event .card-img-top {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.top-rated-event .col {
+  flex-grow: 1;
+}
+
+.top-rated-event .col:last-child p {
+  font-weight: bold;
+}
+
+.nav-bar-filters {
+  position: relative;
+  z-index: 1;
 }

@@ -9,7 +9,7 @@ class EventsController < ApplicationController
     if params[:tag].present?
       @events = @events.joins(:tags).where(tags: { name: params[:tag] })
     end
-    @top_rated_events = Event.left_joins(:likes).group(:id).order('COUNT(likes.id) DESC')
+    @top_rated_events = Event.left_joins(:likes).group(:id).order('COUNT(likes.id) DESC').limit(3)
     respond_to do |format|
       format.html
       format.js
