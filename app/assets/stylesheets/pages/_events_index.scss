@@ -30,15 +30,17 @@
 }
 
 .ei-tags-index {
-  padding-top: 240px;
-  padding-right: 10px;
-  position: absolute;
-  top: 0;
+  padding-right: 5px;
   white-space: nowrap;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   z-index: 10;
+  position: relative;
+  top: -250px; /* adjust this value to fine-tune the positioning */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .ei-tags-index::-webkit-scrollbar {
