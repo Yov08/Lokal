@@ -42,11 +42,12 @@
           </div>
         </div>
         <%# <swiper-container> %>
-
         <div class="ei-tags-index">
-            <% Tag.all.each do |tag| %>
-              <%= link_to tag.name, events_path(tag: tag.name, ei_tags: true), class: "tag #{tag_class(tag)}" %>
-            <% end %>
+          <% Tag.all.each do |tag| %>
+            <%# <swiper-slide> %>
+              <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
+            <%# </swiper-slide> %>
+          <% end %>
         </div>
             <%# </swiper-container> %>
             <div class="events-slide">

@@ -23,17 +23,22 @@
   margin-bottom: 20px;
 }
 
+.events-search {
+  text-align: center;
+  width: 90%;
+
+}
+
 .ei-tags-index {
   padding-top: 240px;
   padding-right: 10px;
   position: absolute;
   top: 0;
-}
-
-.events-search {
-  text-align: center;
-  width: 90%;
-
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 10;
 }
 
 .events-slide {
@@ -42,7 +47,9 @@
   max-width: 87%;
   top: 0;
   position: absolute;
+  z-index: 5;
 }
+
 .ei-card
 {
   position: relative;
@@ -245,14 +252,6 @@
 .ei-date .time-symbol {
   font-size: 20px;
   color: white;
-}
-
-
-.ei-tags-index {
-  white-space: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .ei-tags-index::-webkit-scrollbar {
