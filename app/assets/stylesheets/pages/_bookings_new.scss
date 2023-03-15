@@ -1,0 +1,140 @@
+.ticket-selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ticket-selection {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  // margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.ticket-selection label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.ticket-selection-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ticket-selection-input {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.ticket-selection-input::-webkit-outer-spin-button,
+.ticket-selection-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ticket-selection-input:focus {
+  outline: none;
+}
+
+.ticket-selection-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+  margin-right: 10px;
+}
+
+.ticket-selection-button {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.ticket-selection-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.ticket-selection label,
+.ticket-selection-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-selection label {
+  margin-right: 10px;
+}
+
+.total-ticket-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.total-ticket-selection label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.ticket-selection-input-large {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.ticket-selection-input-large:focus {
+  outline: none;
+}
+
+.book-now-button {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  }
+
+.cancel-button:hover {
+  background-color: #999;
+}
