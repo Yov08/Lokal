@@ -1,49 +1,67 @@
 <body>
   <div class="booking-an-event">
-          <div class="img-event-container">
-              <%= puts @event.inspect %>
-              <img src=<%= @event.image_url %>>
-          </div>
-          <br>
-
-          <div class="show-event-details">
-              <h2><%= @event.name%></h2>
-                <div class="es-date">
-                  <p><i class="fa-regular fa-calendar" class="date-symbol-show"></i> <span><%= @event.date%></span></p>
-                </div>
-          </div>
-
-      <div class="container">
-            <div class="booking-event-address">
-              <p><i class="fa-solid fa-location-dot"></i> <span><%= @event.venue %></span></p>
-              <p><%= @event.address %></p>
-            </div>
-            <div class="ticket-prices">
-              <p>Normal Price: $<%= @event.price_normal %></p>
-              <p>VIP Price: $<%= @event.price_vip %></p>
-            </div>
-            <div class="ticket-quantity">
-              <%= simple_form_for @booking do |f| %>
-                <%= f.hidden_field :event_id, value: params[:event_id] %>
-                <%= f.input :pax, as: :integer, label: "Normal Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %>
-                <%= f.input :pax_vip, as: :integer, label: "VIP Tickets", input_html: { min: 0, value: 0 }, wrapper: false, required: true %><br>
-                <p class="total-price">Total: $ <span id="total-price">0</span></p>
-                <div class="text-center">
-                  <%= f.button :submit, "Book now", class: "button-main" %>
-                  <%# <%= link_to "Proceed to Payment", booking_confirmation_path, method: :post, class: "button-main" %>
-                  <%= link_to "Back", request.referrer, class: "button-event" %>
-                </div><br>
-              <% end %>
-            </div>
-          </div>
+    <div class="img-event-container">
+        <%= puts @event.inspect %>
+        <img src=<%= @event.image_url %>>
+    </div><br>
+    <div class="show-event-details">
+      <h2><%= @event.name%></h2>
+        <div class="es-date">
+          <p><i class="fa-regular fa-calendar" class="date-symbol-show"></i> <span><%= @event.date%></span></p>
         </div>
+    </div>
+    <div class="container">
+      <div class="booking-event-address">
+        <p><i class="fa-solid fa-location-dot"></i> <span><%= @event.venue %></span></p>
+        <p><%= @event.address %></p>
       </div>
+      <div class="ticket-prices">
+        <p>Normal Price: $<%= @event.price_normal %></p>
+        <p>VIP Price: $<%= @event.price_vip %></p>
+      </div>
+      <%= form_for @booking, url: bookings_path do |f| %>
+        <%= f.hidden_field :event_id, value: @event.id %>
+        <div class="ticket-selection-container">
+          <div class="ticket-selection">
+            <label for="normal-tickets">Normal Tickets: </label>
+            <div class="ticket-selection-input-container">
+              <div class="ticket-selection-button-container">
+                <button type="button" class="ticket-selection-button" id="normal-ticket-minus">-</button>
+                <%= f.number_field :pax, id: "normal-tickets", class: "ticket-selection-input", value: 0, min: 0 %>
+                <button type="button" class="ticket-selection-button" id="normal-ticket-plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-selection">
+            <label for="vip-tickets">VIP Tickets: </label>
+            <div class="ticket-selection-input-container">
+              <div class="ticket-selection-button-container">
+                <button type="button" class="ticket-selection-button" id="vip-ticket-minus">-</button>
+                <%= f.number_field :pax_vip, id: "vip-tickets", class: "ticket-selection-input", value: 0, min: 0 %>
+                <button type="button" class="ticket-selection-button" id="vip-ticket-plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="total-ticket-selection">
+            <label for="total-price">Total Price: $</label>
+            <%= f.text_field :total_price, id: "total-price", class: "ticket-selection-input-large", value: 0, readonly: true, step: 1 %>
+          </div>
+          <%= f.submit "Book Now", class: "book-now-button" %>
+          <%= link_to "Cancel", events_path, class: "cancel-button" %>
+        </div>
+      <% end %>
 
+      <!-- <%= simple_form_for @booking do |f| %>
+        <%= f.input :normal_tickets, label: "Normal Tickets:", input_html: { id: "normal-tickets", value: 0 } %>
+        <%= f.input :vip_tickets, label: "VIP Tickets:", input_html: { id: "vip-tickets", value: 0 } %>
+        <%= f.input :total_price, label: "Total Price:", input_html: { id: "total-price", value: 0, readonly: true, step: 1 } %>
+        <%= f.button :submit, "Book Now", class: "book-now-button" %>
+        <%= link_to "Cancel", events_path, class: "cancel-button" %>
+      <% end %> -->
+    </div>
   </div>
-</body>
 
-
-<script>
+<!-- <script>
   document.addEventListener("DOMContentLoaded", function(event) {
     var normalTicketPrice = <%= @event.price_normal %>;
     var vipTicketPrice = <%= @event.price_vip %>;
@@ -66,4 +84,53 @@
       totalPriceDisplay.innerText = total;
     });
   });
+</script> -->
+
+<script>
+// Get the plus and minus buttons and input fields
+const normalTicketPlusButton = document.getElementById("normal-ticket-plus");
+const normalTicketMinusButton = document.getElementById("normal-ticket-minus");
+const normalTicketInput = document.getElementById("normal-tickets");
+const vipTicketPlusButton = document.getElementById("vip-ticket-plus");
+const vipTicketMinusButton = document.getElementById("vip-ticket-minus");
+const vipTicketInput = document.getElementById("vip-tickets");
+const totalPriceInput = document.getElementById("total-price");
+
+// Get the ticket prices from the HTML
+const normalTicketPrice = <%= @event.price_normal %>;
+const vipTicketPrice = <%= @event.price_vip %>;
+
+// Function to calculate the total price
+function calculateTotalPrice() {
+  const normalTicketQuantity = parseInt(normalTicketInput.value);
+  const vipTicketQuantity = parseInt(vipTicketInput.value);
+  const totalPrice = (normalTicketQuantity * normalTicketPrice) + (vipTicketQuantity * vipTicketPrice);
+  totalPriceInput.value = Math.round(totalPrice);
+}
+
+// Add event listeners to the plus and minus buttons
+normalTicketPlusButton.addEventListener("click", () => {
+  normalTicketInput.value = parseInt(normalTicketInput.value) + 1;
+  calculateTotalPrice();
+});
+
+normalTicketMinusButton.addEventListener("click", () => {
+  if (parseInt(normalTicketInput.value) > 0) {
+    normalTicketInput.value = parseInt(normalTicketInput.value) - 1;
+    calculateTotalPrice();
+  }
+});
+
+vipTicketPlusButton.addEventListener("click", () => {
+  vipTicketInput.value = parseInt(vipTicketInput.value) + 1;
+  calculateTotalPrice();
+});
+
+vipTicketMinusButton.addEventListener("click", () => {
+  if (parseInt(vipTicketInput.value) > 0) {
+    vipTicketInput.value = parseInt(vipTicketInput.value) - 1;
+    calculateTotalPrice();
+  }
+});
 </script>
+</body>
