@@ -15,20 +15,20 @@
             <% end %>
           </h4>
         </div>
-        <!-- <div class="events-search">
+        <div class="events-search">
           <%= form_with url: events_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1",placeholder: "Find an event", style:"color: white"%>
           <% end %>
           </div>
-        </div> -->
-        <%# <swiper-container> %>
-        <div class="ei-tags-index">
-          <% Tag.all.each do |tag| %>
-            <%# <swiper-slide> %>
-            <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
-            <%# </swiper-slide> %>
-          <% end %>
         </div>
+        <%# <swiper-container> %>
+          <div class="ei-tags-index">
+            <% Tag.all.each do |tag| %>
+              <%# <swiper-slide> %>
+                <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
+              <%# </swiper-slide> %>
+            <% end %>
+          </div>
         <%# </swiper-container> %>
         <%# <div class="events-container"> %>
           <div class="events-slide">
@@ -131,6 +131,40 @@
                   </div>
                 </div>
               </div>
+              <!-- <div class="tab-content">
+                <div class="tab-pane fade" id="upcoming">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <% @upcoming_events.each do |event| %>
+                        <div class="swiper-slide">
+                          <div class="row card upcoming-event">
+                            <div class="card-body">
+                              <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                            </div>
+                          </div>
+                        </div>
+                      <% end %>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="toprated">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <% @top_rated_events.each do |event| %>
+                        <div class="swiper-slide">
+                          <div class="row card top-rated-event">
+                            <div class="card-body">
+                              <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                            </div>
+                          </div>
+                        </div>
+                      <% end %>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                </div>
+              </div> -->
             </div>
         </div>
     </div>
@@ -190,4 +224,20 @@ $(document).ready(function() {
     $(this).tab('show');
   });
 });
+</script>
+
+
+<!-- JS code for vertical slider -->
+<script>
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  freeMode: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  mousewheel: true,
+});
+
+swiper.init();
 </script>

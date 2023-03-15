@@ -251,17 +251,17 @@
   color: white;
 }
 
-.ei-tags-index {
-  display: flex;
-  gap: 0.3rem;
-  flex-wrap: wrap;
-  row-gap: 0.4rem;
-}
+// .ei-tags-index {
+//   display: flex;
+//   gap: 0.3rem;
+//   flex-wrap: wrap;
+//   row-gap: 0.4rem;
+// }
 
-.container-event{
-  margin-top: 1rem;
-  // border: 2px solid red;
-}
+// .container-event{
+//   margin-top: 1rem;
+//   // border: 2px solid red;
+// }
 
 
 // MODFICATIONS BY ROUS
@@ -277,9 +277,9 @@
   // gap: 1rem;
 // }
 
-.ei-tags-index::-webkit-scrollbar {
-  display: none;
-}
+// .ei-tags-index::-webkit-scrollbar {
+//   display: none;
+// }
 
 .tag {
   display: inline-block;
@@ -423,3 +423,12 @@
   position: relative;
   z-index: 1;
 }
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
