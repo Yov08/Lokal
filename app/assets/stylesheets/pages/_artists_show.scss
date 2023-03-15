@@ -84,27 +84,63 @@
   margin-top: 30px;
   padding: 20px;
   letter-spacing: 1px;
-
 }
 
-.show-artist-image ul li{
-  margin: 0px 4px;
-  list-style: none;
-  display: inline-block;
+.social-artist h4 {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 10px;
 }
+.media-banner {
+  background-color:  #DB2454;
+  height: 100px;
+  width: 100%;
+}
+
+.media-icons {
+  text-align: center;
+}
+
 
 .social-artist .spotify-artist {
-  color: grey;
+  color: white;
   font-size: 30px;
   transition: 0.2s;
+  padding: 10px;
 }
 .social-artist .spotify-artist:hover {
   color: #1DB954;
 }
-.social-artist .deezer-artist {
-  color: grey;
+
+.social-artist .youtube-artist {
+  color: 	white;
   font-size: 30px;
   transition: 0.2s;
+  padding: 10px;
+}
+.social-artist .youtube-artist:hover {
+  color: #FF0000;
+}
+
+.past-artist-events {
+  padding-top: 20px;
+}
+
+.past-artist-events h3 {
+  color: $violet;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+
+.social-artist .deezer-artist {
+  color: white;
+  font-size: 30px;
+  transition: 0.2s;
+  padding: 10px;
 }
 .social-artist .deezer-artist:hover {
   color: #FFED00;

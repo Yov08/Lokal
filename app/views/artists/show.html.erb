@@ -20,26 +20,39 @@
            <p><%= @artist.biography %></p>
         </div>
 
-            <ul class="social-artist">
-        <li><a class="spotify-artist" href="www.spotify.com"><i class="fa-brands fa-spotify"></i></a>
-        <li><a class="deezer-artist" href="www.deezer.com"><i class="fa-brands fa-deezer"></i></a>
-</li>
-        </ul>
+        <div class="social-artist">
+          <div class="container">
+            <div class="media-banner">
+              <h4>Listen to <strong><%= @artist.name%></strong></h4>
+                <div class="media-icons">
 
-      <% if @events.present? %>
-        <h3>Past Events</h3>
-        <div class="card-past-events">
-          <div class="past-events">
-            <% @events.select{ |event| event.date < Date.today }.each do |event| %>
-              <div class="past-event-card">
-                <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
-                <div class="past-event-name">
-                  <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
+                  <a class="spotify-artist" href="<%= @artist.spotify%>"><i class="fa-brands fa-spotify"></i></a>
+                  <a class="youtube-artist" href="<%= @artist.youtube%>"><i class="fa-brands fa-youtube"></i></a>
+                  <a class="deezer-artist" href="<%= @artist.deezer%>"><i class="fa-brands fa-deezer"></i></a>
                 </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="past-artist-events">
+          <div class="container">
+
+            <% if @events.present? %>
+              <h3>Past Events</h3>
+              <div class="card-past-events">
+                <div class="past-events">
+                  <% @events.select{ |event| event.date < Date.today }.each do |event| %>
+                    <div class="past-event-card">
+                      <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
+                      <div class="past-event-name">
+                        <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
+                      </div>
+                  <% end %>
+                </div>
+              </div>
             <% end %>
           </div>
         </div>
-      <% end %>
     </div>
   </div>
 </body>
