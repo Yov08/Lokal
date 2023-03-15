@@ -41,6 +41,10 @@
   z-index: 10;
 }
 
+.ei-tags-index::-webkit-scrollbar {
+  display: none;
+}
+
 .events-slide {
   padding-top: 340px;
   padding-left: 50px;
@@ -153,77 +157,23 @@
 
 }
 
-.ei-tags-index .tag-techno {
-  background-color: transparent;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-  color: white;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: 0.4s;
-}
-
-.ei-tags-index .tag-house {
-  background-color: transparent;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-  color: white;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: 0.4s;
-}
-
-.ei-tags-index .tag-festival {
-  background-color: transparent;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-  color: white;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: 0.4s;
-}
-
-.ei-tags-index .tag-jazz {
-  background-color: transparent;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-  color: white;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: 0.4s;
-}
-
-.ei-tags-index .tag-concert {
-  background-color: transparent;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-  color: white;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 14px;
-  transition: 0.4s;
-}
-
+.ei-tags-index .tag-techno,
+.ei-tags-index .tag-house,
+.ei-tags-index .tag-festival,
+.ei-tags-index .tag-jazz,
+.ei-tags-index .tag-concert,
 .ei-tags-index .tag-rock {
   background-color: transparent;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   color: white;
-  padding: 12px;
+  padding: 8px; /* <-- Change padding value here */
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 14px;
   transition: 0.4s;
 }
+
 
 // .ei-card .ei-details .ei-tags span:nth-child(2)
 // {
@@ -252,10 +202,6 @@
 .ei-date .time-symbol {
   font-size: 20px;
   color: white;
-}
-
-.ei-tags-index::-webkit-scrollbar {
-  display: none;
 }
 
 .tag {
