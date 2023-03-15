@@ -1,58 +1,47 @@
 <body>
   <div class="show-artist-image">
-    <div class="artist-image-profile" style="background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(<%= @artist.image_url %>)">
-
+    <div class="artist-image-profile" style="background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(<%= @artist.image_url %>)"></div>
+    <div class="container-profile-names">
+      <h1><%= @artist.name %></h1>
+      <h5><%= @artist.category %></h5>
     </div>
-
-        <div class="container-profile-names">
-
-        <h1><%= @artist.name %></h1>
-        <h5><%= @artist.category %></h5>
-
+    <div class="show-message-artist">
+      <h3>Message</h3>
+    </div>
+    <div class="show-artist-details">
+      <p><%= @artist.biography %></p>
+    </div>
+    <div class="social-artist">
+      <div class="container">
+        <div class="media-banner">
+          <h4>Listen to <strong><%= @artist.name%></strong></h4>
+            <div class="media-icons">
+              <a class="spotify-artist" href="<%= @artist.spotify%>"><i class="fa-brands fa-spotify"></i></a>
+              <a class="youtube-artist" href="<%= @artist.youtube%>"><i class="fa-brands fa-youtube"></i></a>
+              <a class="deezer-artist" href="<%= @artist.deezer%>"><i class="fa-brands fa-deezer"></i></a>
+            </div>
         </div>
-
-        <div class="show-message-artist">
-        <h3>Message</h3>
-        </div>
-
-
-        <div class="show-artist-details">
-           <p><%= @artist.biography %></p>
-        </div>
-
-        <div class="social-artist">
-          <div class="container">
-            <div class="media-banner">
-              <h4>Listen to <strong><%= @artist.name%></strong></h4>
-                <div class="media-icons">
-
-                  <a class="spotify-artist" href="<%= @artist.spotify%>"><i class="fa-brands fa-spotify"></i></a>
-                  <a class="youtube-artist" href="<%= @artist.youtube%>"><i class="fa-brands fa-youtube"></i></a>
-                  <a class="deezer-artist" href="<%= @artist.deezer%>"><i class="fa-brands fa-deezer"></i></a>
+      </div>
+    </div>
+    <div class="past-artist-events">
+      <div class="container">
+        <% if @events.present? %>
+          <h3>Past Events</h3>
+          <div class="card-past-events">
+            <div class="past-events">
+              <% @events.select{ |event| event.date < Date.today }.each do |event| %>
+                <div class="past-event-card">
+                  <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
+                    <div class="past-event-name">
+                      <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
+                    </div>
+                  </div>
                 </div>
+              <% end %>
             </div>
           </div>
-        </div>
-
-        <div class="past-artist-events">
-          <div class="container">
-
-            <% if @events.present? %>
-              <h3>Past Events</h3>
-              <div class="card-past-events">
-                <div class="past-events">
-                  <% @events.select{ |event| event.date < Date.today }.each do |event| %>
-                    <div class="past-event-card">
-                      <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
-                      <div class="past-event-name">
-                        <p><%= link_to event.name, event_path(event) %> - <%= event.date.strftime("%b %e, %y") %></p>
-                      </div>
-                  <% end %>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </body>
