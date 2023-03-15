@@ -14,7 +14,7 @@ class EventsController < ApplicationController
       format.html
       format.js
     end
-    @upcoming_events = Event.where('date BETWEEN ? AND ?', Date.today, 4.weeks.from_now).order(date: :asc)
+    @upcoming_events = Event.where('date BETWEEN ? AND ?', Date.today, 8.weeks.from_now).order(date: :asc)
   end
 
   def show
