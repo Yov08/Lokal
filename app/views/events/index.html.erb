@@ -1,4 +1,21 @@
 <body>
+<% if params[:ei_tags] %>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+<% end %>
+
   <div class="upcoming-events-lokal">
     <div class="banner-upcoming">
       <h1>Upcoming Music Festivals</h1>
@@ -28,9 +45,7 @@
 
         <div class="ei-tags-index">
             <% Tag.all.each do |tag| %>
-              <%# <swiper-slide> %>
-                <%= link_to tag.name, events_path(tag: tag.name), class: "tag #{tag_class(tag)}" %>
-              <%# </swiper-slide> %>
+              <%= link_to tag.name, events_path(tag: tag.name, ei_tags: true), class: "tag #{tag_class(tag)}" %>
             <% end %>
         </div>
             <%# </swiper-container> %>
