@@ -31,6 +31,8 @@ body .show-artist-lokal
   font-family: 'Quicksand', sans-serif;
   color:#555;
   font-size: 15px;
+  font-weight: bold;
+  padding-right: 5px;
 }
 
 
@@ -48,7 +50,10 @@ body .show-artist-lokal
   border-radius: 20px;
   // box-shadow: 0 15px 50px rgba(0,0,0,0.15);
   transition: 0.5s;
+  margin-bottom: 30px;
 }
+
+
 
 .artist-card:hover
 {
@@ -105,7 +110,7 @@ body .show-artist-lokal
   text-align: center;
   width: 100%;
   transform: 0.5s;
-  transform: translateY(320px);
+  transform: translateY(160px);
 
 }
 
@@ -116,11 +121,12 @@ body .show-artist-lokal
 }
 .artist-card .content .details h2
 {
-  font-size: 1.25em;
+  font-size: 25px;
   font-weight: 600;
   color: $violet;
   line-height: 1.2em;
-  text-align: left;
+  text-align: center;
+  margin-left: 10px;
 }
 .artist-card .content .details h2 span
 {
@@ -140,7 +146,7 @@ body .show-artist-lokal
   color: #555;
   line-height: 1.2em;
   font-weight: 600;
-  text-align: justify;
+  text-align: center;
 }
 .artist-card .content .details .data h3 span
 {

@@ -166,12 +166,12 @@ body .booking-an-event{
   // margin-right: 10px;
 }
 .performing-artists {
+  padding: 10px;
   margin-top: 2rem;
   text-align: center;
 }
 .performing-artists h3 {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .artist-image {
@@ -180,6 +180,7 @@ body .booking-an-event{
   justify-content: center;
   align-items: center;
 }
+
 .artist-image .artist-photo
 {
   width: 60px;
@@ -253,4 +254,8 @@ body .booking-an-event{
 .event-back-btn ion-icon {
   font-size: 2rem;
   color: white;
+}
+
+.buy-ticket-end {
+  padding-bottom: 80px;
 }
