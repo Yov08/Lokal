@@ -490,39 +490,59 @@ puts "Bookings Created!"
 puts "Creating Likes"
 Like.create!(
   event_id: luna_night_festival.id,
-  user_id: dummy1.id,
+  user_id: dummy1.id
 )
 Like.create!(
   event_id: luna_night_festival.id,
-  user_id: dummy2.id,
+  user_id: dummy2.id
 )
 Like.create!(
   event_id: luna_night_festival.id,
-  user_id: dummy3.id,
+  user_id: dummy3.id
 )
 Like.create!(
   event_id: luna_night_festival.id,
-  user_id: dummy4.id,
+  user_id: dummy4.id
 )
 Like.create!(
   event_id: luna_night_festival.id,
-  user_id: dummy5.id,
+  user_id: dummy5.id
 )
 Like.create!(
   event_id: soiree_zulu.id,
-  user_id: dummy4.id,
+  user_id: dummy4.id
 )
 Like.create!(
   event_id: soiree_zulu.id,
-  user_id: dummy2.id,
+  user_id: dummy2.id
 )
 Like.create!(
   event_id: soiree_zulu.id,
-  user_id: dummy3.id,
+  user_id: dummy3.id
 )
 Like.create!(
   event_id: soiree_zulu.id,
-  user_id: dummy1.id,
+  user_id: dummy1.id
+)
+Like.create!(
+  event_id: mystik_garden_vi.id,
+  user_id: dummy1.id
+)
+Like.create!(
+  event_id: mystik_garden_vi.id,
+  user_id: dummy2.id
+)
+Like.create!(
+  event_id: mystik_garden_vi.id,
+  user_id: dummy3.id
+)
+Like.create!(
+  event_id: mystik_garden_vi.id,
+  user_id: dummy4.id
+)
+Like.create!(
+  event_id: mystik_garden_vi.id,
+  user_id: dummy5.id
 )
 puts "Likes Created!"
 
