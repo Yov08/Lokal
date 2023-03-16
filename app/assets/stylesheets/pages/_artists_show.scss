@@ -158,6 +158,7 @@
   color: $purple;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
+  font-size: 17px;
 }
 
 .card-past-events {
@@ -198,4 +199,19 @@
   font-size: 18px;
   text-align: center;
   text-decoration: none;
+}
+
+.youtube-video {
+  padding: 10px;
+  text-align: center;
+}
+
+.youtube-video h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  color: $purple;
+  padding-bottom: 10px;
 }

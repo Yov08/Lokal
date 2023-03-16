@@ -26,5 +26,5 @@ class Event < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :users, through: :likes
   has_and_belongs_to_many :tags, join_table: :events_tags
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 end
