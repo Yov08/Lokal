@@ -53,6 +53,20 @@
   letter-spacing: 0.1rem;
 }
 
+.button-more-event{
+  background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  flex-direction: row;
+  display: inline;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  margin-left: 5px;
+}
+
 .homepage-buttons {
   margin-top: 10vw;
   text-align: center;
