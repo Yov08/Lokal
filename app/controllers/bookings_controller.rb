@@ -1,6 +1,17 @@
   class BookingsController < ApplicationController
     def index
       @bookings = Booking.all
+      @bookings = current_user.bookings.includes(:event).references(:event)
+      case params[:sort]
+      when 'oldest'
+        @bookings = @bookings.order('events.date ASC')
+      when 'upcoming'
+        @bookings = @bookings.where('events.date >= ?', Date.today).order('events.date ASC')
+      when 'over'
+        @bookings = @bookings.where('events.date < ?', Date.today).order('events.date DESC')
+      else
+        @bookings = @bookings.order('events.date DESC')
+      end
     end
 
     def show
