@@ -15,9 +15,9 @@
           <% end %>
         </h4>
       </div>
-      <div class="events-search">
+      <div class="events-search search-container">
         <%= form_with url: events_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1",placeholder: "Find an event", style:"color: white"%>
+          <%= text_field_tag :query, params[:query], class: "form-control rounded-pill py-2 pr-5 mr-1",placeholder: "Find an event", style:"color: black"%>
         <% end %>
         </div>
       </div>
