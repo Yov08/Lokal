@@ -38,9 +38,9 @@ body .booking-an-event{
 }
 .show-event-details h2 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 22px;
   padding-left: 10px;
-  padding-top: 22px;
+  padding-top: 50px;
 }
 
 .event-date {
@@ -149,15 +149,25 @@ body .booking-an-event{
   color: white;
   padding-left: 16px;
   font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   font-size: 19px;
 }
 
+.es-price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 12px 0px 10px;
+  background-color: $violet;
+  margin-top: 226px;
+}
+
 .es-price p {
+
   color: white;
-  padding-left: 50px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 19px;
-  text-align: center;
+  font-size: 17px;
+  text-align: right;
 }
 
 .artists
@@ -166,20 +176,28 @@ body .booking-an-event{
   // margin-right: 10px;
 }
 .performing-artists {
+  padding: 10px;
   margin-top: 2rem;
   text-align: center;
+
 }
 .performing-artists h3 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
+  color: white;
   margin-bottom: 0.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  background-color: $violet;
+  padding: 8px;
+
 }
+
 .artist-image {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .artist-image .artist-photo
 {
   width: 60px;
@@ -253,4 +271,8 @@ body .booking-an-event{
 .event-back-btn ion-icon {
   font-size: 2rem;
   color: white;
+}
+
+.buy-ticket-end {
+  padding-bottom: 80px;
 }

@@ -14,17 +14,8 @@
     </div>
     <div class="show-event-details">
       <h2><%= @event.name if @event.present? %></h2>
-      <div class="row">
-        <div class="col">
-          <div class="es-date">
-            <p><i class="fa-regular fa-calendar" class="date-symbol-show"></i> <span><%= @event.date if @event.present? %></span></p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="es-price">
-            <p><i class="fa-solid fa-tag"></i> As from Rs <%= @event.price_normal %></p>
-          </div>
-        </div>
+      <div class="es-date">
+         <p><i class="fa-regular fa-calendar" class="date-symbol-show"></i> <span><%= @event.date if @event.present? %></span></p>
       </div>
     </div>
     <div class="es-like">
@@ -40,6 +31,10 @@
         <% end %>
       <% end %>
     </div>
+    <div class="es-price">
+      <p><i class="fa-solid fa-tag"></i> As from Rs <%= @event.price_normal %></p>
+    </div>
+
     <div class="location-title">
       <h3>Location</h3>
     </div>
@@ -76,7 +71,7 @@
           <% @artists.each do |artist| %>
             <div class="artists">
               <div class="artist-name">
-                <%= link_to artist.name, artist_path(artist) %>
+                <h5><%= link_to artist.name, artist_path(artist) %></h5>
               </div>
               <div class="artist-image">
                 <%= link_to image_tag(artist.image_url, class: "artist-photo"), artist_path(artist) %>
