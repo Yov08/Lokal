@@ -318,6 +318,7 @@ zulu_artist = Artist.create!(
   deezer: "https://deezer.page.link/S1gJBCPMZRL5pex67",
   instagram: "https://www.instagram.com/"
 )
+
 eli_fur_artist = Artist.create!(
   name: "Eli",
   user_id: eli_fur.id,
