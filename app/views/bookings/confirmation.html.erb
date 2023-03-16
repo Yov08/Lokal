@@ -1,25 +1,24 @@
-
 <body>
   <div class="confirmation-template">
     <div class="thank-you">
-
       <div class="container">
+        <div class="confirmation-check">
+          <i class="fa-regular fa-circle-check fa-7x"></i>
+        </div>
         <div class="confirmation-thanks">
           <h2>Thank you</h2>
         </div>
       </div>
     </div>
-
-      <div class="confirmation-details">
-        <div class="container">
-          <div class="confirmation-check">
-            <h1><i class="fa-regular fa-circle-check"></i></h1>
-            <p>Please check your email for your confirmation and details.</p>
-          </div>
-
-          <div class="confirmation-links">
-            <%= link_to "Home", root_path, class: "button-event" %>
-          </div>
+    <div class="confirmation-details">
+      <div class="container">
+        <div class="confirm-message">
+          <p>Please check your email for your confirmation and details.</p>
+        </div>
+        <div class="confirmation-links">
+          <%= link_to "View Bookings", bookings_path, class: "button-event" %>
+          <%= link_to "Home", root_path, class: "button-event" %>
+        </div>
       </div>
     </div>
   </div>

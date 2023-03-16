@@ -5,37 +5,53 @@ body .confirmation-template {
 }
 
 .confirmation-template .thank-you {
-  height: 470px;
+  height: 500px;
   background-color: $violet;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
 }
 
+// .check-mark {
+//   font-size: 150px;
+//   text-align: center;
+//   color: rgb(38, 201, 38);
+//   margin-top: 120px;
+// }
+
 .confirmation-thanks h2 {
   color: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  font-size: 38px;
-  padding-top: 220px;
+  font-size: 45px;
+  padding-top: 60px;
   letter-spacing: 1px;
 }
 
-.confirmation-check p {
-  font-size: 18px;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 1px;
-}
-
-.confirmation-check h1 {
-  font-size: 80px;
+.confirmation-check {
+  font-size: 40px;
+  padding-top: 60px;
   text-align: center;
   color: $yellow;
+  animation-name: grow-checkmark;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes grow-checkmark {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.fa-circle-check {
+  color: rgb(38, 201, 38);
+}
+
 
 .confirmation-details {
   padding-top: 40px;
   text-align: center;
+  font-size: 20px;
 }
 
 .confirmation-links {
