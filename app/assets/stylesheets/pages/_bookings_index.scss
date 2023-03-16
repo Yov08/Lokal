@@ -2,7 +2,7 @@
 
 .bookings-index {
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(45deg, #fbda61, #ff5acd);
+  background: linear-gradient(45deg, $orange, $teal);
 }
 
 
@@ -10,7 +10,7 @@
   text-align: left;
   padding-top: 20px;
   padding-left: 5px;
-  color: black;
+  color: $burgundy;
   font-weight: bold;
   padding-bottom: 10px;
 }
