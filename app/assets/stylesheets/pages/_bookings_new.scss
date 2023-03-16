@@ -128,3 +128,26 @@
   outline: none;
 }
 
+.ticket-prices p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.ticket-prices {
+  padding-bottom: 40px;
+}
+
+.col .price-section p {
+  color: $teal;
+  padding: 10px;
+  text-align: left;
+
+}
+
+.col .price-display p {
+  color: $teal;
+  padding: 10px;
+  border-radius: 200px;
+}

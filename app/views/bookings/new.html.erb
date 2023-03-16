@@ -11,13 +11,22 @@
         </div>
     </div>
     <div class="container">
-      <div class="booking-event-address">
-        <p><i class="fa-solid fa-location-dot"></i> <span><%= @event.venue %></span></p>
-        <p><%= @event.address %></p>
-      </div>
+
       <div class="ticket-prices">
-        <p>Normal Price: $<%= @event.price_normal %></p>
-        <p>VIP Price: $<%= @event.price_vip %></p>
+        <div class="row">
+            <div class="col">
+              <div class="price-section">
+                <p>Normal Price ($)</p>
+                <p>VIP Price ($)</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="price-display">
+                <p><%= @event.price_normal %></p>
+                <p><%= @event.price_vip %></p>
+              </div>
+            </div>
+        </div>
       </div>
       <%= form_for @booking, url: bookings_path do |f| %>
         <%= f.hidden_field :event_id, value: @event.id %>
