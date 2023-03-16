@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
-body {
+.bookings-index {
   font-family: 'Quicksand', sans-serif;
   background-color: #f5f5f5;
 }
 
-.container {
+.booking-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-h1 {
+.booking-container h1 {
   text-align: center;
   margin-bottom: 2rem;
   color: #745383;
