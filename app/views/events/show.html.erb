@@ -105,7 +105,7 @@
               </div>
             </div>
           <% end %>
-        </div><br>
+        </div><br><br>
         <div class="buy-ticket-end">
           <% if @event.present? %>
             <%= link_to "Buy ticket", new_booking_path(event_id: @event.id), class: "button-main" %>
