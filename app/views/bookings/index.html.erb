@@ -3,6 +3,18 @@
     <h1>My bookings</h1>
 
     <div class="bookings-wrapper">
+      <div class="filter">
+        <button class="filter-button">Sort by</button>
+        <div class="filter-dropdown">
+          <a href="<%= bookings_path %>">All</a>
+          <a href="<%= bookings_path(sort: 'oldest') %>">Oldest</a>
+          <a href="<%= bookings_path(sort: 'upcoming') %>">Upcoming</a>
+          <a href="<%= bookings_path(sort: 'over') %>">Events Over</a>
+        </div>
+        <% if params[:sort].present? %>
+          <%= button_to "Remove filter", bookings_path, method: :get, params: { sort: nil }, class: "btn btn-danger remove-filter" %>
+        <% end %>
+      </div>
     <% unless @bookings.empty? %>
       <% @bookings.each do |booking| %>
         <div class="booking-card <%= 'event-over' if booking.event.date < Date.today %>">
@@ -26,4 +38,11 @@
     <% end %>
     </div>
   </div>
+
+<script>
+document.querySelector('.filter-button').addEventListener('click', function() {
+  document.querySelector('.filter-dropdown').classList.toggle('show');
+});
+</script>
+
 </div>

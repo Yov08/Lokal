@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_one :artist, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :events, through: :likes
+  has_many :bookings
+
   def likes?(event)
     self.likes.exists?(event: event)
   end

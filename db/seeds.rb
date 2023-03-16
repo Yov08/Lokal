@@ -25,7 +25,7 @@ pure = Event.create!(
   price_vip: 3000,
   address: "Lux Grand Gaube",
   capacity: 1000,
-  image_url: "https://scontent.fmru4-1.fna.fbcdn.net/v/t1.6435-9/106805838_3207637609282733_6413803682731626488_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=973b4a&_nc_ohc=Dfz130joYH0AX-vG_zM&_nc_ht=scontent.fmru4-1.fna&oh=00_AfCLZros5_KXnwMaKt5bVa3qg-PaNqDhcFxeAYz_6P2u-Q&oe=64130F68",
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1676913981/LOKAL/Events_homepage_cq8dwz.jpg",
   rating: 4.9
 )
 soiree_zulu = Event.create!(
@@ -483,6 +483,14 @@ Booking.create!(
   pax: 4,
   booking_type: "",
   total_price: 800,
+  pax_vip: 0
+)
+Booking.create!(
+  event_id: pure.id,
+  user_id: rouslan.id,
+  pax: 1,
+  booking_type: "",
+  total_price: 2000,
   pax_vip: 0
 )
 Booking.create!(

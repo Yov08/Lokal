@@ -1,5 +1,10 @@
 <body>
   <div class="show-artist-image">
+    <div class="event-back-btn">
+      <%= link_to artists_path, class: "button-icon" do %>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      <% end %>
+    </div>
     <div class="artist-image-profile" style="background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(<%= @artist.image_url %>)"></div>
     <div class="container-profile-names">
       <h1><%= @artist.name %></h1>
