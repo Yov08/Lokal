@@ -1,10 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #745383;
+}
+
+.bookings-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
 .booking-card {
-  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  background: linear-gradient(135deg, #5ca3b3, #eb7c36);
+}
+
+.booking-card.event-over .booking-card-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(219, 36, 84, 0.5), rgba(219, 36, 84, 0.7));
+  z-index: 1;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
 }
 
 .booking-card-image {
   height: 200px;
-  width: 90vw;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -17,18 +61,51 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(255,165,0,0.4), rgba(255,165,0,1));
+  // background: linear-gradient(to bottom, rgba(116, 83, 131, 0.6), rgba(116, 83, 131, 0.6));
   z-index: 1;
 }
 
-.booking-card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  // padding: 1rem;
-  color: #fff;
+.event-over-text {
+  font-size: 2rem;
   font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   z-index: 2;
-  overflow: hidden;
+}
+
+.booking-card-body {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 0 5px 5px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.booking-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #745383;
+  margin-bottom: 0.5rem;
+}
+
+.booking-address {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.booking-event-date,
+.booking-normal,
+.booking-vip,
+.booking-total {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
