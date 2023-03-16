@@ -93,8 +93,8 @@
 }
 
 .total-ticket-selection {
-  border: 1px solid $purple;
-  background-color: $purple;
+  border: 2px solid $teal;
+  background-color: $white;
   padding-left: 30px;
   margin-bottom: 20px;
   margin-left: 40px;
@@ -106,7 +106,7 @@
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
   margin-right: 30px;
-  color: $white;
+  color: $teal;
   text-align: left;
 }
 
@@ -114,7 +114,7 @@
   width: 100px;
   height: 50px;
   font-family: 'Quicksand' ,sans-serif;
-  color: $purple;
+  color: $teal;
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -136,18 +136,22 @@
 }
 
 .ticket-prices {
-  padding-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .col .price-section p {
-  color: $teal;
+  color: white;
   padding: 10px;
   text-align: left;
 
 }
 
+.container .ticket-prices {
+  background: linear-gradient(45deg, $teal, $purple);
+}
+
 .col .price-display p {
-  color: $teal;
+  color: white;
   padding: 10px;
   border-radius: 200px;
 }
