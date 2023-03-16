@@ -46,8 +46,10 @@
             <label for="total-price">Total price <strong>($)</strong></label>
             <%= f.text_field :total_price, id: "total-price", class: "ticket-selection-input-large", value: 0, readonly: true, step: 1 %>
           </div>
+          <div class="buttons-booking-page">
           <%= f.submit "Book Now", class: "book-now-button" %>
           <%= link_to "Cancel", events_path, class: "cancel-button" %>
+          </div>
         </div>
       <% end %>
 

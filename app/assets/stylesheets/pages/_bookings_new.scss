@@ -128,33 +128,3 @@
   outline: none;
 }
 
-.book-now-button {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.cancel-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #ccc;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  }
-
-.cancel-button:hover {
-  background-color: #999;
-}
