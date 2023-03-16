@@ -6,7 +6,7 @@ body .confirmation-template {
 
 .confirmation-template .thank-you {
   height: 500px;
-  background-color: $violet;
+  background-color: $burgundy;
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
 }
@@ -22,13 +22,13 @@ body .confirmation-template {
   color: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  font-size: 45px;
+  font-size: 30px;
   padding-top: 60px;
   letter-spacing: 1px;
 }
 
 .confirmation-check {
-  font-size: 40px;
+  font-size: 36px;
   padding-top: 60px;
   text-align: center;
   color: $yellow;
@@ -44,14 +44,14 @@ body .confirmation-template {
 }
 
 .fa-circle-check {
-  color: rgb(38, 201, 38);
+  color: $white;
 }
 
 
 .confirmation-details {
   padding-top: 40px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 

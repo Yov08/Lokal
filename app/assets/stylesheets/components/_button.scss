@@ -40,7 +40,7 @@
 }
 
 .button-main:hover{
-  background-color: #F5EA5A;
+  background-color: $orange;
   color: black;
   border-radius: 10px;
   padding: 12px 32px 12px 32px;
@@ -54,28 +54,6 @@
   text-align: center;
 }
 
-.button-contact{
-  background-color: darkgray;
-  color: black;
-  border-radius: 10px;
-  padding: 8px 12px 8px 12px;
-  text-decoration: none;
-  flex-direction: row;
-  transition: 0.2s;
-  letter-spacing: 0.1rem;
-
-}
-
-.button-contact:hover {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  padding: 8px 12px 8px 12px;
-  text-decoration: none;
-  flex-direction: row;
-  letter-spacing: 0.1rem;
-
-}
 
 .button-event {
   background-color: transparent;
@@ -116,7 +94,7 @@
 }
 
 .btn-registration:hover {
-  background-color: $yellow;
+  background-color: $orange;
   color: black;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -128,7 +106,7 @@
 }
 
 .btn-login-form {
-  background-color: $yellow;
+  background-color: $orange;
   color: black;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -167,7 +145,7 @@
 }
 
 .button-evhome:hover {
-  background-color: $yellow;
+  background-color: $orange;
   color: white;
   border: 3px;
   border-style: solid;
@@ -196,7 +174,7 @@
 }
 
 .button-arthome:hover{
-  background-color: #F5EA5A;
+  background-color: $orange;
   color: black;
   border-radius: 10px;
   padding: 10px 16px 10px 16px;
@@ -220,7 +198,7 @@
 }
 
 .login-sign:hover {
-  background-color: $yellow;
+  background-color: $orange;
   color: black;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
