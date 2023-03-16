@@ -3,6 +3,7 @@
     <h1>My bookings</h1>
 
     <div class="bookings-wrapper">
+    <% unless @bookings.empty? %>
       <% @bookings.each do |booking| %>
         <div class="booking-card <%= 'event-over' if booking.event.date < Date.today %>">
           <div class="booking-card-image" style="background-image: url(<%= booking.event.image_url %>)">
@@ -20,6 +21,9 @@
           </div>
         </div>
       <% end %>
+    <% else %>
+      <h3>No Bookings Yet!</h3>
+    <% end %>
     </div>
   </div>
 </div>

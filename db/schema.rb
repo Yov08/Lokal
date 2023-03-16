@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_11_065141) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_16_113138) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,14 +61,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_065141) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "event_id"
-    t.integer "user_id"
     t.integer "pax"
     t.boolean "booking_type"
     t.integer "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "pax_vip"
+    t.bigint "event_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "event_artists", force: :cascade do |t|
@@ -140,6 +142,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_11_065141) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "events"
+  add_foreign_key "bookings", "users"
   add_foreign_key "events_tags", "events"
   add_foreign_key "events_tags", "tags"
   add_foreign_key "likes", "events"
