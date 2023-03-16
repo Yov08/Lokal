@@ -1,14 +1,12 @@
 <body>
   <div class="booking-an-event">
-    <div class="img-event-container">
+    <div class="img-event-booking">
         <%= puts @event.inspect %>
         <img src=<%= @event.image_url %>>
     </div><br>
-    <div class="show-event-details">
+    <div class="booking-event-details">
       <h2><%= @event.name%></h2>
-        <div class="es-date">
-          <p><i class="fa-regular fa-calendar" class="date-symbol-show"></i> <span><%= @event.date%></span></p>
-        </div>
+
     </div>
     <div class="container">
 
