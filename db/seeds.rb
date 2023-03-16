@@ -484,6 +484,23 @@ Booking.create!(
   total_price: 800,
   pax_vip: 0
 )
+Booking.create!(
+  event_id: pure.id,
+  user_id: yov.id,
+  pax: 1,
+  booking_type: "",
+  total_price: 2000,
+  pax_vip: 0
+)
+Booking.create!(
+  event_id: soiree_zulu.id,
+  user_id: yov.id,
+  pax: 4,
+  booking_type: "",
+  total_price: 800,
+  pax_vip: 0
+)
+
 puts "Bookings Created!"
 
 
