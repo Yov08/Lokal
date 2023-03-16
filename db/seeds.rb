@@ -460,14 +460,14 @@ puts "Events Artists Created!"
 
 
 puts "Creating Bookings"
-Booking.create!(
-  event_id: pure.id,
-  user_id: rouslan.id,
-  pax: 1,
-  booking_type: "",
-  total_price: 2000,
-  pax_vip: 0
-)
+# Booking.create!(
+#   event_id: pure.id,
+#   user_id: rouslan.id,
+#   pax: 1,
+#   booking_type: "",
+#   total_price: 2000,
+#   pax_vip: 0
+# )
 Booking.create!(
   event_id: mystik_garden_vi.id,
   user_id: rouslan.id,
