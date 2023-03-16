@@ -95,7 +95,7 @@
   padding: 10px;
 }
 .media-banner {
-  background-color: $purple;
+  background-color: $teal;
   height: 100px;
   width: 100%;
 }
@@ -155,7 +155,7 @@
 }
 
 .past-artist-events h3 {
-  color: black;
+  color: $purple;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
 }
@@ -193,7 +193,7 @@
   left: 0;
   right: 0;
   padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: $purple; opacity:0.8;
   color: #fff;
   font-size: 18px;
   text-align: center;
