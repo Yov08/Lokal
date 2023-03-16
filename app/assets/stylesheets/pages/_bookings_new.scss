@@ -1,5 +1,31 @@
+body .booking-an-event {
+  background: white;
+
+}
+
+.img-event-booking img {
+  background-size: cover;
+  height: 300px;
+  max-width: 100%;;
+  object-fit: cover;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.booking-event-details h2 {
+  padding-left: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: $purple;
+}
+
 .booking-an-event {
-  padding-bottom: 100px;
+  padding-bottom: 200px;
+}
+
+.booking-event-address {
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .ticket-selection-container {
@@ -22,8 +48,8 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
   margin-bottom: 10px;
-  color: $burgundy;
-  padding-left: 55px;
+  color: $purple;
+  padding-left: 50px;
 }
 
 .ticket-selection-input-container {
@@ -42,8 +68,7 @@
   border-radius: 5px;
   border: 1px solid $white;
   margin: 0 10px;
-  color: $burgundy;
-  font-weight: bold;
+  color: $purple;
   font-size: 20px;
 }
 
@@ -82,69 +107,72 @@
   color: #fff;
 }
 
-.ticket-selection label,
-.ticket-selection-input-container {
-  display: flex;
-  align-items: center;
-}
+
 
 .ticket-selection label {
   margin-right: 10px;
 }
 
 .total-ticket-selection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid $teal;
+  background-color: $white;
+  padding-left: 30px;
   margin-bottom: 20px;
+  margin-left: 40px;
+  margin-top: 10px;
+  border-radius: 20px;
 }
 
 .total-ticket-selection label {
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 5px;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+  margin-right: 30px;
+  color: $teal;
+  text-align: left;
 }
 
 .ticket-selection-input-large {
   width: 100px;
   height: 50px;
+  font-family: 'Quicksand' ,sans-serif;
+  color: $teal;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1px;
   padding: 10px;
   text-align: center;
-  border-radius: 5px;
-  margin: 0 10px;
+  border: 2px solid $white;
+  border-radius: 20px;
 }
 
 .ticket-selection-input-large:focus {
   outline: none;
 }
 
-.book-now-button {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
+.ticket-prices p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: center;
   font-weight: bold;
-  cursor: pointer;
 }
 
-.cancel-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #ccc;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  }
+.ticket-prices {
+  margin-bottom: 10px;
+}
 
-.cancel-button:hover {
-  background-color: #999;
+.col .price-section p {
+  color: black;
+  padding: 10px;
+  text-align: left;
+
+}
+
+.container .ticket-prices {
+  background-color: white;
+}
+
+.col .price-display p {
+  color: black;
+  padding: 10px;
+  border-radius: 200px;
 }

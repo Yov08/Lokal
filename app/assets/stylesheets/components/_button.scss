@@ -1,5 +1,6 @@
 .button-outline{
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border: 3px;
   border-style: solid;
@@ -15,6 +16,7 @@
 
 .button-outline:hover{
   background-color: black;
+  font-family: 'Quicksand', sans-serif;
   border: 3px;
   border-color: #DB2454;
   color: white;
@@ -28,6 +30,7 @@
 
 .button-main{
   background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border-radius: 10px;
   padding: 12px 32px 12px 32px;
@@ -41,12 +44,27 @@
 
 .button-main:hover{
   background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   border-radius: 10px;
   padding: 12px 32px 12px 32px;
   text-decoration: none;
   display: inline;
   letter-spacing: 0.1rem;
+}
+
+.button-more-event{
+  background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  flex-direction: row;
+  display: inline;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  margin-left: 5px;
 }
 
 .homepage-buttons {
@@ -57,6 +75,7 @@
 
 .button-event {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   border: 1px;
   border-style: solid;
@@ -70,6 +89,7 @@
 
 .button-event:hover {
   background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border: 1px;
   border-style: solid;
@@ -82,6 +102,7 @@
 
 .btn-registration {
   background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -95,6 +116,7 @@
 
 .btn-registration:hover {
   background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -107,6 +129,7 @@
 
 .btn-login-form {
   background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -119,6 +142,7 @@
 
 .btn-login-form:hover {
   background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -131,6 +155,7 @@
 
 .button-evhome {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border: 3px;
   border-style: solid;
@@ -146,6 +171,7 @@
 
 .button-evhome:hover {
   background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border: 3px;
   border-style: solid;
@@ -161,6 +187,7 @@
 
 .button-arthome{
   background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border-radius: 10px;
   padding: 10px 16px 10px 16px;
@@ -175,6 +202,7 @@
 
 .button-arthome:hover{
   background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   border-radius: 10px;
   padding: 10px 16px 10px 16px;
@@ -185,6 +213,7 @@
 
 .login-sign {
   background-color: #DB2454;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -199,6 +228,7 @@
 
 .login-sign:hover {
   background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   border-radius: 10px;
   padding: 8px 12px 8px 12px;
@@ -213,6 +243,7 @@
 
 .forgot-password {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   text-decoration: none;
   display: inline;
@@ -222,6 +253,7 @@
 
 .button-confirmation {
   background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
   color: $burgundy;
   border: 1px;
   border-style: solid;
@@ -230,4 +262,41 @@
   text-decoration: none;
   transition: 0.2s;
   letter-spacing: 0.1rem;
+}
+
+.book-now-button {
+  background-color: $orange;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  color: white;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-left: 70px;
+
+}
+
+.cancel-button {
+  background-color: $white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  color: $teal;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.buttons-booking-page {
+  margin-top: 10px;
 }
