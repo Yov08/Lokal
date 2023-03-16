@@ -313,7 +313,7 @@ zulu_artist = Artist.create!(
   media_link: "https://www.youtube.com/watch?v=EUFpT8RyP70",
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433599/LOKAL/artists/zulu-4_cnordr.jpg",
   social_media_links: "https://www.facebook.com/ZuluBavajee/",
-  youtube: "https://www.youtube.com/watch?v=EUFpT8RyP70",
+  youtube: "https://www.youtube.com/embed?v=EUFpT8RyP70",
   spotify: "https://open.spotify.com/artist/5CkVLGKUJkIc1pmSk10QP4?si=7v0DNMJuToOcHBf5BCyBVg",
   deezer: "https://deezer.page.link/S1gJBCPMZRL5pex67",
   instagram: "https://www.instagram.com/"
