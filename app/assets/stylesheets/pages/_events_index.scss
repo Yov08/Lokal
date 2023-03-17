@@ -188,6 +188,7 @@
   letter-spacing: 0.5px;
   padding-bottom: 1px;
   padding-top: 20px;
+  text-shadow: ;
 }
 
 .ei-tags
@@ -253,9 +254,9 @@ color: white;
   font-size: 17px;
   padding-top: 4px;
   color: white;
-  padding-bottom: 5px;
-  line-height:0.5cm;
-
+  padding-bottom: -23px;
+  line-height: 0.01cm;
+  text-align: right;
 }
 
 .ei-date .date-symbol p {
@@ -263,6 +264,13 @@ color: white;
   color: white;
 }
 
+.ei-date .container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 120px;
+
+}
 
 .ei-date .time-symbol {
   font-size: 20px;

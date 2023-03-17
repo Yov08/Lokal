@@ -61,11 +61,13 @@
                   </div>
                   <h2> <%= event.name %> </h2>
                   <div class="ei-date">
-                    <% formatted_date = (event.date).strftime("%b %e") %>
-                    <% formatted_start_time = (event.start_time.present? ? event.start_time.strftime("%H:%M") : '') %>
-                    <% formatted_end_time = (event.end_time.present? ? event.end_time.strftime("%H:%M") : '') %>
-                    <p><i class="fa-regular fa-calendar" class="date-symbol"></i> <span><%= formatted_date %></span></p>
-                    <p><i class="fa-regular fa-clock" class="time-symbol"></i> <span><%= formatted_start_time %> - <%= formatted_end_time %></span></p>
+                    <div class="container">
+                      <% formatted_date = (event.date).strftime("%b %e") %>
+                      <% formatted_start_time = (event.start_time.present? ? event.start_time.strftime("%H:%M") : '') %>
+                      <% formatted_end_time = (event.end_time.present? ? event.end_time.strftime("%H:%M") : '') %>
+                      <p><i class="fa-regular fa-calendar" class="date-symbol"></i> <span><%= formatted_date %></span></p>
+                      <p><i class="fa-regular fa-clock" class="time-symbol"></i> <span><%= formatted_start_time %> - <%= formatted_end_time %></span></p>
+                    </div>
                   </div>
                   <div class="ei-location">
                     <p><i class="fa-solid fa-location-dot"></i> <span><%= event.venue %></span></p><br>

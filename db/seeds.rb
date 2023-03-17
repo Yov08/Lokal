@@ -58,12 +58,14 @@ moaf = Event.create!(
   address: "Royal Road, Coteau Raffin, Black River",
   capacity: 2000,
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678258607/LOKAL/Events/moaf-banner_z7vdl9.png",
+  start_time: "18:00",
+  end_time: "23:00",
   rating: 4.2,
   longitude: -20.085627115510015,
   latitude: 57.5206045413392
 )
 mystik_garden_vi = Event.create!(
-  name: "The Mystik Garden VI",
+  name: "Mystik Garden VI",
   date: "19.03.2023",
   venue: "Ruins of Balaclava",
   description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
