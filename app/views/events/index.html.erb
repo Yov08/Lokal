@@ -58,7 +58,9 @@
                   <div class="ei-location">
                     <p><i class="fa-solid fa-location-dot"></i> <span><%= event.venue %></span></p><br>
                   </div>
-                  <%= link_to "More", event_path(event), class: "button-more-event" %>
+                  <div class="ei-more">
+                    <%= link_to "More", event_path(event), class: "button-more-event" %>
+                  </div>
                   <div class="ei-lineup">
                     <% if event.event_artists.present? %>
                       <div class="ei-lineup-artists">

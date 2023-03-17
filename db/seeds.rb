@@ -41,7 +41,7 @@ soiree_zulu = Event.create!(
   price_vip: 0,
   address: "Tamarin",
   capacity: 400,
-  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678433453/LOKAL/Events/Soir%C3%A9e-with-Zulu-Carousel_p35wzp.jpg",
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1679089467/LOKAL/Events/Soire%CC%81e-with-Zulu-Carousel_sxxgqg.png",
   rating: 4.7,
   start_time: "19:00",
   end_time: "23:00",
