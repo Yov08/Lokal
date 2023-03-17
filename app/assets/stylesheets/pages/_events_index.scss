@@ -390,3 +390,14 @@
 .nav-link {
   text-decoration: none;
 }
+
+.ei-index .event-back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+}
+.ei-index .event-back-btn ion-icon {
+  font-size: 2rem;
+  color: black;
+}
