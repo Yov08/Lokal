@@ -22,10 +22,10 @@
     
   </head>
 
-  <body>
+  <body class="<%= 'no-navbar' if request.path == booking_confirmation_path %>">
     <%= render "shared/flashes" %>
     <%= yield %>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && request.path != booking_confirmation_path %>
       <%= render "shared/navbar" %>
     <% end %>
   </body>
