@@ -1,5 +1,205 @@
-body .show-artist-lokal
-{
+// body .show-artist-lokal
+// {
+//   background: linear-gradient(45deg, $orange, $purple);
+// }
+
+// .swiper {
+//   padding-bottom: 100px;
+// }
+
+// .banner-artist-all h1{
+//   font-family: 'Quicksand', sans-serif;
+//   font-size: 42px;
+//   font-weight: bold;
+//   color: $burgundy;
+//   width: 100%;
+//   text-align: center;
+//   padding-top: 20px;
+// }
+
+// .banner-artist-all{
+
+//   padding-top: 20px;
+//   background-color:$white;
+//   border-bottom-left-radius: 210px;
+//   height: 180px;
+// }
+
+// .banner-artist-all p {
+//   text-align: left;
+//   padding-left: 130px;
+//   font-family: 'Quicksand', sans-serif;
+//   color:#555;
+//   font-size: 15px;
+//   font-weight: bold;
+//   padding-right: 5px;
+// }
+
+
+// .container-index-artist {
+//   margin-left: 20px;
+//   padding-top: 40px;
+// }
+
+// .artist-card{
+//   position: relative;
+//   width: 350px;
+//   height: 190px;
+//   // height: 450px;
+//   background: white;opacity: 0.5;
+//   border-radius: 20px;
+//   // box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+//   transition: 0.5s;
+//   margin-bottom: 30px;
+//   transform: translateY(100%);
+//   opacity: 0;
+//   animation: slideIn 1s forwards;
+//   animation-delay: calc(0.2s * var(--index));
+// }
+
+// .artist-card:hover
+// {
+//   height: 450px;
+//   opacity: 0.9;
+//   font-family: 'Quicksand', sans-serif;
+//   letter-spacing: 1px;
+// }
+
+// .imgBx
+// {
+//   position: absolute;
+//   left: 50%;
+//   top: -50px;
+//   transform: translateX(-50%);
+//   width: 150px;
+//   height: 150px;
+//   background: #fff;
+//   border-radius: 20px;
+//   // box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+//   overflow: hidden;
+//   transition: 0.5s;
+//   margin-bottom: 8px;
+// }
+
+// .artist-card:hover .imgBx
+// {
+//   width: 250px;
+//   height: 250px;
+// }
+
+// .imgBx img
+// {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+// .artist-card .content
+// {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-end;
+//   overflow: hidden;
+// }
+// .artist-card .content .details
+// {
+//   padding: 40px;
+//   text-align: center;
+//   width: 100%;
+//   transform: 0.5s;
+//   transform: translateY(160px);
+
+// }
+
+// .artist-card:hover .content .details
+// {
+//   transform: translateY(0px);
+
+// }
+// .artist-card .content .details h2
+// {
+//   font-size: 25px;
+//   font-weight: 600;
+//   color: $burgundy;
+//   line-height: 1.2em;
+//   text-align: center;
+//   margin-left: 10px;
+// }
+// .artist-card .content .details h2 span
+// {
+//   font-size: 0.75em;
+//   font-weight: 500;
+//   opacity: 0.5;
+// }
+// .artist-card .content .details .data
+// {
+//   display: flex;
+//   justify-content: space-between;
+//   margin: 20px 0;
+// }
+// .artist-card .content .details .data h3
+// {
+//   font-size: 1em;
+//   color: #555;
+//   line-height: 1.2em;
+//   font-weight: 600;
+//   text-align: center;
+//   margin-left: 10px;
+// }
+// .artist-card .content .details .data h3 span
+// {
+//   font-size: 0.85em;
+//   font-weight: 400;
+//   opacity: 0.5;
+// }
+// .artist-card .content .details .actionBtn
+// {
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 20px;
+// }
+// .artist-card .content .details .actionBtn button
+// {
+//   padding: 10px 30px;
+//   border-radius: 5px;
+//   border: none;
+//   outline: none;
+//   font-size: 1em;
+//   font-weight: 500;
+//   background: #ff5f95;
+//   color: #fff;
+//   cursor: pointer;
+// }
+
+// .artist-card.open {
+//   height: 450px;
+//   opacity: 0.9;
+// }
+
+// .artist-card.open .imgBx {
+//   width: 250px;
+//   height: 250px;
+// }
+
+
+// @keyframes slideIn {
+//   0% {
+//     transform: translateY(100%);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+
+body .show-artist-lokal {
   background: linear-gradient(45deg, $orange, $purple);
 }
 
@@ -7,7 +207,7 @@ body .show-artist-lokal
   padding-bottom: 100px;
 }
 
-.banner-artist-all h1{
+.banner-artist-all h1 {
   font-family: 'Quicksand', sans-serif;
   font-size: 42px;
   font-weight: bold;
@@ -15,58 +215,61 @@ body .show-artist-lokal
   width: 100%;
   text-align: center;
   padding-top: 20px;
-
-
 }
 
-.banner-artist-all{
-
+.banner-artist-all {
   padding-top: 20px;
-  background-color:$white;
+  background-color: $white;
   border-bottom-left-radius: 210px;
   height: 180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .banner-artist-all p {
   text-align: left;
   padding-left: 130px;
   font-family: 'Quicksand', sans-serif;
-  color:#555;
+  color: #555;
   font-size: 15px;
   font-weight: bold;
   padding-right: 5px;
 }
-
 
 .container-index-artist {
   margin-left: 20px;
   padding-top: 40px;
 }
 
-.artist-card{
+.artist-card {
   position: relative;
   width: 350px;
   height: 190px;
-  // height: 450px;
-  background: white;opacity: 0.5;
+  background: white;
+  opacity: 0.5;
   border-radius: 20px;
-  // box-shadow: 0 15px 50px rgba(0,0,0,0.15);
   transition: 0.5s;
   margin-bottom: 30px;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: slideIn 1s forwards;
+  animation-delay: calc(0.2s * var(--index));
 }
 
+.artist-card.closed {
+  height: 200px;
+  opacity: 1;
+}
 
-
-.artist-card:hover
-{
+.artist-card.open {
   height: 450px;
   opacity: 0.9;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 1px;
-
 }
-.imgBx
-{
+
+.imgBx {
   position: absolute;
   left: 50%;
   top: -50px;
@@ -75,20 +278,22 @@ body .show-artist-lokal
   height: 150px;
   background: #fff;
   border-radius: 20px;
-  // box-shadow: 0 15px 50px rgba(0,0,0,0.35);
   overflow: hidden;
   transition: 0.5s;
   margin-bottom: 8px;
 }
 
-.artist-card:hover .imgBx
-{
+.artist-card.closed .imgBx {
+  width: 150px;
+  height: 150px;
+}
+
+.artist-card.open .imgBx {
   width: 250px;
   height: 250px;
 }
 
-.imgBx img
-{
+.imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,8 +301,8 @@ body .show-artist-lokal
   height: 100%;
   object-fit: cover;
 }
-.artist-card .content
-{
+
+.artist-card .content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -106,23 +311,20 @@ body .show-artist-lokal
   align-items: flex-end;
   overflow: hidden;
 }
-.artist-card .content .details
-{
+
+.artist-card .content .details {
   padding: 40px;
   text-align: center;
   width: 100%;
-  transform: 0.5s;
   transform: translateY(160px);
-
+  transition: 0.5s;
 }
 
-.artist-card:hover .content .details
-{
+.artist-card.open .content .details {
   transform: translateY(0px);
-
 }
-.artist-card .content .details h2
-{
+
+.artist-card .content .details h2 {
   font-size: 25px;
   font-weight: 600;
   color: $burgundy;
@@ -130,20 +332,20 @@ body .show-artist-lokal
   text-align: center;
   margin-left: 10px;
 }
-.artist-card .content .details h2 span
-{
+
+.artist-card .content .details h2 span {
   font-size: 0.75em;
   font-weight: 500;
   opacity: 0.5;
 }
-.artist-card .content .details .data
-{
+
+.artist-card .content .details .data {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
-.artist-card .content .details .data h3
-{
+
+.artist-card .content .details .data h3 {
   font-size: 1em;
   color: #555;
   line-height: 1.2em;
@@ -151,20 +353,20 @@ body .show-artist-lokal
   text-align: center;
   margin-left: 10px;
 }
-.artist-card .content .details .data h3 span
-{
+
+.artist-card .content .details .data h3 span {
   font-size: 0.85em;
   font-weight: 400;
   opacity: 0.5;
 }
-.artist-card .content .details .actionBtn
-{
+
+.artist-card .content .details .actionBtn {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-.artist-card .content .details .actionBtn button
-{
+
+.artist-card .content .details .actionBtn button {
   padding: 10px 30px;
   border-radius: 5px;
   border: none;
@@ -175,10 +377,14 @@ body .show-artist-lokal
   color: #fff;
   cursor: pointer;
 }
-// .card .content .details .actionBtn button:nth-child(2)
-// {
-//   border: 1px solid #999;
-//   color: #999;
-//   background: #fff;
 
-// }
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
