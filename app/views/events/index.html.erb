@@ -81,16 +81,16 @@
       <% end %>
     </div>
     <div class="nav-bar-filters">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#upcoming">Upcoming</a>
+          <a class="nav-link active" data-toggle="pill" href="#upcoming">Upcoming</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#toprated">Top Rated</a>
+          <a class="nav-link" data-toggle="pill" href="#toprated">Top Rated</a>
         </li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane fade" id="upcoming">
+        <div class="tab-pane fade show active" id="upcoming">
           <div class="upcoming-events">
             <% if @upcoming_events.present? %>
               <% @upcoming_events.each do |event| %>
