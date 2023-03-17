@@ -90,3 +90,37 @@
 .indicator {
   display: none;
 }
+
+.dropdown-menu {
+  border-radius: 25px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  inset: auto 0px 0px auto;
+  margin: 0px;
+  transform: translate3d(0px, -77px, 0px) !important;
+}
+
+.dropdown-item {
+  color: var(--clr);
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 0.5rem 1.5rem;
+  transition: 0.5s;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu:before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 78%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent rgba(128, 128, 128, 0.5) transparent;
+}
