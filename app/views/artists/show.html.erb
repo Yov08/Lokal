@@ -14,6 +14,21 @@
       <h3 href = "mailto: abc@example.com">Message</h3>
     </div>
     <br><br>
+        <div class="bio-first-artist">
+          <div class="container">
+            <div class=row>
+              <div class="col">
+                <h4>Rating</h4>
+              <p><i class="fa-regular fa-star-half-stroke"></i> <%= @artist.rating %></p>
+              </div>
+              <div class="col">
+               <h4>Hourly rate</h4>
+              <p><i class="fa-solid fa-tag"></i> <%= @artist.hourly_rate %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="spotify-embed">
           <div class="container">
               <h3>Listen to <strong><%= @artist.name%></strong></h3>
