@@ -297,7 +297,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: rgba(219, 36, 84, 0.2);
+  background-color: white;
 }
 
 .upcoming-event .card-body {
@@ -324,6 +324,7 @@
   text-align: center;
   letter-spacing: 1px;
   color: $black;
+  padding-left: 5px;
 }
 
 
@@ -361,7 +362,8 @@
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
-  color: $black;
+  color: $burgundy;
+  padding-left: 5px;
 }
 
 .nav-bar-filters {
@@ -388,11 +390,14 @@
   background-color: #DB2454;
   color: #FFFFFF;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .nav-pills .nav-link:not(.active) {
   background-color: transparent;
   color: $black;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .nav-link {
