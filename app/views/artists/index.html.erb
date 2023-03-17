@@ -5,9 +5,9 @@
   </div>
   <div class="swiper">
     <div class="container-index-artist">
-      <% @artists.each do |artist| %><br>
+      <% @artists.each_with_index do |artist, index| %>
         <swiper-slide class="slider">
-          <div class="artist-card">
+          <div class="artist-card" style="--index: <%= index %>">
             <div class="imgBx">
               <img src=<%= artist.image_url %>>
             </div>
@@ -33,42 +33,73 @@
       <% end %>
     </div>
   </div>
-  <script>
 
-    $(".banner-artist-all").hide();
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-            $(".banner-artist-all").fadeOut("fast");
-        }
-        else {
-            $(".banner-artist-all").fadeIn("slow");
-        }
+<script>
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+function initArtistCards() {
+  const artistCards = document.querySelectorAll('.artist-card');
+  const windowHeight = window.innerHeight;
+  let firstCardClicked = false;
+
+  function updateCardState() {
+    let activeCardIndex = -1;
+
+    artistCards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+
+      if (cardRect.top <= windowHeight * 0.6 && cardRect.top >= windowHeight * 0.5) {
+        card.classList.add('open');
+        card.classList.remove('closed');
+        activeCardIndex = index;
+      } else {
+        card.classList.remove('open');
+        card.classList.add('closed');
+      }
     });
 
+    if (activeCardIndex > 0) {
+      artistCards[activeCardIndex - 1].classList.remove('open');
+      artistCards[activeCardIndex - 1].classList.add('closed');
+    }
+  }
+
+  function onCardClick(event) {
+    const card = event.currentTarget;
+    scrollToCard(card);
+  }
+
+  function scrollToCard(card) {
+    const cardRect = card.getBoundingClientRect();
+    const scrollToY = cardRect.top + window.scrollY - (windowHeight * 0.6);
+    window.scrollTo({ top: scrollToY, behavior: 'smooth' });
+    setTimeout(updateCardState, 500);
+  }
+
+  artistCards.forEach((card) => {
+    card.addEventListener('click', onCardClick);
+  });
+
+  window.addEventListener('scroll', debounce(() => {
+    if (firstCardClicked) {
+      updateCardState();
+    }
+  }, 50));
+}
+
+if (typeof Turbolinks === 'undefined' || Turbolinks === null) {
+  document.addEventListener('DOMContentLoaded', initArtistCards);
+} else {
+  document.addEventListener('turbolinks:load', initArtistCards);
+}
+
 </script>
+
+
 </div>
-
-
-
-  <!-- <div class="container">
-    <% @artists.each do |artist| %>
-      <div class="card">
-        <div class="imgBx">
-          <img src=<%= artist.image_url %>>
-        </div>
-        <div class="content">
-          <div class="details">
-            <h2><%= artist.name %><br><span><%= artist.category %></span> </h2>
-            <div class="data">
-              <% if @events.present? %>
-                <h3><%= link_to @events.first.name, event_path(@events.first) %><br><span>Upcoming<br>Event</span></h3>
-              <% end %>
-              <h3><%= artist.rating %><br><span>Rating</span> </h3>
-              <h3><%= truncate(artist.biography, length: 100) %><%= link_to "Learn more", artist_path(artist.id) %><br><span>Bio</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <%= link_to "Back", root_path, class: "button-event" %>
-  </div> -->
