@@ -35,47 +35,69 @@
   </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+function initArtistCards() {
   const artistCards = document.querySelectorAll('.artist-card');
   const windowHeight = window.innerHeight;
+  let firstCardClicked = false;
 
   function updateCardState() {
+    let activeCardIndex = -1;
+
     artistCards.forEach((card, index) => {
       const cardRect = card.getBoundingClientRect();
 
-      if (cardRect.top <= windowHeight * 0.5 && cardRect.bottom >= windowHeight * 0.5) {
+      if (cardRect.top <= windowHeight * 0.6 && cardRect.top >= windowHeight * 0.5) {
         card.classList.add('open');
         card.classList.remove('closed');
+        activeCardIndex = index;
       } else {
         card.classList.remove('open');
         card.classList.add('closed');
       }
     });
+
+    if (activeCardIndex > 0) {
+      artistCards[activeCardIndex - 1].classList.remove('open');
+      artistCards[activeCardIndex - 1].classList.add('closed');
+    }
   }
 
-  // Add this line to open the first card by default
-  artistCards[0].classList.add('open');
+  function onCardClick(event) {
+    const card = event.currentTarget;
+    scrollToCard(card);
+  }
 
-  artistCards.forEach((card, index) => {
-    if (index !== 0) { // Don't add 'closed' class to the first card
-      card.classList.add('closed');
-    }
+  function scrollToCard(card) {
+    const cardRect = card.getBoundingClientRect();
+    const scrollToY = cardRect.top + window.scrollY - (windowHeight * 0.6);
+    window.scrollTo({ top: scrollToY, behavior: 'smooth' });
+    setTimeout(updateCardState, 500);
+  }
+
+  artistCards.forEach((card) => {
+    card.addEventListener('click', onCardClick);
   });
 
-  window.addEventListener('scroll', updateCardState);
+  window.addEventListener('scroll', debounce(() => {
+    if (firstCardClicked) {
+      updateCardState();
+    }
+  }, 50));
+}
 
-  // Set the initial scroll position to center the first card on the screen
-  const firstCardRect = artistCards[0].getBoundingClientRect();
-  const bannerArtistAll = document.querySelector('.banner-artist-all');
-  const bannerHeight = bannerArtistAll.getBoundingClientRect().height;
-  const scrollToY = firstCardRect.top + window.scrollY - (windowHeight - firstCardRect.height) / 2 - bannerHeight;
-
-  // Delay the scroll action to allow the page to load completely
-  setTimeout(() => {
-    window.scrollTo({top: scrollToY, behavior: 'smooth'});
-    updateCardState();
-  }, 100);
-});
+if (typeof Turbolinks === 'undefined' || Turbolinks === null) {
+  document.addEventListener('DOMContentLoaded', initArtistCards);
+} else {
+  document.addEventListener('turbolinks:load', initArtistCards);
+}
 
 </script>
 
