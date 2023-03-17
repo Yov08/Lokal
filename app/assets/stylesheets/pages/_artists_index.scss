@@ -23,8 +23,9 @@ body .show-artist-lokal
   background-color:$white;
   border-bottom-left-radius: 210px;
   height: 180px;
-  position: sticky;
   top: 0;
+  position: sticky;
+  z-index: 1000;
 }
 
 
