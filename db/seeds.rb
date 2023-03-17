@@ -49,7 +49,7 @@ soiree_zulu = Event.create!(
   latitude: 57.5206045413392
 )
 moaf = Event.create!(
-  name: "Mauritius Open Air",
+  name: "Moris Open Air",
   date: "23.07.2023",
   venue: "Nou Le Morne",
   description: "Discover Mauritius paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
@@ -81,7 +81,7 @@ mystik_garden_vi = Event.create!(
   latitude: 57.5206045413392
 )
 sakifo = Event.create!(
-  name: "Sakifo Music Festival",
+  name: "Sakifo Muzik",
   date: "02.06.2023",
   venue: "Saint Pierre ",
   description: "Since 2004, the Sakifo Musik Festival has thrilled festival-goers over 3 days to pop, rock, electro, maloya, etc. rhythms. More than 50 local, national and international artists will be welcomed on the 5 stages of the festival.",
@@ -98,9 +98,9 @@ sakifo = Event.create!(
 )
 
 luna_night_festival = Event.create!(
-  name: "Luna Night Festival",
+  name: "Luna Festival",
   date: "21.06.2023",
-  venue: "Domaine Les Pailles",
+  venue: "Pailles",
   description: "Get ready for the Luna Night Festival, an electrifying evening of music and dance under the stars. This year's line-up features top local and international artists, including DJ Sash, Eli & Fur, and Massane. Join us on June 21st at Domaine Les Pailles, the perfect natural setting for this unforgettable night.",
   price_normal: 2500,
   price_vip: 5000,
@@ -150,6 +150,10 @@ live_dan_moka.tags << jazz
 live_dan_moka.tags << concert
 luna_night_festival.tags << techno
 luna_night_festival.tags << festival
+soiree_zulu.tags << jazz
+sakifo.tags << jazz
+sakifo.tags << festival
+moaf.tags << concert
 puts "Event Tags Created!"
 
 
@@ -468,6 +472,11 @@ EventArtist.create!(
   artist_id: zulu_artist.id,
   event_id: soiree_zulu.id
 )
+EventArtist.create!(
+  artist_id: kaya_artist.id,
+  event_id: live_dan_moka.id
+)
+puts
 puts "Events Artists Created!"
 
 
