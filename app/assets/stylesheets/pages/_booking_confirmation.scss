@@ -23,12 +23,12 @@ body .confirmation-template {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   font-size: 30px;
-  padding-top: 60px;
+  padding-top: 8px;
   letter-spacing: 1px;
 }
 
 .confirmation-check {
-  font-size: 36px;
+  font-size: 20px;
   padding-top: 60px;
   text-align: center;
   color: $yellow;
@@ -36,6 +36,16 @@ body .confirmation-template {
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
+
+.confirmation-thanks p {
+  font-size: 18px;
+  padding-top: 61px;
+  text-align: center;
+  color: $white;
+}
+
+
+
 
 @keyframes grow-checkmark {
   0% { transform: scale(0); }
@@ -58,4 +68,6 @@ body .confirmation-template {
 .confirmation-links {
   padding-top: 20px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }

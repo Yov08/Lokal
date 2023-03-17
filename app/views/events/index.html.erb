@@ -1,5 +1,10 @@
 <div class="ei-index">
   <div class="ei-index main">
+    <div class="event-back-btn">
+      <%= link_to root_path, class: "button-icon" do %>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      <% end %>
+    </div>
     <div class="upcoming-events-lokal">
     <div class="banner-upcoming">
       <h1>Upcoming Music Festivals</h1>
@@ -116,7 +121,7 @@
                       <p class="card-text"><%= event.venue %></p>
                     </div>
                     <div class="col">
-                      <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+                      <p class="card-text-currency"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
                     </div>
                   </div>
                 </div>
@@ -133,7 +138,7 @@
                 <div class="card-body">
                   <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
                   <div class="col">
-                    <p class="card-text"><%= event.date %></p>
+                    <p class="card-text-date"><%= event.date %></p>
                     <h6 class="card-title"><%= event.name %></h6>
                     <p class="card-text"><%= event.venue %></p>
                   </div>

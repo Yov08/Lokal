@@ -77,17 +77,16 @@
 }
 
 .show-artist-details p {
-  color: darkgrey;
+  color:#1A1A1A;
   font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify;
   margin-top: 30px;
-  padding: 20px;
   letter-spacing: 1px;
 }
 
 .social-artist h4 {
-  color: white;
+  color: $burgundy;
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
@@ -95,7 +94,7 @@
   padding: 10px;
 }
 .media-banner {
-  background-color: $teal;
+  background-color: transparent;
   height: 100px;
   width: 100%;
 }
@@ -105,50 +104,36 @@
 }
 
 
-.social-artist .spotify-artist {
-  color: white;
+.social-artist .instagram-artist {
+  color: 	$burgundy;
   font-size: 30px;
   transition: 0.2s;
   padding: 10px;
 }
-.social-artist .spotify-artist:hover {
-  color: #1DB954;
+
+.social-artist .facebook-artist {
+  color: $burgundy;
+  font-size: 30px;
+  transition: 0.2s;
+  padding: 10px;
 }
+
+
 
 .social-artist .youtube-artist {
-  color: 	white;
+  color: $burgundy;
   font-size: 30px;
   transition: 0.2s;
   padding: 10px;
 }
-.social-artist .youtube-artist:hover {
-  color: #FF0000;
-}
 
 
-
-.social-artist .deezer-artist {
-  color: white;
-  font-size: 30px;
-  transition: 0.2s;
-  padding: 10px;
-}
-.social-artist .deezer-artist:hover {
-  color: #FFED00;
-}
 .youtube-video {
-  width: 380px;
+  width: 365px;
   height: 281px;
   align-items: center;
 }
 
-// .card .content .details .actionBtn button:nth-child(2)
-// {
-  //   border: 1px solid #999;
-  //   color: #999;
-  //   background: #fff;
-
-  // }
 
 .past-artist-events {
   padding-top: 25px;
@@ -202,7 +187,6 @@
 }
 
 .youtube-video {
-  padding: 10px;
   text-align: center;
 }
 
@@ -216,3 +200,44 @@
   padding-bottom: 10px;
 }
 
+.sportify-embed {
+  padding: 10px;
+  text-align: center;
+}
+
+.spotify-embed h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  color: $purple;
+  padding-bottom: 10px;
+}
+
+.bio-show-artist h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  color: $purple;
+  padding-top: 10px;
+
+}
+
+.bio-first-artist p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $purple;
+  text-align: center;
+}
+
+.bio-first-artist h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: $purple;
+  text-align: center;
+}
