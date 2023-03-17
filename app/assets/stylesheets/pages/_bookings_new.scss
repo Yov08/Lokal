@@ -15,18 +15,15 @@ body .booking-an-event {
 .booking-event-details h2 {
   padding-left: 10px;
   font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
   font-weight: bold;
-  color: $purple;
+  color: $burgundy;
 }
 
 .booking-an-event {
   padding-bottom: 200px;
 }
 
-.booking-event-address {
-  font-size: 16px;
-  font-family: 'Quicksand', sans-serif;
-}
 
 .ticket-selection-container {
   display: flex;
@@ -96,11 +93,11 @@ body .booking-an-event {
   height: 60px;
   font-size: 30px;
   border-radius: 10px;
-  border: 1px solid $purple;
-  color: white;
-  background-color: $purple;
+  color: $burgundy;
+  border: 0;
   padding: 5px 10px 20px 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .ticket-selection-button:hover {
@@ -161,7 +158,7 @@ body .booking-an-event {
 }
 
 .col .price-section p {
-  color: black;
+  color: $black;
   padding: 10px;
   text-align: left;
 
@@ -172,7 +169,7 @@ body .booking-an-event {
 }
 
 .col .price-display p {
-  color: black;
+  color: $black;
   padding: 10px;
   border-radius: 200px;
 }

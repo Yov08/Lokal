@@ -262,21 +262,36 @@
   border: 1px;
   border-style: solid;
   border-radius: 10px;
-  padding: 8px 12px 8px 12px;
+  padding: 15px 0;
   text-decoration: none;
   transition: 0.2s;
   letter-spacing: 0.1rem;
+  width: 48%;
+}
+
+.button-home-confirmation {
+  background-color: $burgundy;
+  font-family: 'Quicksand', sans-serif;
+  color: $white;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 15px 0;
+  text-decoration: none;
+  transition: 0.2s;
+  letter-spacing: 0.1rem;
+  width: 48%;
 }
 
 .book-now-button {
-  background-color: $orange;
+  background-color: $burgundy;
   font-family: 'Quicksand', sans-serif;
   font-size: 17px;
   color: white;
   border: 1px;
   border-style: solid;
   border-radius: 10px;
-  padding: 8px 12px 8px 12px;
+  padding: 9px 12px 9px 12px;
   text-decoration: none;
   transition: 0.2s;
   letter-spacing: 0.1rem;
@@ -285,7 +300,7 @@
 
 }
 
-.cancel-button {
+.back-button {
   background-color: $white;
   font-family: 'Quicksand', sans-serif;
   font-size: 17px;
@@ -293,7 +308,7 @@
   border: 1px;
   border-style: solid;
   border-radius: 10px;
-  padding: 8px 12px 8px 12px;
+  padding: 9px 12px 9px 12px;
   text-decoration: none;
   transition: 0.2s;
   letter-spacing: 0.1rem;
