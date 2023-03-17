@@ -1,5 +1,6 @@
 .ei-index {
   background-color: rgba(219, 36, 84, 0.1);
+  padding-bottom: 40px;
 }
 
 .ei-index-main {
@@ -196,7 +197,7 @@
 {
   font-size: 18px;
   padding-top: 5px;
-  color: 	black;
+  color: $black;
 }
 .ei-card .ei-details .ei-date p
 {
@@ -224,10 +225,10 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
-  color: #333;
+  color: $black;
   text-align: center;
   text-decoration: none;
-  border: 2px solid #333;
+  border: 2px solid $black;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -296,6 +297,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  background-color: rgba(219, 36, 84, 0.2);
 }
 
 .upcoming-event .card-body {
@@ -306,21 +308,24 @@
 }
 
 .upcoming-event .card-img-top {
-  width: 80px;
-  height: 80px;
+  width: 140px;
   background-size: cover;
   background-position: center;
   border-radius: 2px;
   margin-right: 20px;
   padding: 30px;
-
-
+  border-radius: 20px;
 }
-
 
 .upcoming-event .col:last-child p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
   font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $black;
 }
+
 
 // top-rated events cards CSS
 .top-rated-event {
@@ -328,27 +333,35 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
+  background-color: white;
 }
 
 .top-rated-event .card-body {
-  padding: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
+  padding: 10px;
 }
 
 .top-rated-event .card-img-top {
-  width: 80px;
-  height: 80px;
+  width: 140px;
   background-size: cover;
   background-position: center;
   border-radius: 2px;
-  margin-right: 10px;
+  margin-right: 20px;
+  padding: 30px;
+  border-radius: 20px;
 }
 
 
 .top-rated-event .col:last-child p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
   font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $black;
 }
 
 .nav-bar-filters {
