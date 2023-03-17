@@ -113,7 +113,7 @@ body .booking-an-event{
 
 .border-right {
   border-right: 0.5px solid $burgundy;
-  height: 160px;
+  height: 138px;
 }
 
 .event-description h3 {
@@ -196,6 +196,7 @@ body .booking-an-event{
 .performing-artists a {
   text-decoration: none;
   color: $black;
+  font-weight: bold;
 
 }
 
@@ -212,7 +213,7 @@ body .booking-an-event{
   height: 60px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #007bff;
+  border: 3px solid $burgundy;
   margin-left: -20px;
   z-index: 1;
   position: relative;
@@ -282,13 +283,13 @@ body .booking-an-event{
 }
 
 .buy-ticket-end {
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
 
 .es-share i {
   opacity: 0;
   font-size: 28px;
-  color: #1F1E1E;
+  color: $purple;
   will-change: transform;
   -webkit-transform: scale(.1);
           transform: scale(.1);
@@ -311,7 +312,7 @@ body .booking-an-event{
   cursor: pointer;
   width: 240px;
   height: 72px;
-  background-color: #EEEEED;
+  background-color: transparent;
   border-radius: 80px;
   padding: 0 18px;
   will-change: transform;
@@ -328,19 +329,23 @@ body .booking-an-event{
 .es-share span {
   position: absolute;
   z-index: 99;
-  width: 240px;
-  height: 72px;
-  border-radius: 80px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 16px;
   text-align: center;
-  line-height: 70px;
-  letter-spacing: 2px;
-  color: #EEEEED;
-  background-color: #1F1E1E;
-  padding: 0 18px;
+  letter-spacing: 1px;
+  color: $purple;
+  background-color: transparent;
+  border: 1px solid $purple;
+  padding: 12px 24px 12px 24px;
   -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 
 .es-share .container {
