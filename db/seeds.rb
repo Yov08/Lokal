@@ -17,7 +17,7 @@ EventArtist.destroy_all
 
 puts "Creating events"
 pure = Event.create!(
-  name: "Pure at Lux",
+  name: "Pure at LUX",
   date: "30.07.2022",
   venue: "Grand Gaube ",
   description: "This 3-day Music & Beach festival will occur on the 7th, 8th, and 9th of August. For the first time in Mauritius, an entire resort is being privatised for a 3-day festival. ",
@@ -49,7 +49,7 @@ soiree_zulu = Event.create!(
   latitude: 57.5206045413392
 )
 moaf = Event.create!(
-  name: "Mauritius Open Air Festival",
+  name: "Mauritius Open Air",
   date: "23.07.2023",
   venue: "Nou Le Morne",
   description: "Discover Mauritius paradise lifestyle, epic beach/club parties and amazing excursions trips! ",
