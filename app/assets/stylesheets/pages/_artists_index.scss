@@ -15,8 +15,6 @@ body .show-artist-lokal
   width: 100%;
   text-align: center;
   padding-top: 20px;
-
-
 }
 
 .banner-artist-all{
@@ -25,7 +23,10 @@ body .show-artist-lokal
   background-color:$white;
   border-bottom-left-radius: 210px;
   height: 180px;
+  position: sticky;
+  top: 0;
 }
+
 
 .banner-artist-all p {
   text-align: left;
@@ -36,7 +37,6 @@ body .show-artist-lokal
   font-weight: bold;
   padding-right: 5px;
 }
-
 
 .container-index-artist {
   margin-left: 20px;
