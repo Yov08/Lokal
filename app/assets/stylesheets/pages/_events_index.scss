@@ -102,8 +102,8 @@
 .ei-card .ei-poster:before
 {
   content: '';
-  position: relative;
-  bottom: -180px;
+  position: absolute;
+  bottom: -200px;
   width: 100%;
   height: 100%;
   background: linear-gradient(0deg,  $black 50%, transparent);
@@ -131,7 +131,7 @@
 .ei-card .ei-details
 {
   position: absolute;
-  bottom: 0px;
+  bottom: -50px;
   left: 0;
   padding: 20px;;
   width: 100%;
@@ -179,22 +179,25 @@
 }
 .ei-card .ei-details h2
 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: white;
   letter-spacing: 0.5px;
-  padding-bottom: 1px;
+  // padding-bottom: 1px;
   padding-top: 20px;
+  position: relative;
+  top: -30px;
 
 }
 
 .ei-tags
 {
-  padding: 10px;
+  // padding: 10px;
   max-width: 100%;
   display: inline-flex;
   position: relative;
-  padding-bottom: 124px;
+  top: 62px
+  // padding-bottom: 124px;
 }
 
 .ei-tags-index .tag-techno,
@@ -229,6 +232,8 @@ color: white;
   position: relative;
   display: flex;
   gap: 10px;
+  align-items: center;
+  top: 35px;
 }
 
 .ei-lineup .ei-artist .artist-photo
@@ -243,17 +248,19 @@ color: white;
 
 .ei-location p
 {
-  font-size: 18px;
-  padding-top: 5px;
+  font-size: 15px;
+  // padding-top: 5px;
   color: 	white;
+  position: relative;
+  top: 17px;
 }
 .ei-card .ei-details .ei-date p
 {
   font-size: 17px;
-  padding-top: 4px;
+  // padding-top: 4px;
   color: white;
   padding-bottom: -23px;
-  line-height: 0.01cm;
+  // line-height: 0.01cm;
   text-align: right;
 }
 
@@ -264,9 +271,9 @@ color: white;
 
 .ei-date .container {
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   right: 0;
-  padding-left: 120px;
+  padding-left: 108px;
 
 }
 
