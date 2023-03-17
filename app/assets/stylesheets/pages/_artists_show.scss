@@ -125,6 +125,20 @@
   color: #FF0000;
 }
 
+.social-artist .instagram-artist {
+  color: 	white;
+  font-size: 30px;
+  transition: 0.2s;
+  padding: 10px;
+}
+
+.social-artist .facebook-artist {
+  color: 	white;
+  font-size: 30px;
+  transition: 0.2s;
+  padding: 10px;
+}
+
 
 
 .social-artist .deezer-artist {
@@ -207,6 +221,21 @@
 }
 
 .youtube-video h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  color: $purple;
+  padding-bottom: 10px;
+}
+
+.sportify-embed {
+  padding: 10px;
+  text-align: center;
+}
+
+.spotify-embed h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 17px;
   text-align: left;
