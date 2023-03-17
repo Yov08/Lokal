@@ -2,10 +2,10 @@
   background-color: transparent;
   font-family: 'Quicksand', sans-serif;
   color: white;
-  border: 3px;
+  border: 2px;
   border-style: solid;
   border-radius: 10px;
-  padding: 12px 32px 12px 32px;
+  padding: 12px 24px 12px 24px;
   text-decoration: none;
   // margin-right: 30px;
   display: inline;
@@ -22,7 +22,7 @@
   color: white;
   border-style: solid;
   border-radius: 10px;
-  padding: 12px 32px 12px 32px;
+  padding: 12px 24px 12px 24px;
   text-decoration: none;
   display: inline;
   letter-spacing: 0.1rem;
@@ -32,8 +32,9 @@
   background-color: #DB2454;
   font-family: 'Quicksand', sans-serif;
   color: white;
+  border: 2px solid $burgundy;
   border-radius: 10px;
-  padding: 12px 32px 12px 32px;
+  padding: 12px 24px 12px 24px;
   text-decoration: none;
   flex-direction: row;
   display: inline;
@@ -47,7 +48,7 @@
   font-family: 'Quicksand', sans-serif;
   color: black;
   border-radius: 10px;
-  padding: 12px 32px 12px 32px;
+  padding: 12px 24px 12px 24px;
   text-decoration: none;
   display: inline;
   letter-spacing: 0.1rem;
@@ -70,6 +71,9 @@
 .homepage-buttons {
   margin-top: 10vw;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 

@@ -33,7 +33,22 @@
       <% end %>
     </div>
   </div>
+  <script>
+
+    $(".banner-artist-all").hide();
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 100) {
+            $(".banner-artist-all").fadeOut("fast");
+        }
+        else {
+            $(".banner-artist-all").fadeIn("slow");
+        }
+    });
+
+</script>
 </div>
+
+
 
   <!-- <div class="container">
     <% @artists.each do |artist| %>
