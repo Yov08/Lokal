@@ -66,8 +66,9 @@ body .booking-an-event{
 
 .location-title h3 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
-  color: black;
+  font-size: 22px;
+  color: $burgundy;
+  font-weight: bold;
   padding-top: 18px;
   padding-left: 12px;
 }
@@ -119,8 +120,9 @@ body .booking-an-event{
   width: 100%;
   text-align: left;
   padding: 10px;
-  font-size: 20px;
-  color: black;
+  font-size: 22px;
+  color: $burgundy;
+  font-weight: bold;
 }
 
 .event-description p {
@@ -185,8 +187,15 @@ body .booking-an-event{
   color: $burgundy;
   margin-bottom: 0.5rem;
   font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   padding: 8px;
+  font-weight: bold;
+
+}
+
+.performing-artists a {
+  text-decoration: none;
+  color: $black;
 
 }
 
