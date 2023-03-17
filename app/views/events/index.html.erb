@@ -1,10 +1,5 @@
 <div class="ei-index">
   <div class="ei-index main">
-    <div class="event-back-btn">
-      <%= link_to root_path, class: "button-icon" do %>
-        <ion-icon name="arrow-back-outline"></ion-icon>
-      <% end %>
-    </div>
     <div class="upcoming-events-lokal">
     <div class="banner-upcoming">
       <h1>Upcoming Music Festivals</h1>
@@ -43,26 +38,28 @@
               <div class="ei-card">
                 <div class="ei-poster">
                   <img src= <%= event.image_url%> alt="">
+                </div>
+                <div class="ei-details">
+                  <!--
                   <div class="ei-like">
                     <% if user_signed_in? %>
                       <% if current_user.likes?(event) %>
                         <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked", remote: true, data: { turbo: false } do %>
-                          <i class="fas fa-heart"></i>
+                          <ion-icon name="heart"></ion-icon>
                         <% end %>
                       <% else %>
                         <%= button_to event_likes_path(event), method: :post, class: "like-button", remote: true, data: { turbo: false } do %>
-                          <i class="far fa-heart"></i>
+                          <ion-icon name="heart-outline"></ion-icon>
                         <% end %>
                       <% end %>
                     <% end %>
-                  </div>
-                </div>
-                <div class="ei-details">
+                  </div> -->
                   <div class="ei-tags">
                     <% event.tags.each do |tag| %>
                       <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
                     <% end %>
-                  </div><br>
+                  </div>
+                  <h2> <%= event.name %> </h2>
                   <div class="ei-date">
                     <% formatted_date = (event.date).strftime("%b %e") %>
                     <% formatted_start_time = (event.start_time.present? ? event.start_time.strftime("%H:%M") : '') %>
@@ -70,11 +67,25 @@
                     <p><i class="fa-regular fa-calendar" class="date-symbol"></i> <span><%= formatted_date %></span></p>
                     <p><i class="fa-regular fa-clock" class="time-symbol"></i> <span><%= formatted_start_time %> - <%= formatted_end_time %></span></p>
                   </div>
-                  <h2> <%= event.name %> </h2>
                   <div class="ei-location">
                     <p><i class="fa-solid fa-location-dot"></i> <span><%= event.venue %></span></p><br>
                   </div>
                   <%= link_to "More", event_path(event), class: "button-more-event" %>
+                  <!--
+                  <div class="ei-lineup">
+                    <% if event.event_artists.present? %>
+                      <h4>Lineup:</h6>
+                      <div class="ei-lineup-artists">
+                        <% event.event_artists.each do |event_artist| %>
+                          <% artist = event_artist.artist %>
+                          <div class="ei-artist">
+                            <%= link_to image_tag(artist.image_url, class: "artist-photo"), artist_path(artist) %>
+                          </div>
+                        <% end %>
+                      </div>
+                    <% end %>
+                  </div>
+                  -->
                 </div>
               </div>
             </swiper-slide>
@@ -108,7 +119,7 @@
                       <p class="card-text"><%= event.venue %></p>
                     </div>
                     <div class="col">
-                      <p class="card-text-currency"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+                      <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
                     </div>
                   </div>
                 </div>
@@ -125,7 +136,7 @@
                 <div class="card-body">
                   <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
                   <div class="col">
-                    <p class="card-text-date"><%= event.date %></p>
+                    <p class="card-text"><%= event.date %></p>
                     <h6 class="card-title"><%= event.name %></h6>
                     <p class="card-text"><%= event.venue %></p>
                   </div>
@@ -171,13 +182,17 @@ document.addEventListener("turbolinks:load", function() {
 <script>
   document.querySelectorAll('.like-button').forEach(button => {
     button.addEventListener('ajax:success', (event) => {
-      const icon = event.currentTarget.querySelector('i');
-      icon.classList.toggle('far');
-      icon.classList.toggle('fas');
+      const icon = event.currentTarget.querySelector('ion-icon');
+      if (icon.getAttribute('name') === 'heart-outline') {
+        icon.setAttribute('name', 'heart');
+      } else {
+        icon.setAttribute('name', 'heart-outline');
+      }
       icon.classList.toggle('liked');
     });
   });
 </script>
+
 
 <!-- JS for loading UPCOMING & TOP-RATED events tabs data-->
 <script>

@@ -61,10 +61,11 @@
   scrollbar-width: none;
   z-index: 10;
   position: relative;
-  top: -280px; /* adjust this value to fine-tune the positioning */
+  top: -281px; /* adjust this value to fine-tune the positioning */
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
 }
 
 .ei-tags-index::-webkit-scrollbar {
@@ -73,46 +74,40 @@
 
 .events-slide {
   position: relative;
-  top: -230px; /* adjust this value to fine-tune the positioning */
+  top: -253px; /* adjust this value to fine-tune the positioning */
   padding-left: 50px;
   max-width: 87%;
   z-index: 5;
   width: 100%;
 }
 
+// Events card
 .ei-card
 {
   position: relative;
   height: 90vw;
   width: 70vw;
-  background: #fff;
+  // background: #fff;
   border-radius: 20px;
   overflow: hidden;
-  // box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
-.ei-like {
-  font-size: 25px;
-  text-align: center;
-  top: 0;
-  position: relative;
-  padding-left: 80px;
-}
 .ei-card .ei-poster
 {
   position: relative;
   z-index: 2;
-  // overflow: hidden;
+  overflow: hidden;
   width: 100vw;
 }
-.ei-card:before
+.ei-card .ei-poster:before
 {
   content: '';
   position: absolute;
   bottom: -180px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg,  #5CA3B3 50%, transparent);
+  background: linear-gradient(0deg,  $black 50%, transparent);
   height:550px;
   transition: 0.5s;
   z-index: 1;
@@ -123,22 +118,23 @@
 }
 .ei-card .ei-poster img
 {
-  background-size: contain ;
+  width: 100%;
   transition: 0.5s;
-  position: absolute;
+  height: 375px;
+  object-fit: cover;
+
+
 }
 .ei-card:hover .ei-poster img
 {
   transform: translateY(-50px);
   filter: blur(5px);
 }
-.like-icon.liked {
-  color: red;
-}
+
 .ei-card .ei-details
 {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   padding: 20px;;
   width: 100%;
@@ -149,6 +145,37 @@
 {
   bottom: 40px;
 }
+
+// .ei-like {
+//   position: absolute;
+//   top: -25px;
+//   right: 7px;
+// }
+
+.like-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.like-link .icon {
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: rgba(128, 128, 128, 0.5);
+}
+
+.like-link.liked .icon {
+  color: var(--clr);
+  text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
+}
+
+:root {
+  --clr: red;
+}
+
+
 .ei-card .ei-details .logo
 {
   max-width: 180px;
@@ -160,15 +187,15 @@
   color: white;
   letter-spacing: 0.5px;
   padding-bottom: 1px;
-  padding-top: 2px;
+  padding-top: 20px;
 }
 
-.gender-events .ei-tags
+.ei-tags
 {
   padding: 10px;
   max-width: 100%;
   display: inline-flex;
-
+  position: relative;
 }
 
 .ei-tags-index .tag-techno,
@@ -180,24 +207,46 @@
   background-color: transparent;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  color: $burgundy;
-  padding: 8px; /* <-- Change padding value here */
+  color:$burgundy;
+  padding: 8px;
   border: 1px solid $burgundy;
   border-radius: 15px;
   font-size: 14px;
   transition: 0.4s;
 }
 
+.ei-lineup
+{
+  position: relative;
+}
 
-// .ei-card .ei-details .ei-tags span:nth-child(2)
-// {
-//   background: #745383;
-// }
+.ei-lineup h4
+{
+color: white;
+}
+
+.ei-lineup-artists
+{
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.ei-lineup .ei-artist .artist-photo
+{
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
 .ei-location p
 {
   font-size: 18px;
   padding-top: 5px;
-  color: $black;
+  color: 	white;
 }
 .ei-card .ei-details .ei-date p
 {
@@ -206,12 +255,14 @@
   color: white;
   padding-bottom: 5px;
   line-height:0.5cm;
+
 }
 
-.ei-date .date-symbol {
+.ei-date .date-symbol p {
   font-size: 20px;
   color: white;
 }
+
 
 .ei-date .time-symbol {
   font-size: 20px;
@@ -225,10 +276,10 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
-  color: $black;
+  color: #333;
   text-align: center;
   text-decoration: none;
-  border: 2px solid $black;
+  border: 2px solid #333;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -289,6 +340,7 @@
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
 }
+
 
 // upcoming events cards CSS
 .upcoming-event {
