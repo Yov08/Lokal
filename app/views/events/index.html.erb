@@ -40,20 +40,6 @@
                   <img src= <%= event.image_url%> alt="">
                 </div>
                 <div class="ei-details">
-                  <!--
-                  <div class="ei-like">
-                    <% if user_signed_in? %>
-                      <% if current_user.likes?(event) %>
-                        <%= button_to event_like_path(event, current_user.likes.find_by(event: event)), method: :delete, class: "like-button liked", remote: true, data: { turbo: false } do %>
-                          <ion-icon name="heart"></ion-icon>
-                        <% end %>
-                      <% else %>
-                        <%= button_to event_likes_path(event), method: :post, class: "like-button", remote: true, data: { turbo: false } do %>
-                          <ion-icon name="heart-outline"></ion-icon>
-                        <% end %>
-                      <% end %>
-                    <% end %>
-                  </div> -->
                   <div class="ei-tags">
                     <% event.tags.each do |tag| %>
                       <span><%= link_to(tag.name, events_path(tag: tag.name), class: tag_class(tag)) %></span>
@@ -73,14 +59,10 @@
                     <p><i class="fa-solid fa-location-dot"></i> <span><%= event.venue %></span></p><br>
                   </div>
                   <%= link_to "More", event_path(event), class: "button-more-event" %>
-
-                  <!--
-
-
                   <div class="ei-lineup">
                     <% if event.event_artists.present? %>
-                      <h4>Lineup:</h6>
                       <div class="ei-lineup-artists">
+                        <h4>Lineup:</h6>
                         <% event.event_artists.each do |event_artist| %>
                           <% artist = event_artist.artist %>
                           <div class="ei-artist">
@@ -90,10 +72,6 @@
                       </div>
                     <% end %>
                   </div>
-
-                  -->
-
-
                 </div>
               </div>
             </swiper-slide>
