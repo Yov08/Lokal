@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/view_artists', to: 'artists#index', as: 'view_artists'
   get 'bookings/confirmation', to: 'bookings#confirmation', as: 'booking_confirmation'
   get '/top_rated_events', to: 'events#top_rated_events', as: 'top_rated_events'
+  get '/upcoming_events', to: 'events#index', defaults: { upcoming: true }
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

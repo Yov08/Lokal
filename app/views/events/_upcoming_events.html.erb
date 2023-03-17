@@ -1,0 +1,15 @@
+<% @upcoming_events.each do |event| %>
+  <div class="row card upcoming-event">
+    <div class="card-body">
+      <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+      <div class="col">
+        <p class="card-text"><%= event.date %></p>
+        <h6 class="card-title"><%= event.name %></h6>
+        <p class="card-text"><%= event.venue %></p>
+      </div>
+      <div class="col">
+        <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
