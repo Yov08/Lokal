@@ -86,10 +86,10 @@
   position: relative;
   height: 90vw;
   width: 70vw;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.25);
   // background: #fff;
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  border-radius: 20px;
 }
 
 .ei-card .ei-poster
@@ -146,7 +146,7 @@
 .ei-more .button-more-event
 {
   position: relative;
-  
+
 }
 
 // .ei-like {
