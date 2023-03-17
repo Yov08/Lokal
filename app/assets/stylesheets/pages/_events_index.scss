@@ -60,10 +60,11 @@
   scrollbar-width: none;
   z-index: 10;
   position: relative;
-  top: -280px;
+  top: -281px; /* adjust this value to fine-tune the positioning */
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
 }
 
 .ei-tags-index::-webkit-scrollbar {
@@ -72,7 +73,7 @@
 
 .events-slide {
   position: relative;
-  top: -230px;
+  top: -253px; /* adjust this value to fine-tune the positioning */
   padding-left: 50px;
   max-width: 87%;
   z-index: 5;
@@ -105,7 +106,7 @@
   bottom: -180px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg,  #5CA3B3 50%, transparent);
+  background: linear-gradient(0deg,  $black 50%, transparent);
   height:550px;
   transition: 0.5s;
   z-index: 1;
@@ -117,12 +118,9 @@
 .ei-card .ei-poster img
 {
   width: 100%;
-  // background-size: contain ;
   transition: 0.5s;
-  // background-repeat: no-repeat;
-  // background-position: 50% 0%;
-  // background-size: cover;
-  // position: relative;
+  height: 375px;
+  object-fit: cover;
 }
 .ei-card:hover .ei-poster img
 {
@@ -133,7 +131,7 @@
 .ei-card .ei-details
 {
   position: absolute;
-  bottom: -100px;
+  bottom: 0px;
   left: 0;
   padding: 20px;;
   width: 100%;
@@ -145,11 +143,11 @@
   bottom: 40px;
 }
 
-.ei-like {
-  position: absolute;
-  top: -25px;
-  right: 7px;
-}
+// .ei-like {
+//   position: absolute;
+//   top: -25px;
+//   right: 7px;
+// }
 
 .like-link {
   display: flex;
@@ -170,9 +168,8 @@
   text-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 30px var(--clr);
 }
 
-/* Add these styles if you don't have them in your CSS file */
 :root {
-  --clr: red; /* Change this value to the desired color */
+  --clr: red;
 }
 
 
@@ -187,7 +184,8 @@
   color: white;
   letter-spacing: 0.5px;
   padding-bottom: 1px;
-  padding-top: 2px;
+  padding-top: 20px;
+
 }
 
 .ei-tags
@@ -196,6 +194,7 @@
   max-width: 100%;
   display: inline-flex;
   position: relative;
+  padding-bottom: 124px;
 }
 
 .ei-tags-index .tag-techno,
@@ -207,8 +206,8 @@
   background-color: transparent;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  color: $burgundy;
-  padding: 8px; /* <-- Change padding value here */
+  color:$burgundy;
+  padding: 8px;
   border: 1px solid $burgundy;
   border-radius: 15px;
   font-size: 14px;
@@ -246,20 +245,29 @@ color: white;
 {
   font-size: 18px;
   padding-top: 5px;
-  color: $black;
+  color: 	white;
 }
 .ei-card .ei-details .ei-date p
 {
   font-size: 17px;
   padding-top: 4px;
   color: white;
-  padding-bottom: 5px;
-  line-height:0.5cm;
+  padding-bottom: -23px;
+  line-height: 0.01cm;
+  text-align: right;
 }
 
-.ei-date .date-symbol {
+.ei-date .date-symbol p {
   font-size: 20px;
   color: white;
+}
+
+.ei-date .container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-left: 120px;
+
 }
 
 .ei-date .time-symbol {
@@ -274,10 +282,10 @@ color: white;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
-  color: $black;
+  color: #333;
   text-align: center;
   text-decoration: none;
-  border: 2px solid $black;
+  border: 2px solid #333;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -338,6 +346,7 @@ color: white;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
 }
+
 
 // upcoming events cards CSS
 .upcoming-event {
