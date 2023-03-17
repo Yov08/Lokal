@@ -313,7 +313,7 @@ zulu_artist = Artist.create!(
   youtube: "https://www.youtube.com/embed/EUFpT8RyP70",
   spotify: "https://open.spotify.com/embed/artist/0FJi3fSLGLtquZCfeC55Tm?utm_source=generator&theme=0",
   deezer: "https://deezer.page.link/S1gJBCPMZRL5pex67",
-  instagram: "https://www.instagram.com/"
+  instagram: "https://www.instagram.com/zulu_bavajee"
 )
 
 eli_fur_artist = Artist.create!(
@@ -372,7 +372,8 @@ kaya_artist = Artist.create!(
   image_url: "https://otayo.com/wp-content/uploads/2022/07/Kaya-1.jpg",
   social_media_links: "https://www.facebook.com/profile.php?id=100057452267838",
   youtube: "https://www.youtube.com/embed/glo_--yEOGM",
-  spotify: "https://open.spotify.com/embed/artist/5VZirLPBLkdsVsDHcVEWxt?utm_source=generator&theme=0"
+  spotify: "https://open.spotify.com/embed/artist/5VZirLPBLkdsVsDHcVEWxt?utm_source=generator&theme=0",
+  instagram: "https://www.instagram.com"
 )
 annega_artist = Artist.create!(
   name: "Annega",
@@ -385,7 +386,8 @@ annega_artist = Artist.create!(
   image_url: "https://otayo.com/wp-content/uploads/2022/07/anne-ga-4.jpg",
   social_media_links: "https://www.facebook.com/Annegaofficial",
   youtube: "https://www.youtube.com/embed/mmopE96_T4Y",
-  spotify: "https://open.spotify.com/embed/artist/4raFB7ovPksXVgfeYt7Xg4?utm_source=generator&theme=0"
+  spotify: "https://open.spotify.com/embed/artist/4raFB7ovPksXVgfeYt7Xg4?utm_source=generator&theme=0",
+  instagram: "https://www.instagram.com/annega_official"
 )
 blakkayo_artist = Artist.create!(
   name: "Blakkayo",
@@ -398,7 +400,8 @@ blakkayo_artist = Artist.create!(
   image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1678529471/LOKAL/artists/blakkayo_show_mkxzsc.jpg",
   social_media_links: "https://www.facebook.com/orizinalblakkayo",
   youtube: "https://www.youtube.com/embed/O4YAvUPp9MU",
-  spotify: "https://open.spotify.com/embed/artist/3DoTxN5SX13QpC2mrjko2O?utm_source=generator&theme=0"
+  spotify: "https://open.spotify.com/embed/artist/3DoTxN5SX13QpC2mrjko2O?utm_source=generator&theme=0",
+  instagram: "https://www.instagram.com/orizinal_blakkayo_"
 )
 davidjay_artist = Artist.create!(
   name: "David Jay",
@@ -411,7 +414,8 @@ davidjay_artist = Artist.create!(
   image_url: "https://otayo.com/wp-content/uploads/2022/07/david-jay-1.jpg",
   social_media_links: "https://www.facebook.com/davidjaymusic",
   youtube: "https://www.youtube.com/embed/0XQ3lZeeb54",
-  spotify: "https://open.spotify.com/embed/artist/3GcNaoDb5ZGePZXfUd3gIU?utm_source=generator&theme=0"
+  spotify: "https://open.spotify.com/embed/artist/3GcNaoDb5ZGePZXfUd3gIU?utm_source=generator&theme=0",
+  instagram: "https://www.instagram.com/djdavidjay"
 )
 
 puts "Artists Created!"
