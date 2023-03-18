@@ -80,6 +80,22 @@ mystik_garden_vi = Event.create!(
   longitude: -20.085627115510015,
   latitude: 57.5206045413392
 )
+mystik_garden_v = Event.create!(
+  name: "Mystik Garden V",
+  date: "11.08.2022",
+  venue: "Ruins of Balaclava",
+  description: "The wait is over. For the next and final edition of the Mystik Festival, Secret Models is taking this last event of the summer of 2023 to a whole new level. A stellar line up of local artists and a selection of artists from the Anjunadeep and mau5trap music labels (Eli & Fur, Massane and Anima), as well as a secret international guest, awaits you at the Maritim Resorts & Spa, Balaclava on 11 March 2023.",
+  price_normal: 2000,
+  price_vip: 4000,
+  address: "Turtle Bay Balaclava, Terre Rouge",
+  capacity: 2000,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1679112386/LOKAL/Events/mystik_5_hdutd3.jpg",
+  rating: 4.2,
+  start_time: "14:00",
+  end_time: "00:00",
+  longitude: -20.085627115510015,
+  latitude: 57.5206045413392
+)
 sakifo = Event.create!(
   name: "Sakifo Muzik",
   date: "02.06.2023",
@@ -129,6 +145,25 @@ live_dan_moka = Event.create!(
   end_time: "00:00",
   longitude: -20.085627115510015,
   latitude: 57.5206045413392
+)
+easter_party = Event.create!(
+  name: "Easter Party",
+  date: "15.04.2021",
+  venue: "Hennessy Park",
+  description: "Vous souhaitez célébrer la Pâques en mode rétro des années 80’/90’/2000 ou faire la fête comme avant? Cet événement est fait pour vous! L’Easter Party 80’/90’/2000 vous fera faire un flashback haut en couleur sur la décennie la plus marquante sur le plan musical, le samedi 15 avril 2023 au Hennessy Park Hotel.
+  Replongez le temps d'une nuit dans la folie des années 80’/90’/2000 avec les chansons cultes qui ont marqué à jamais la culture musicale - revivez ces refrains envoûtants dans votre plus belle tenue colorée.
+  Avec ce thème unique, Easter Party 80’/90’/2000 vous réserve une soirée inoubliable à l’occasion de la Pâques.
+  La première partie de l'événement sera assurée par The Firehawks qui se produiront en live pour vous donner la fièvre du samedi soir tout le long de la soirée.",
+  price_normal: 500,
+  price_vip: 1000,
+  address: "Ebene",
+  capacity: 800,
+  image_url: "https://res.cloudinary.com/dqjdq06qv/image/upload/v1679112046/LOKAL/Events/easter-party_mq88ka.png",
+  rating: 3.9,
+  start_time: "20:30",
+  end_time: "03:00",
+  longitude: -20.241030346018974,
+  latitude: 57.489311920461
 )
 
 puts "Events Created!"
@@ -476,7 +511,30 @@ EventArtist.create!(
   artist_id: kaya_artist.id,
   event_id: live_dan_moka.id
 )
-puts
+EventArtist.create!(
+  artist_id: eli_fur_artist.id,
+  event_id: easter_party.id
+)
+EventArtist.create!(
+  artist_id: annega_artist.id,
+  event_id: easter_party.id
+)
+EventArtist.create!(
+  artist_id: blakkayo_artist.id,
+  event_id: mystik_garden_v.id
+)
+EventArtist.create!(
+  artist_id: dj_sash_artist.id,
+  event_id: mystik_garden_v.id
+)
+EventArtist.create!(
+  artist_id: massane_artist.id,
+  event_id: mystik_garden_v.id
+)
+EventArtist.create!(
+  artist_id: zulu_artist.id,
+  event_id: mystik_garden_v.id
+)
 puts "Events Artists Created!"
 
 
@@ -588,6 +646,26 @@ Like.create!(
 )
 Like.create!(
   event_id: mystik_garden_vi.id,
+  user_id: dummy5.id
+)
+Like.create!(
+  event_id: easter_party.id,
+  user_id: dummy1.id
+)
+Like.create!(
+  event_id: easter_party.id,
+  user_id: dummy2.id
+)
+Like.create!(
+  event_id: easter_party.id,
+  user_id: dummy3.id
+)
+Like.create!(
+  event_id: easter_party.id,
+  user_id: dummy4.id
+)
+Like.create!(
+  event_id: easter_party.id,
   user_id: dummy5.id
 )
 puts "Likes Created!"

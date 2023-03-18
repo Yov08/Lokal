@@ -11,7 +11,7 @@
       <h5><%= @artist.category %></h5>
     </div>
     <div class="show-message-artist">
-      <h3 href = "mailto: abc@example.com">Message</h3>
+      <%= link_to "Message", "mailto:#{@artist.user.email}", class: 'h3 no-text-decoration' %>
     </div>
     <br><br>
         <div class="bio-first-artist">
@@ -22,8 +22,8 @@
               <p><i class="fa-regular fa-star-half-stroke"></i> <%= @artist.rating %></p>
               </div>
               <div class="col">
-               <h4>Hourly rate</h4>
-              <p><i class="fa-solid fa-tag"></i> <%= @artist.hourly_rate %></p>
+                <h4>Hourly rate</h4>
+                <p><i class="fa-solid fa-tag"></i> <%= number_with_delimiter(@artist.hourly_rate, delimiter: ',') %></p>
               </div>
             </div>
           </div>
@@ -66,18 +66,23 @@
       <div class="container">
         <% if @events.present? %>
           <h3>Past Events</h3>
-          <div class="card-past-events">
-            <div class="past-events">
-              <% @events.select{ |event| event.date < Date.today }.each do |event| %>
-                <div class="past-event-card">
-                  <div class="past-event-image" style="background-image: url(<%= event.image_url %>)"></div>
-                    <div class="past-event-name">
-                      <p><%= link_to event.name, event_path(event) %> | <%= event.date.strftime("%b %e, %y") %></p>
-                    </div>
+          <div class="past-events">
+            <% @events.select{ |event| event.date < Date.today }.each do |event| %>
+              <div class="row card past-event-card">
+                <div class="card-body">
+                  <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                  <div class="col">
+                    <% formatted_date = event.date.strftime("%b %e, %Y") %>
+                    <p class="card-text"><%= formatted_date %></p>
+                    <h6 class="card-title"><%= link_to event.name, event_path(event), class: 'no-text-decoration' %></h6>
+                    <p class="card-text"><ion-icon name="location-outline"></ion-icon> <%= event.venue %></p>
+                  </div>
+                  <div class="col">
+                    <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs", precision: 0) %></p>
                   </div>
                 </div>
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           </div>
         <% end %>
       </div>
