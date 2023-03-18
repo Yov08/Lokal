@@ -17,14 +17,12 @@
               <% end %>
           </div><br>
           <div class="artist-banner">
-              <h5>Artists</h5>
-              <p>Book your favorite artist now,
-              with a simple click.</p>
+              <h5>Nissa ala lokal</h5>
           </div><br>
           <div class="homepage-buttons">
               <% if user_signed_in? %>
-                <%= link_to "View Events", events_path, class: "button-main" %>
-                <%= link_to "View Artists", artists_path, class: "button-outline" %>
+                <%= link_to "Events", events_path, class: "button-main" %>
+                <%= link_to "Artists", artists_path, class: "button-outline" %>
               <% else %>
                 <%= link_to "Log in", new_user_session_path, class: "button-outline" %>
                 <%= link_to "Sign Up", new_user_registration_path, class: "button-main" %>
