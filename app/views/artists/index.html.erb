@@ -10,6 +10,8 @@
           <div class="artist-card" style="--index: <%= index %>">
             <div class="imgBx">
               <img src=<%= artist.image_url %>>
+              <div class="artist-rating"><%= artist.rating %>★</div>
+              <div class="hourly-rate">$<%= artist.hourly_rate %>/hr</div>
             </div>
             <div class="content">
               <div class="details">
@@ -42,7 +44,7 @@ function debounce(func, wait) {
     timeout = setTimeout(() => func.apply(this, args), wait);
   };
 }
- 
+
 function initArtistCards() {
   const artistCards = document.querySelectorAll('.artist-card');
   const windowHeight = window.innerHeight;

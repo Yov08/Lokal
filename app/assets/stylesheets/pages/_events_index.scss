@@ -146,7 +146,7 @@
 .ei-more .button-more-event
 {
   position: relative;
-  
+
 }
 
 // .ei-like {
@@ -360,6 +360,28 @@ color: white;
   text-decoration: none;
 }
 
+.filter-remove .remove-filter-btn {
+  position: relative;
+  border-radius: 5px;
+  align-items: center;
+  border: 2px solid #DB2454;
+  color: #DB2454;
+  top: 10px;
+  left: 70px;
+}
+
+@keyframes glide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.filter-remove .remove-filter-btn.glide-in {
+  animation: glide-in 0.5s ease-out;
+}
 
 // upcoming events cards CSS
 .upcoming-event {
@@ -374,12 +396,13 @@ color: white;
 .upcoming-event .card-body {
   display: flex;
   flex-direction: row;
-  align-items: left;
+  align-items: center;
   padding: 10px;
 }
 
 .upcoming-event .card-img-top {
-  width: 140px;
+  width: 120px;
+  height: 120px;
   background-size: cover;
   background-position: center;
   border-radius: 2px;
@@ -388,14 +411,46 @@ color: white;
   border-radius: 20px;
 }
 
+.upcoming-event h6
+{
+  font-weight: 900;
+}
 .upcoming-event .col:last-child p {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
-  color: $black;
+  color: $burgundy;
   padding-left: 5px;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+
+.upcoming-event a,
+.top-rated-event a {
+  text-decoration: none;
+  color: black;
+}
+
+.upcoming-event a:hover,
+.top-rated-event a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.upcoming-event a:visited,
+.top-rated-event a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.upcoming-event a:active,
+.top-rated-event a:active {
+  text-decoration: none;
+  color: black;
 }
 
 
@@ -412,12 +467,13 @@ color: white;
 .top-rated-event .card-body {
   display: flex;
   flex-direction: row;
-  align-items: left;
+  align-items: center;
   padding: 10px;
 }
 
 .top-rated-event .card-img-top {
-  width: 140px;
+  width: 120px;
+  height: 120px;
   background-size: cover;
   background-position: center;
   border-radius: 2px;
@@ -426,6 +482,10 @@ color: white;
   border-radius: 20px;
 }
 
+.top-rated-event .col h6
+{
+  font-weight: 900;
+}
 
 .top-rated-event .col:last-child p {
   font-family: 'Quicksand', sans-serif;
@@ -435,6 +495,7 @@ color: white;
   letter-spacing: 1px;
   color: $burgundy;
   padding-left: 5px;
+  align-items: center;
 }
 
 .nav-bar-filters {

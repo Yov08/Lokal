@@ -1,3 +1,7 @@
+.event-back-btn .button-icon
+{
+  color: white;
+}
 
 .show-artist-image .artist-image-profile{
   max-width: 100%;
@@ -134,63 +138,85 @@
   align-items: center;
 }
 
+.past-event-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.past-event-card .card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.past-event-card .card-img-top {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  margin-right: 20px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.past-event-card .col h6 {
+  font-weight: 900;
+}
+
+.past-event-card .col:last-child p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $burgundy;
+  padding-left: 5px;
+}
 
 .past-artist-events {
-  padding-top: 25px;
+  padding-bottom: 80px;
 }
 
-.past-artist-events h3 {
-  color: $purple;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.card-past-events {
-  padding-top: 8px;
-  padding-bottom: 200px;
-
-}
-
-.past-events {
-  display: flex;
-  overflow-x: scroll;
-}
-
-.past-event-card {
-  width: 500px;
-  height: 150px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.past-event-image {
-  width: 100%;
-  height: 100%;
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.past-event-name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.5rem;
-  background-color: $purple; opacity:0.8;
-  color: #fff;
-  font-size: 18px;
-  text-align: center;
+.no-text-decoration {
   text-decoration: none;
+  color: black;
 }
 
+.no-text-decoration:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.no-text-decoration:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.no-text-decoration:active {
+  text-decoration: none;
+  color: black;
+}
 .youtube-video {
   text-align: center;
 }
 
 .youtube-video h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  color: $purple;
+  padding-bottom: 10px;
+}
+
+.past-artist-events h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 17px;
   text-align: left;

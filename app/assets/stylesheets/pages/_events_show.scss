@@ -402,3 +402,88 @@ bottom: 16px;
 right: 16px;
 width:100px;
 }
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.event-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-over-overlay span {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+}
+
+.past-event-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.past-event-card .card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.past-event-card .card-img-top {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  margin-right: 20px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.past-event-card .col h6 {
+  font-weight: 900;
+}
+
+.past-event-card .col:last-child p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $burgundy;
+  padding-left: 5px;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.no-text-decoration:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.no-text-decoration:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.no-text-decoration:active {
+  text-decoration: none;
+  color: black;
+}

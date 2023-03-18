@@ -80,9 +80,11 @@
           <% end %>
         </swiper-container>
       </div>
-      <% if params[:tag].present? %>
-        <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn btn-danger" %>
-      <% end %>
+      <div class="filter-remove">
+        <% if params[:tag].present? %>
+          <%= button_to "Remove filter", events_path, method: :get, params: { tag: nil }, class: "btn remove-filter-btn glide-in" %>
+        <% end %>
+      </div>
     </div>
     <div class="nav-bar-filters">
       <ul class="nav nav-pills">
@@ -98,19 +100,22 @@
           <div class="upcoming-events">
             <% if @upcoming_events.present? %>
               <% @upcoming_events.each do |event| %>
-                <div class="row card upcoming-event">
-                  <div class="card-body">
-                    <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
-                    <div class="col">
-                      <p class="card-text"><%= event.date %></p>
-                      <h6 class="card-title"><%= event.name %></h6>
-                      <p class="card-text"><%= event.venue %></p>
-                    </div>
-                    <div class="col">
-                      <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+                <%= link_to event_path(event), class: 'no-text-decoration' do %>
+                  <div class="row card upcoming-event">
+                    <div class="card-body">
+                      <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                      <div class="col">
+                        <% formatted_date = (event.date).strftime("%b %e") %>
+                        <p class="card-text"><%= formatted_date %></p>
+                        <h6 class="card-title"><%= event.name %></h6>
+                        <p class="card-text"><ion-icon name="location-outline"></ion-icon> <%= event.venue %></p>
+                      </div>
+                      <div class="col">
+                        <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs", precision: 0) %></p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                <% end %>
               <% end %>
             <% else %>
               <p>No upcoming events found.</p>
@@ -120,19 +125,22 @@
         <div class="tab-pane fade" id="toprated">
           <div class="top-rated-events">
             <% @top_rated_events.each do |event| %>
-              <div class="row card top-rated-event">
-                <div class="card-body">
-                  <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
-                  <div class="col">
-                    <p class="card-text"><%= event.date %></p>
-                    <h6 class="card-title"><%= event.name %></h6>
-                    <p class="card-text"><%= event.venue %></p>
-                  </div>
-                  <div class="col">
-                    <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs ", precision: 0) %></p>
+              <%= link_to event_path(event), class: 'no-text-decoration' do %>
+                <div class="row card top-rated-event">
+                  <div class="card-body">
+                    <div class="card-img-top" style="background-image: url('<%= event.image_url %>')"></div>
+                    <div class="col">
+                      <% formatted_date = (event.date).strftime("%b %e") %>
+                      <p class="card-text"><%= formatted_date %></p>
+                      <h6 class="card-title"><%= event.name %></h6>
+                      <p class="card-text"><ion-icon name="location-outline"></ion-icon> <%= event.venue %></p>
+                    </div>
+                    <div class="col">
+                      <p class="card-text"><%= number_to_currency(event.price_normal, unit: "Rs", precision: 0) %></p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              <% end %>
             <% end %>
           </div>
         </div>
